@@ -1,0 +1,5 @@
+#include "Pods-MoShang-DZGeometryTools.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/DZGeometryTools" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/DZGeometryTools" "${PODS_ROOT}/Headers/Public/DZProgrameDefines" "${PODS_ROOT}/Headers/Public/DZReadability" "${PODS_ROOT}/Headers/Public/DZSinglonFactory" "${PODS_ROOT}/Headers/Public/HTMLReader"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

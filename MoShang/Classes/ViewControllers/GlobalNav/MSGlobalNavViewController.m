@@ -7,7 +7,7 @@
 //
 
 #import "MSGlobalNavViewController.h"
-
+#import "MSMainViewController.h"
 @interface MSGlobalNavViewController ()
 @end
 
@@ -15,7 +15,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    MSMainViewController* mainVC = [MSMainViewController new];
+    
+    [self ms_AddChildViewController:mainVC];
+    _mainViewController = mainVC;
     // Do any additional setup after loading the view.
+}
+
+- (void) ms_AddChildViewController:(UIViewController*)viewController
+{
+    [viewController willMoveToParentViewController:self];
+    
+    [self addChildViewController:viewController];
+    [self.view addSubview:viewController.view];
+    viewController.view.frame = self.view.bounds;
+    [viewController didMoveToParentViewController:self];
+}
+
+
+- (void) ms_removeChildViewController:(UIViewController*)vc
+{
+    [vc willMoveToParentViewController:nil];
+    [vc removeFromParentViewController];
+    [vc.view removeFromSuperview];
+    [vc didMoveToParentViewController:nil];
 }
 
 - (void)didReceiveMemoryWarning {

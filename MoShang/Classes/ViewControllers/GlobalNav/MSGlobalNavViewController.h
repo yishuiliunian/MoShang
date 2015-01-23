@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <DZProgramDefines.h>
 @interface MSGlobalNavViewController : UIViewController
-
+DEFINE_PROPERTY_STRONG_READONLY(UIViewController*, mainViewController);
 @end

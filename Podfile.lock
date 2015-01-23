@@ -1,0 +1,22 @@
+PODS:
+  - DZGeometryTools (1.0.0)
+  - DZProgrameDefines (1.0.0)
+  - DZReadability (0.2.1):
+    - HTMLReader
+  - DZSinglonFactory (1.0.0)
+  - HTMLReader (0.5.9)
+
+DEPENDENCIES:
+  - DZGeometryTools
+  - DZProgrameDefines
+  - DZReadability
+  - DZSinglonFactory
+
+SPEC CHECKSUMS:
+  DZGeometryTools: e1c57508aa0679684bf2ccc3a05d3b6c797c8196
+  DZProgrameDefines: 8c89ec3a8d9aa5ef705438690ec6fa496eb2b6d5
+  DZReadability: bc1fff8ff0f4c7c1d325da4f418d80b6a3713c93
+  DZSinglonFactory: b7fdac485e282c583a85e644a20878fe3d4cf891
+  HTMLReader: 0833fa2af5fd2019bc2d7a6e8066a07fd0fe87f1
+
+COCOAPODS: 0.35.0.rc2

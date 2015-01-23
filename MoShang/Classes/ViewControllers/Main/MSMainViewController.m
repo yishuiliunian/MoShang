@@ -7,17 +7,24 @@
 //
 
 #import "MSMainViewController.h"
-
+#import <DZProgramDefines.h>
+#import "MSMainViewController.h"
 @interface MSMainViewController ()
-
 @end
 
 @implementation MSMainViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+- (void) initViewControllers
+{
+    
 }
+- (void) viewDidLoad
+{
+    [super viewDidLoad];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
