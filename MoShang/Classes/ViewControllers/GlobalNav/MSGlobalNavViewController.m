@@ -8,7 +8,12 @@
 
 #import "MSGlobalNavViewController.h"
 #import "MSMainViewController.h"
-@interface MSGlobalNavViewController ()
+#import "MSCreateFeedViewController.h"
+#import "MSMessagesTableViewController.h"
+#import "MSFeedsTableViewController.h"
+#import "MSMineViewController.h"
+#import "MSMasterTableViewController.h"
+@interface MSGlobalNavViewController () <MSMainViewControllerDelegate>
 @end
 
 @implementation MSGlobalNavViewController
@@ -16,13 +21,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   
+    UINavigationController* (^CreateNavigationWithParams)(NSString* title, Class cla) = ^(NSString* title, Class cla) {
+        UIViewController* controller = [[cla alloc] init];
+        UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController: controller];
+        navVC.title = title;
+        return navVC;
+    };
+    NSArray* viewControllers = @[CreateNavigationWithParams(@"留言", [MSFeedsTableViewController class]),
+                                 CreateNavigationWithParams(@"领主", [MSMasterTableViewController class]),
+                                 CreateNavigationWithParams(@"消息", [MSMessagesTableViewController class]),
+                                 CreateNavigationWithParams(@"我", [MSMineViewController class])];
+    
+    
+    
     MSMainViewController* mainVC = [MSMainViewController new];
+    mainVC.centerDelegate = self;
+    [mainVC setViewControllers:viewControllers];
     
     [self ms_AddChildViewController:mainVC];
     _mainViewController = mainVC;
     // Do any additional setup after loading the view.
 }
 
+
+- (void) mainViewControllerDidTapCenterButton:(MSMainViewController *)mainVC
+{
+    UINavigationController* createNAV = [[UINavigationController alloc] initWithRootViewController:[MSCreateFeedViewController new]];
+    [self presentViewController:createNAV animated:YES completion:^{
+        
+    }];
+}
 - (void) ms_AddChildViewController:(UIViewController*)viewController
 {
     [viewController willMoveToParentViewController:self];

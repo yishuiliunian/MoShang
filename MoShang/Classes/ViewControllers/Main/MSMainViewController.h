@@ -7,7 +7,10 @@
 //
 
 #import "RDVTabBarController.h"
-
-@interface MSMainViewController : RDVTabBarController
-
+@class MSMainViewController;
+@protocol MSMainViewControllerDelegate
+- (void) mainViewControllerDidTapCenterButton:(MSMainViewController*)mainVC ;
+@end
+@interface MSMainViewController : UITabBarController
+@property (nonatomic, weak) NSObject<MSMainViewControllerDelegate>* centerDelegate;
 @end
