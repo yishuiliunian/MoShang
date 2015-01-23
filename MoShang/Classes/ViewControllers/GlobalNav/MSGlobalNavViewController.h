@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MSGlobalNavViewController.h
 //  MoShang
 //
 //  Created by stonedong on 15/1/23.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MSGlobalNavViewController : UIViewController
 
 @end
-

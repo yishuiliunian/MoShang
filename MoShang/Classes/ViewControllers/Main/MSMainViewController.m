@@ -1,27 +1,29 @@
 //
-//  ViewController.m
+//  MSMainViewController.m
 //  MoShang
 //
 //  Created by stonedong on 15/1/23.
 //  Copyright (c) 2015年 stonedong. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MSMainViewController.h"
 
-@interface ViewController ()
+@interface MSMainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MSMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
