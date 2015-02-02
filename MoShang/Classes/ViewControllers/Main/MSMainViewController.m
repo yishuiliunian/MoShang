@@ -10,6 +10,7 @@
 #import <DZProgramDefines.h>
 #import "MSMainViewController.h"
 #import "MSCenterAddButton.h"
+#import <DZImageCache.h>
 @interface MSMainViewController ()
 DEFINE_PROPERTY_STRONG(MSCenterAddButton*, centerButton);
 DEFINE_PROPERTY_ASSIGN_INT16(insertIndex);
@@ -25,7 +26,6 @@ DEFINE_PROPERTY_ASSIGN_INT16(insertIndex);
 {
     [super viewDidLoad];
     INIT_SUBVIEW(self.tabBar, MSCenterAddButton, _centerButton);
-    _centerButton.backgroundColor = [UIColor redColor];
     
     [_centerButton addTarget:self action:@selector(didTapCenterButton:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -62,10 +62,10 @@ DEFINE_PROPERTY_ASSIGN_INT16(insertIndex);
     
     CGFloat barWidth = CGRectGetWidth(self.tabBar.frame)/(self.viewControllers.count);
     CGFloat barHeight = CGRectGetHeight(self.tabBar.frame) + 20;
-    
 
     _centerButton.frame = CGRectMake(barWidth*_insertIndex, CGRectGetHeight(self.tabBar.frame) - barHeight , barWidth, barHeight );
     [self.tabBar bringSubviewToFront:_centerButton];
+    [_centerButton setImage:DZCachedImageByName(@"tab_upload_feed") forState:UIControlStateNormal];
     
 }
 

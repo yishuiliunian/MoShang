@@ -13,6 +13,8 @@
 #import "MSFeedsTableViewController.h"
 #import "MSMineViewController.h"
 #import "MSMasterTableViewController.h"
+#import "MSTabBarItem.h"
+#import <DZImageCache.h>
 @interface MSGlobalNavViewController () <MSMainViewControllerDelegate>
 @end
 
@@ -22,16 +24,21 @@
     [super viewDidLoad];
     
    
-    UINavigationController* (^CreateNavigationWithParams)(NSString* title, Class cla) = ^(NSString* title, Class cla) {
+    UINavigationController* (^CreateNavigationWithParams)(NSString* title,
+                                                          Class cla,
+                                                          NSString* imageName,
+                                                          NSString* selectedImageName)
+    = ^(NSString* title, Class cla, NSString* imageName, NSString* selectedImageName) {
         UIViewController* controller = [[cla alloc] init];
         UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController: controller];
-        navVC.title = title;
+        MSTabBarItem* tabItem = [[MSTabBarItem alloc] initWithTitle:title image:DZCachedImageByName(imageName) selectedImage:DZCachedImageByName(selectedImageName)];
+        navVC.tabBarItem = tabItem;
         return navVC;
     };
-    NSArray* viewControllers = @[CreateNavigationWithParams(@"留言", [MSFeedsTableViewController class]),
-                                 CreateNavigationWithParams(@"领主", [MSMasterTableViewController class]),
-                                 CreateNavigationWithParams(@"消息", [MSMessagesTableViewController class]),
-                                 CreateNavigationWithParams(@"我", [MSMineViewController class])];
+    NSArray* viewControllers = @[CreateNavigationWithParams(@"留言", [MSFeedsTableViewController class], @"tab_nearby", @"tab_nearby_click"),
+                                 CreateNavigationWithParams(@"领主", [MSMasterTableViewController class], @"tab_hotnew", @"tab_hotnew_click"),
+                                 CreateNavigationWithParams(@"消息", [MSMessagesTableViewController class], @"tab_message", @"tab_message_click"),
+                                 CreateNavigationWithParams(@"我", [MSMineViewController class], @"tab_mine", @"tab_mine_click")];
     
     
     

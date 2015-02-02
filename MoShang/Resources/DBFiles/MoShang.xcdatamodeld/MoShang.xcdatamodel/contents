@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="MSMessageHistoryModel" representedClassName="MSMessageHistoryModel" syncable="YES">
+        <attribute name="lastMessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="fromeUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MSUser" syncable="YES"/>
+        <relationship name="toUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MSUser" syncable="YES"/>
+    </entity>
+    <entity name="MSUser" representedClassName="MSUser" syncable="YES">
+        <attribute name="avarterURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MSUser" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="MSMessageHistoryModel" positionX="-54" positionY="18" width="128" height="103"/>
+    </elements>
+</model>

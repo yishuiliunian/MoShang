@@ -7,16 +7,39 @@
 //
 
 #import "MSFeedsTableViewController.h"
-
+#import "MSFeedCell.h"
+#import "MSFeedLayoutItem.h"
+#import "MSFeed.h"
+#import "MSLayoutEngine.h"
+#import <DZGeometryTools.h>
 @interface MSFeedsTableViewController ()
-
+@property (nonatomic, strong) NSMutableArray* feeds;
 @end
 
 @implementation MSFeedsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    _feeds = [NSMutableArray new];
+    for (int i = 0; i < 220; i++) {
+        MSFeed* feed = [MSFeed new];
+        if (i % 2 == 0) {
+            feed.detailText = @"今天在酒吧遇见了一个人，很好很感动";
+        } else {
+            feed.detailText = @"a:";
+        }
+        feed.layoutItem = [[MSFeedLayoutItem alloc] init];
+        [feed.layoutItem decodeLayoutWithFeed:feed];
+        feed.avaterURL = @"http://www.baidu.com/img/bdlogo.png";
+        feed.nickName = @"这是一个很好的例子";
+        feed.backgroundURL = @"http://f.hiphotos.baidu.com/image/pic/item/0df431adcbef7609b639d99e2cdda3cc7cd99e85.jpg";
+        [_feeds addObject:feed];
+    }
     
+    self.tableView.backgroundColor = MSDefaultBackgroundColor();
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -32,69 +55,38 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return _feeds.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    static NSString* cellIdentifier = @"feed-cell";
+    MSFeedCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[MSFeedCell alloc]  initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+    }
+    MSFeed* feed = [_feeds objectAtIndex:indexPath.row];
+    cell.feed = feed;
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MSFeed* feed = [_feeds objectAtIndex:indexPath.row];
+    return feed.layoutItem.layoutSize.height;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.alpha = 0.4;
+    CGRect oldFrame = cell.frame;
+    cell.frame = CGRectCenterSubSize(cell.frame, CGSizeMake(0, 70));
+    [UIView animateWithDuration:0.4 animations:^{
+        cell.alpha = 1;
+        cell.frame = oldFrame;
+    }];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

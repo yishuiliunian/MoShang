@@ -1,22 +1,74 @@
 PODS:
+  - AVOSCloud (2.6.10)
+  - CocoaLumberjack (1.9.2):
+    - CocoaLumberjack/Extensions (= 1.9.2)
+  - CocoaLumberjack/Core (1.9.2)
+  - CocoaLumberjack/Extensions (1.9.2):
+    - CocoaLumberjack/Core
+  - DZCache (1.0.0):
+    - DZCDNFiles
+    - DZGeometryTools
+    - DZSinglonFactory
+  - DZCDNFiles (1.0.1):
+    - DZSinglonFactory
   - DZGeometryTools (1.0.0)
   - DZProgrameDefines (1.0.0)
   - DZReadability (0.2.1):
     - HTMLReader
   - DZSinglonFactory (1.0.0)
+  - Haneke (1.0.1)
+  - HexColors (2.2.1)
   - HTMLReader (0.5.9)
+  - JSQMessagesViewController (6.1.3):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - LKBadgeView (1.2.0)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core (= 2.2)
+  - MagicalRecord/Core (2.2)
+  - ObjectiveRecord (1.5.0):
+    - ObjectiveSugar
+  - ObjectiveSugar (1.1.0)
+  - TTTAttributedLabel (1.13.1)
 
 DEPENDENCIES:
+  - AVOSCloud
+  - CocoaLumberjack
+  - DZCache
   - DZGeometryTools
   - DZProgrameDefines
   - DZReadability
   - DZSinglonFactory
+  - Haneke (~> 1.0)
+  - HexColors
+  - JSQMessagesViewController
+  - LKBadgeView (from `https://github.com/lakesoft/LKBadgeView.git`)
+  - MagicalRecord
+  - ObjectiveRecord
+  - TTTAttributedLabel
+
+EXTERNAL SOURCES:
+  LKBadgeView:
+    :git: https://github.com/lakesoft/LKBadgeView.git
 
 SPEC CHECKSUMS:
+  AVOSCloud: f6bda519d035a21ceacab049184aa5cdb9e1177f
+  CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
+  DZCache: 1db011f8f60a0cf288dadcfe64b72f46491ac3f5
+  DZCDNFiles: 0a6b071b8d57dadfcb0089c314d2e70435742559
   DZGeometryTools: e1c57508aa0679684bf2ccc3a05d3b6c797c8196
   DZProgrameDefines: 8c89ec3a8d9aa5ef705438690ec6fa496eb2b6d5
   DZReadability: bc1fff8ff0f4c7c1d325da4f418d80b6a3713c93
   DZSinglonFactory: b7fdac485e282c583a85e644a20878fe3d4cf891
+  Haneke: 943f7121b50d31a31a0942afdacb7e6a26ea6181
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
   HTMLReader: 0833fa2af5fd2019bc2d7a6e8066a07fd0fe87f1
+  JSQMessagesViewController: e93a288a9662d4519c95a28a8c0eec10beae1bfc
+  JSQSystemSoundPlayer: 55528c699a283aae2220d3ae7b8b527d2ecef4b4
+  LKBadgeView: 178c43bcf11ada8052271d0d418505153634938f
+  MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
+  ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
+  TTTAttributedLabel: 71843ac4178e1ebd6b0950b54325146726a124ae
 
 COCOAPODS: 0.35.0.rc2
