@@ -12,8 +12,11 @@
 #import "MSFeed.h"
 #import "MSLayoutEngine.h"
 #import <DZGeometryTools.h>
-@interface MSFeedsTableViewController ()
+#import "MSGetFeedByPosReq.h"
+#import "MSSyncCenter.h"
+@interface MSFeedsTableViewController () <MSRequestUIDelegate>
 @property (nonatomic, strong) NSMutableArray* feeds;
+@property (nonatomic, assign) int lastRequestID;
 @end
 
 @implementation MSFeedsTableViewController
@@ -22,21 +25,7 @@
     [super viewDidLoad];
    
     _feeds = [NSMutableArray new];
-    for (int i = 0; i < 220; i++) {
-        MSFeed* feed = [MSFeed new];
-        if (i % 2 == 0) {
-            feed.detailText = @"今天在酒吧遇见了一个人，很好很感动";
-        } else {
-            feed.detailText = @"a:";
-        }
-        feed.layoutItem = [[MSFeedLayoutItem alloc] init];
-        [feed.layoutItem decodeLayoutWithFeed:feed];
-        feed.avaterURL = @"http://www.baidu.com/img/bdlogo.png";
-        feed.nickName = @"这是一个很好的例子";
-        feed.backgroundURL = @"http://f.hiphotos.baidu.com/image/pic/item/0df431adcbef7609b639d99e2cdda3cc7cd99e85.jpg";
-        [_feeds addObject:feed];
-    }
-    
+
     self.tableView.backgroundColor = MSDefaultBackgroundColor();
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView reloadData];
@@ -45,6 +34,24 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self reloadData];
+}
+
+- (void) reloadData
+{
+    MSGetFeedByPosReq* request = [MSGetFeedByPosReq new];
+    request.uidelegate = self;
+    [MSDefaultSyncCenter performRequest:request];
+}
+- (void) request:(MSRequest *)request onError:(NSError *)error
+{
+    
+}
+
+- (void) request:(MSRequest *)request onSucced:(id)object
+{
+    _feeds = object;
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

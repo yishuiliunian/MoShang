@@ -67,7 +67,7 @@ CGFloat const MSFeedMaxHeight = 140;
     startPoint.y = -_topLayoutItem.egdeInsets.top + self.egdeInsets.top;
         SetFrameWithOrigin(_topLayoutItem, startPoint);
         
-        _detailTextLayout.text = feed.detailText;
+        _detailTextLayout.text = feed.content;
         height += HeightWithLayoutItem(_detailTextLayout);
         SetFrameWithOrigin(_detailTextLayout, CGPointMake(CGRectGetMinX(_topLayoutItem.frame), CGRectGetMaxY(_topLayoutItem.frame) - _topLayoutItem.egdeInsets.bottom));
         

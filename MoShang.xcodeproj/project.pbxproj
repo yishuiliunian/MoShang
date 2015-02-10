@@ -25,12 +25,39 @@
 		650DC2581A723259000D000F /* MSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DC2571A723259000D000F /* MSMineViewController.m */; };
 		650DC25B1A723266000D000F /* MSMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DC25A1A723266000D000F /* MSMasterTableViewController.m */; };
 		650DC25E1A723275000D000F /* MSCreateFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650DC25D1A723275000D000F /* MSCreateFeedViewController.m */; };
+		6529829A1A85B3F200322E8B /* NSError+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982991A85B3F200322E8B /* NSError+MS.m */; };
+		6529829E1A85B7D200322E8B /* MSRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6529829D1A85B7D200322E8B /* MSRequestOperation.m */; };
+		652982A11A85B86900322E8B /* MSSyncCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982A01A85B86900322E8B /* MSSyncCenter.m */; };
+		652982A51A85BDDD00322E8B /* MSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982A41A85BDDD00322E8B /* MSAccount.m */; };
+		652982A81A85BF6600322E8B /* MSAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982A71A85BF6600322E8B /* MSAccountManager.m */; };
+		652982AB1A85C53800322E8B /* MSLoginReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982AA1A85C53800322E8B /* MSLoginReq.m */; };
+		652982B01A85DA9800322E8B /* MSSingleFeedReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982AF1A85DA9800322E8B /* MSSingleFeedReq.m */; };
+		652982B31A85E77F00322E8B /* MSPostFeedReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982B21A85E77F00322E8B /* MSPostFeedReq.m */; };
+		652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 652982B61A85F5B300322E8B /* MSDebugCenter.m */; };
 		6533C3A21A78D974007603CC /* MSGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6533C3A11A78D974007603CC /* MSGlobal.m */; };
 		653A4E6F1A7E0EF3001384AC /* MSToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 653A4E6E1A7E0EF3001384AC /* MSToken.m */; };
 		653A4E731A7E1252001384AC /* MoShang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 653A4E711A7E1252001384AC /* MoShang.xcdatamodeld */; };
 		653A4E7F1A7E138F001384AC /* MSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 653A4E7E1A7E138F001384AC /* MSUser.m */; };
 		653A4E821A7E196B001384AC /* MSMessageHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 653A4E811A7E196B001384AC /* MSMessageHistoryModel.m */; };
 		653A4E8A1A7E2624001384AC /* MSMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653A4E891A7E2624001384AC /* MSMessagesViewController.m */; };
+		6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4621A7F75BA0066C7FC /* MCRecord.m */; };
+		6545C4661A7F76200066C7FC /* MCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4651A7F76200066C7FC /* MCSession.m */; };
+		6545C4691A7F766C0066C7FC /* MCSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4681A7F766C0066C7FC /* MCSessionManager.m */; };
+		6563964D1A80C98300E61638 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6563964C1A80C98300E61638 /* CoreTelephony.framework */; };
+		656396521A82157900E61638 /* MSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 656396511A82157900E61638 /* MSRouter.m */; };
+		656396551A82161E00E61638 /* MSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656396541A82161E00E61638 /* MSRequest.m */; };
+		656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656396571A82184000E61638 /* MSVerifyAuthorRequest.m */; };
+		6563965B1A821CA700E61638 /* MSTokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563965A1A821CA700E61638 /* MSTokenManager.m */; };
+		6563965F1A821F1800E61638 /* MSRegisterReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563965E1A821F1800E61638 /* MSRegisterReq.m */; };
+		656DB5491A89A72E008AE224 /* MSSetLikeReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB5481A89A72E008AE224 /* MSSetLikeReq.m */; };
+		656DB54C1A89A9F5008AE224 /* MSUserInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB54B1A89A9F5008AE224 /* MSUserInfoReq.m */; };
+		656DB54F1A89AC2F008AE224 /* MSUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB54E1A89AC2F008AE224 /* MSUserInfo.m */; };
+		656DB5521A89AE80008AE224 /* MSSetUserInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB5511A89AE80008AE224 /* MSSetUserInfoReq.m */; };
+		656DB5551A89E589008AE224 /* MSCommentFeedReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB5541A89E589008AE224 /* MSCommentFeedReq.m */; };
+		656DB5581A89E798008AE224 /* MSGetMyTalksReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB5571A89E798008AE224 /* MSGetMyTalksReq.m */; };
+		656DB55B1A89E86F008AE224 /* MSDelTalsReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB55A1A89E86F008AE224 /* MSDelTalsReq.m */; };
+		656DB55E1A89E8D2008AE224 /* MSReportPosReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB55D1A89E8D2008AE224 /* MSReportPosReq.m */; };
+		656DB5611A89E941008AE224 /* MSGetFeedByUidReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB5601A89E941008AE224 /* MSGetFeedByUidReq.m */; };
 		6570FC3E1A78B8F7000021C7 /* tab_nearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6570FC3A1A78B8F7000021C7 /* tab_nearby@2x.png */; };
 		6570FC3F1A78B8F7000021C7 /* tab_hotnew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6570FC3B1A78B8F7000021C7 /* tab_hotnew@2x.png */; };
 		6570FC401A78B8F7000021C7 /* tab_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6570FC3C1A78B8F7000021C7 /* tab_mine@2x.png */; };
@@ -50,6 +77,12 @@
 		658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221331A787E52006B599D /* MSFeedLayoutItem.m */; };
 		658221371A787E71006B599D /* MSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221361A787E71006B599D /* MSModel.m */; };
 		6582213A1A787E81006B599D /* MSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221391A787E81006B599D /* MSFeed.m */; };
+		65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC41A8884E500A37E08 /* MSLocationManager.m */; };
+		65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC81A8886D900A37E08 /* MSLog.m */; };
+		65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */; };
+		65BCBBCE1A88962C00A37E08 /* MSGetFeedByPosReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBCD1A88962C00A37E08 /* MSGetFeedByPosReq.m */; };
+		65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460A1A8A100B00CF1536 /* MSChinaMap.m */; };
+		65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460D1A8A103600CF1536 /* MSProviceView.m */; };
 		65FD5B551A721B4F007239B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B541A721B4F007239B9 /* Images.xcassets */; };
 		65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B561A721B4F007239B9 /* LaunchScreen.xib */; };
 		65FD5B641A721B50007239B9 /* MoShangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD5B631A721B50007239B9 /* MoShangTests.m */; };
@@ -102,6 +135,24 @@
 		650DC25A1A723266000D000F /* MSMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMasterTableViewController.m; sourceTree = "<group>"; };
 		650DC25C1A723275000D000F /* MSCreateFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCreateFeedViewController.h; sourceTree = "<group>"; };
 		650DC25D1A723275000D000F /* MSCreateFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCreateFeedViewController.m; sourceTree = "<group>"; };
+		652982981A85B3F200322E8B /* NSError+MS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+MS.h"; path = "untitled folder/NSError+MS.h"; sourceTree = "<group>"; };
+		652982991A85B3F200322E8B /* NSError+MS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+MS.m"; path = "untitled folder/NSError+MS.m"; sourceTree = "<group>"; };
+		6529829C1A85B7D200322E8B /* MSRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequestOperation.h; sourceTree = "<group>"; };
+		6529829D1A85B7D200322E8B /* MSRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRequestOperation.m; sourceTree = "<group>"; };
+		6529829F1A85B86900322E8B /* MSSyncCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSyncCenter.h; sourceTree = "<group>"; };
+		652982A01A85B86900322E8B /* MSSyncCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSyncCenter.m; sourceTree = "<group>"; };
+		652982A31A85BDDD00322E8B /* MSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAccount.h; sourceTree = "<group>"; };
+		652982A41A85BDDD00322E8B /* MSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAccount.m; sourceTree = "<group>"; };
+		652982A61A85BF6600322E8B /* MSAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAccountManager.h; sourceTree = "<group>"; };
+		652982A71A85BF6600322E8B /* MSAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAccountManager.m; sourceTree = "<group>"; };
+		652982A91A85C53800322E8B /* MSLoginReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLoginReq.h; sourceTree = "<group>"; };
+		652982AA1A85C53800322E8B /* MSLoginReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLoginReq.m; sourceTree = "<group>"; };
+		652982AE1A85DA9800322E8B /* MSSingleFeedReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSingleFeedReq.h; sourceTree = "<group>"; };
+		652982AF1A85DA9800322E8B /* MSSingleFeedReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSingleFeedReq.m; sourceTree = "<group>"; };
+		652982B11A85E77F00322E8B /* MSPostFeedReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPostFeedReq.h; sourceTree = "<group>"; };
+		652982B21A85E77F00322E8B /* MSPostFeedReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPostFeedReq.m; sourceTree = "<group>"; };
+		652982B51A85F5B300322E8B /* MSDebugCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDebugCenter.h; sourceTree = "<group>"; };
+		652982B61A85F5B300322E8B /* MSDebugCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDebugCenter.m; sourceTree = "<group>"; };
 		6533C3A01A78D974007603CC /* MSGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGlobal.h; sourceTree = "<group>"; };
 		6533C3A11A78D974007603CC /* MSGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGlobal.m; sourceTree = "<group>"; };
 		653A4E6D1A7E0EF3001384AC /* MSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSToken.h; sourceTree = "<group>"; };
@@ -113,6 +164,41 @@
 		653A4E811A7E196B001384AC /* MSMessageHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMessageHistoryModel.m; sourceTree = "<group>"; };
 		653A4E881A7E2624001384AC /* MSMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMessagesViewController.h; sourceTree = "<group>"; };
 		653A4E891A7E2624001384AC /* MSMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMessagesViewController.m; sourceTree = "<group>"; };
+		6545C4611A7F75BA0066C7FC /* MCRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRecord.h; sourceTree = "<group>"; };
+		6545C4621A7F75BA0066C7FC /* MCRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRecord.m; sourceTree = "<group>"; };
+		6545C4641A7F76200066C7FC /* MCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSession.h; sourceTree = "<group>"; };
+		6545C4651A7F76200066C7FC /* MCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSession.m; sourceTree = "<group>"; };
+		6545C4671A7F766C0066C7FC /* MCSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSessionManager.h; sourceTree = "<group>"; };
+		6545C4681A7F766C0066C7FC /* MCSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSessionManager.m; sourceTree = "<group>"; };
+		6563964C1A80C98300E61638 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		656396501A82157900E61638 /* MSRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRouter.h; sourceTree = "<group>"; };
+		656396511A82157900E61638 /* MSRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRouter.m; sourceTree = "<group>"; };
+		656396531A82161E00E61638 /* MSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRequest.h; sourceTree = "<group>"; };
+		656396541A82161E00E61638 /* MSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRequest.m; sourceTree = "<group>"; };
+		656396561A82184000E61638 /* MSVerifyAuthorRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSVerifyAuthorRequest.h; sourceTree = "<group>"; };
+		656396571A82184000E61638 /* MSVerifyAuthorRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSVerifyAuthorRequest.m; sourceTree = "<group>"; };
+		656396591A821CA700E61638 /* MSTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTokenManager.h; sourceTree = "<group>"; };
+		6563965A1A821CA700E61638 /* MSTokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTokenManager.m; sourceTree = "<group>"; };
+		6563965D1A821F1800E61638 /* MSRegisterReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRegisterReq.h; sourceTree = "<group>"; };
+		6563965E1A821F1800E61638 /* MSRegisterReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRegisterReq.m; sourceTree = "<group>"; };
+		656DB5471A89A72E008AE224 /* MSSetLikeReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSetLikeReq.h; sourceTree = "<group>"; };
+		656DB5481A89A72E008AE224 /* MSSetLikeReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSetLikeReq.m; sourceTree = "<group>"; };
+		656DB54A1A89A9F5008AE224 /* MSUserInfoReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUserInfoReq.h; sourceTree = "<group>"; };
+		656DB54B1A89A9F5008AE224 /* MSUserInfoReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserInfoReq.m; sourceTree = "<group>"; };
+		656DB54D1A89AC2F008AE224 /* MSUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUserInfo.h; sourceTree = "<group>"; };
+		656DB54E1A89AC2F008AE224 /* MSUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserInfo.m; sourceTree = "<group>"; };
+		656DB5501A89AE80008AE224 /* MSSetUserInfoReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSetUserInfoReq.h; sourceTree = "<group>"; };
+		656DB5511A89AE80008AE224 /* MSSetUserInfoReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSetUserInfoReq.m; sourceTree = "<group>"; };
+		656DB5531A89E589008AE224 /* MSCommentFeedReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommentFeedReq.h; sourceTree = "<group>"; };
+		656DB5541A89E589008AE224 /* MSCommentFeedReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCommentFeedReq.m; sourceTree = "<group>"; };
+		656DB5561A89E798008AE224 /* MSGetMyTalksReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGetMyTalksReq.h; sourceTree = "<group>"; };
+		656DB5571A89E798008AE224 /* MSGetMyTalksReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGetMyTalksReq.m; sourceTree = "<group>"; };
+		656DB5591A89E86F008AE224 /* MSDelTalsReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDelTalsReq.h; sourceTree = "<group>"; };
+		656DB55A1A89E86F008AE224 /* MSDelTalsReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDelTalsReq.m; sourceTree = "<group>"; };
+		656DB55C1A89E8D2008AE224 /* MSReportPosReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSReportPosReq.h; sourceTree = "<group>"; };
+		656DB55D1A89E8D2008AE224 /* MSReportPosReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSReportPosReq.m; sourceTree = "<group>"; };
+		656DB55F1A89E941008AE224 /* MSGetFeedByUidReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGetFeedByUidReq.h; sourceTree = "<group>"; };
+		656DB5601A89E941008AE224 /* MSGetFeedByUidReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGetFeedByUidReq.m; sourceTree = "<group>"; };
 		6570FC3A1A78B8F7000021C7 /* tab_nearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_nearby@2x.png"; sourceTree = "<group>"; };
 		6570FC3B1A78B8F7000021C7 /* tab_hotnew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_hotnew@2x.png"; sourceTree = "<group>"; };
 		6570FC3C1A78B8F7000021C7 /* tab_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_mine@2x.png"; sourceTree = "<group>"; };
@@ -143,6 +229,17 @@
 		658221361A787E71006B599D /* MSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSModel.m; sourceTree = "<group>"; };
 		658221381A787E81006B599D /* MSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeed.h; sourceTree = "<group>"; };
 		658221391A787E81006B599D /* MSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeed.m; sourceTree = "<group>"; };
+		65BCBBC31A8884E500A37E08 /* MSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLocationManager.h; sourceTree = "<group>"; };
+		65BCBBC41A8884E500A37E08 /* MSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLocationManager.m; sourceTree = "<group>"; };
+		65BCBBC71A8886D900A37E08 /* MSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLog.h; sourceTree = "<group>"; };
+		65BCBBC81A8886D900A37E08 /* MSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLog.m; sourceTree = "<group>"; };
+		65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		65BCBBCC1A88962C00A37E08 /* MSGetFeedByPosReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGetFeedByPosReq.h; sourceTree = "<group>"; };
+		65BCBBCD1A88962C00A37E08 /* MSGetFeedByPosReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGetFeedByPosReq.m; sourceTree = "<group>"; };
+		65DA46091A8A100B00CF1536 /* MSChinaMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSChinaMap.h; sourceTree = "<group>"; };
+		65DA460A1A8A100B00CF1536 /* MSChinaMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChinaMap.m; sourceTree = "<group>"; };
+		65DA460C1A8A103600CF1536 /* MSProviceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSProviceView.h; sourceTree = "<group>"; };
+		65DA460D1A8A103600CF1536 /* MSProviceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSProviceView.m; sourceTree = "<group>"; };
 		65FD5B441A721B4F007239B9 /* MoShang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoShang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FD5B481A721B4F007239B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65FD5B541A721B4F007239B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -173,6 +270,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */,
+				6563964D1A80C98300E61638 /* CoreTelephony.framework in Frameworks */,
 				1AEB1FB39C24A23980A749A2 /* libPods-MoShang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +360,66 @@
 			path = Mine;
 			sourceTree = "<group>";
 		};
+		6529829B1A85B7BB00322E8B /* operation */ = {
+			isa = PBXGroup;
+			children = (
+				6529829C1A85B7D200322E8B /* MSRequestOperation.h */,
+				6529829D1A85B7D200322E8B /* MSRequestOperation.m */,
+				6529829F1A85B86900322E8B /* MSSyncCenter.h */,
+				652982A01A85B86900322E8B /* MSSyncCenter.m */,
+			);
+			path = operation;
+			sourceTree = "<group>";
+		};
+		652982A21A85BDD100322E8B /* account */ = {
+			isa = PBXGroup;
+			children = (
+				652982A31A85BDDD00322E8B /* MSAccount.h */,
+				652982A41A85BDDD00322E8B /* MSAccount.m */,
+				652982A61A85BF6600322E8B /* MSAccountManager.h */,
+				652982A71A85BF6600322E8B /* MSAccountManager.m */,
+			);
+			path = account;
+			sourceTree = "<group>";
+		};
+		652982AD1A85DA7B00322E8B /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				652982AE1A85DA9800322E8B /* MSSingleFeedReq.h */,
+				652982AF1A85DA9800322E8B /* MSSingleFeedReq.m */,
+				652982B11A85E77F00322E8B /* MSPostFeedReq.h */,
+				652982B21A85E77F00322E8B /* MSPostFeedReq.m */,
+				65BCBBCC1A88962C00A37E08 /* MSGetFeedByPosReq.h */,
+				65BCBBCD1A88962C00A37E08 /* MSGetFeedByPosReq.m */,
+				656DB5471A89A72E008AE224 /* MSSetLikeReq.h */,
+				656DB5481A89A72E008AE224 /* MSSetLikeReq.m */,
+				656DB54A1A89A9F5008AE224 /* MSUserInfoReq.h */,
+				656DB54B1A89A9F5008AE224 /* MSUserInfoReq.m */,
+				656DB5501A89AE80008AE224 /* MSSetUserInfoReq.h */,
+				656DB5511A89AE80008AE224 /* MSSetUserInfoReq.m */,
+				656DB5531A89E589008AE224 /* MSCommentFeedReq.h */,
+				656DB5541A89E589008AE224 /* MSCommentFeedReq.m */,
+				656DB5561A89E798008AE224 /* MSGetMyTalksReq.h */,
+				656DB5571A89E798008AE224 /* MSGetMyTalksReq.m */,
+				656DB5591A89E86F008AE224 /* MSDelTalsReq.h */,
+				656DB55A1A89E86F008AE224 /* MSDelTalsReq.m */,
+				656DB55C1A89E8D2008AE224 /* MSReportPosReq.h */,
+				656DB55D1A89E8D2008AE224 /* MSReportPosReq.m */,
+				656DB55F1A89E941008AE224 /* MSGetFeedByUidReq.h */,
+				656DB5601A89E941008AE224 /* MSGetFeedByUidReq.m */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		652982B41A85ECA700322E8B /* DEBUG */ = {
+			isa = PBXGroup;
+			children = (
+				652982B51A85F5B300322E8B /* MSDebugCenter.h */,
+				652982B61A85F5B300322E8B /* MSDebugCenter.m */,
+			);
+			path = DEBUG;
+			sourceTree = "<group>";
+		};
 		6533C39D1A78CC06007603CC /* utities */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +436,8 @@
 				6533C3A11A78D974007603CC /* MSGlobal.m */,
 				650303991A79049600F30A2D /* NSDate+Read.h */,
 				6503039A1A79049600F30A2D /* NSDate+Read.m */,
+				652982981A85B3F200322E8B /* NSError+MS.h */,
+				652982991A85B3F200322E8B /* NSError+MS.m */,
 			);
 			name = Unities;
 			sourceTree = "<group>";
@@ -299,10 +460,35 @@
 		653A4E871A7E25B4001384AC /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				6545C4601A7F75980066C7FC /* CModel */,
 				653A4E881A7E2624001384AC /* MSMessagesViewController.h */,
 				653A4E891A7E2624001384AC /* MSMessagesViewController.m */,
 			);
 			path = Messages;
+			sourceTree = "<group>";
+		};
+		6545C4601A7F75980066C7FC /* CModel */ = {
+			isa = PBXGroup;
+			children = (
+				6545C4611A7F75BA0066C7FC /* MCRecord.h */,
+				6545C4621A7F75BA0066C7FC /* MCRecord.m */,
+				6545C4641A7F76200066C7FC /* MCSession.h */,
+				6545C4651A7F76200066C7FC /* MCSession.m */,
+				6545C4671A7F766C0066C7FC /* MCSessionManager.h */,
+				6545C4681A7F766C0066C7FC /* MCSessionManager.m */,
+			);
+			name = CModel;
+			sourceTree = "<group>";
+		};
+		6563965C1A821F0600E61638 /* author */ = {
+			isa = PBXGroup;
+			children = (
+				6563965D1A821F1800E61638 /* MSRegisterReq.h */,
+				6563965E1A821F1800E61638 /* MSRegisterReq.m */,
+				652982A91A85C53800322E8B /* MSLoginReq.h */,
+				652982AA1A85C53800322E8B /* MSLoginReq.m */,
+			);
+			name = author;
 			sourceTree = "<group>";
 		};
 		6570FC381A78B8E8000021C7 /* Resources */ = {
@@ -355,6 +541,35 @@
 				658221331A787E52006B599D /* MSFeedLayoutItem.m */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		65BCBBC21A8884CF00A37E08 /* Assist */ = {
+			isa = PBXGroup;
+			children = (
+				65BCBBC31A8884E500A37E08 /* MSLocationManager.h */,
+				65BCBBC41A8884E500A37E08 /* MSLocationManager.m */,
+			);
+			path = Assist;
+			sourceTree = "<group>";
+		};
+		65BCBBC61A88868200A37E08 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				65BCBBC71A8886D900A37E08 /* MSLog.h */,
+				65BCBBC81A8886D900A37E08 /* MSLog.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		65DA46081A8A0FFB00CF1536 /* ChinaMap */ = {
+			isa = PBXGroup;
+			children = (
+				65DA46091A8A100B00CF1536 /* MSChinaMap.h */,
+				65DA460A1A8A100B00CF1536 /* MSChinaMap.m */,
+				65DA460C1A8A103600CF1536 /* MSProviceView.h */,
+				65DA460D1A8A103600CF1536 /* MSProviceView.m */,
+			);
+			path = ChinaMap;
 			sourceTree = "<group>";
 		};
 		65FD5B3B1A721B4F007239B9 = {
@@ -417,6 +632,10 @@
 		65FD5B6D1A721BF8007239B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				65BCBBC61A88868200A37E08 /* Log */,
+				65BCBBC21A8884CF00A37E08 /* Assist */,
+				652982B41A85ECA700322E8B /* DEBUG */,
+				652982A21A85BDD100322E8B /* account */,
 				653A4E861A7E2363001384AC /* Messages */,
 				6533C39F1A78D965007603CC /* Unities */,
 				65FD5B6E1A721BF8007239B9 /* AppConfig */,
@@ -450,6 +669,8 @@
 				658221361A787E71006B599D /* MSModel.m */,
 				658221381A787E81006B599D /* MSFeed.h */,
 				658221391A787E81006B599D /* MSFeed.m */,
+				656DB54D1A89AC2F008AE224 /* MSUserInfo.h */,
+				656DB54E1A89AC2F008AE224 /* MSUserInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -457,8 +678,19 @@
 		65FD5B731A721BF8007239B9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				652982AD1A85DA7B00322E8B /* protocols */,
+				6529829B1A85B7BB00322E8B /* operation */,
+				6563965C1A821F0600E61638 /* author */,
 				653A4E6D1A7E0EF3001384AC /* MSToken.h */,
 				653A4E6E1A7E0EF3001384AC /* MSToken.m */,
+				656396501A82157900E61638 /* MSRouter.h */,
+				656396511A82157900E61638 /* MSRouter.m */,
+				656396531A82161E00E61638 /* MSRequest.h */,
+				656396541A82161E00E61638 /* MSRequest.m */,
+				656396561A82184000E61638 /* MSVerifyAuthorRequest.h */,
+				656396571A82184000E61638 /* MSVerifyAuthorRequest.m */,
+				656396591A821CA700E61638 /* MSTokenManager.h */,
+				6563965A1A821CA700E61638 /* MSTokenManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -498,6 +730,7 @@
 		65FD5B7F1A721BF8007239B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65DA46081A8A0FFB00CF1536 /* ChinaMap */,
 				6533C39D1A78CC06007603CC /* utities */,
 				6582210A1A77BBA5006B599D /* Layout */,
 			);
@@ -529,6 +762,8 @@
 		C04D19819BEEDE5D82946703 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */,
+				6563964C1A80C98300E61638 /* CoreTelephony.framework */,
 				9C99F356C25263AF99DF250B /* libPods-MoShang.a */,
 			);
 			name = Frameworks;
@@ -684,38 +919,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652982B01A85DA9800322E8B /* MSSingleFeedReq.m in Sources */,
 				650DC25E1A723275000D000F /* MSCreateFeedViewController.m in Sources */,
 				650303A11A790DF400F30A2D /* MSMineTopView.m in Sources */,
 				65FD5B8D1A721DE0007239B9 /* MSGlobalNavViewController.m in Sources */,
 				65FD5B841A721BF8007239B9 /* RDVTabBarItem.m in Sources */,
+				652982B31A85E77F00322E8B /* MSPostFeedReq.m in Sources */,
+				6545C4691A7F766C0066C7FC /* MCSessionManager.m in Sources */,
 				650303921A79020600F30A2D /* MSMessageCell.m in Sources */,
 				6503039E1A790D7F00F30A2D /* MSMyCardViewController.m in Sources */,
+				65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */,
 				658221311A787D11006B599D /* MSTextLayoutItem.m in Sources */,
+				652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */,
 				658221161A77BCFB006B599D /* MSLineHorizontalLayout.m in Sources */,
+				6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */,
+				6545C4661A7F76200066C7FC /* MCSession.m in Sources */,
+				652982A11A85B86900322E8B /* MSSyncCenter.m in Sources */,
+				6529829E1A85B7D200322E8B /* MSRequestOperation.m in Sources */,
 				653A4E821A7E196B001384AC /* MSMessageHistoryModel.m in Sources */,
+				656DB55B1A89E86F008AE224 /* MSDelTalsReq.m in Sources */,
+				652982A51A85BDDD00322E8B /* MSAccount.m in Sources */,
 				658221131A77BCD6006B599D /* MSLineVerticalLayout.m in Sources */,
 				658221101A77BC5C006B599D /* MSLayout.m in Sources */,
 				65FD5B831A721BF8007239B9 /* RDVTabBarController.m in Sources */,
+				6563965B1A821CA700E61638 /* MSTokenManager.m in Sources */,
 				650DC2491A722FC5000D000F /* MSCenterAddButton.m in Sources */,
+				65BCBBCE1A88962C00A37E08 /* MSGetFeedByPosReq.m in Sources */,
 				6582210D1A77BBB0006B599D /* MSLayoutEngine.m in Sources */,
+				652982A81A85BF6600322E8B /* MSAccountManager.m in Sources */,
 				653A4E8A1A7E2624001384AC /* MSMessagesViewController.m in Sources */,
+				656DB5551A89E589008AE224 /* MSCommentFeedReq.m in Sources */,
+				656DB54C1A89A9F5008AE224 /* MSUserInfoReq.m in Sources */,
 				653A4E731A7E1252001384AC /* MoShang.xcdatamodeld in Sources */,
 				6582211A1A77C4DF006B599D /* MSFeedCell.m in Sources */,
 				65FD5B811A721BF8007239B9 /* main.m in Sources */,
 				653A4E7F1A7E138F001384AC /* MSUser.m in Sources */,
 				658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */,
+				656396551A82161E00E61638 /* MSRequest.m in Sources */,
+				656DB5491A89A72E008AE224 /* MSSetLikeReq.m in Sources */,
 				6503039B1A79049600F30A2D /* NSDate+Read.m in Sources */,
+				656DB5611A89E941008AE224 /* MSGetFeedByUidReq.m in Sources */,
+				656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */,
 				650DC2461A722C52000D000F /* MSTabBarItem.m in Sources */,
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
+				656DB54F1A89AC2F008AE224 /* MSUserInfo.m in Sources */,
+				656DB5521A89AE80008AE224 /* MSSetUserInfoReq.m in Sources */,
+				656396521A82157900E61638 /* MSRouter.m in Sources */,
 				6582213A1A787E81006B599D /* MSFeed.m in Sources */,
 				6533C3A21A78D974007603CC /* MSGlobal.m in Sources */,
 				653A4E6F1A7E0EF3001384AC /* MSToken.m in Sources */,
+				65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */,
 				650DC25B1A723266000D000F /* MSMasterTableViewController.m in Sources */,
+				656DB5581A89E798008AE224 /* MSGetMyTalksReq.m in Sources */,
+				65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */,
+				65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */,
 				650303871A78E39400F30A2D /* MSLeftImageButton.m in Sources */,
+				656DB55E1A89E8D2008AE224 /* MSReportPosReq.m in Sources */,
 				650DC2521A723240000D000F /* MSFeedsTableViewController.m in Sources */,
 				650DC2551A72324E000D000F /* MSMessagesTableViewController.m in Sources */,
+				6529829A1A85B3F200322E8B /* NSError+MS.m in Sources */,
+				6563965F1A821F1800E61638 /* MSRegisterReq.m in Sources */,
 				650DC2581A723259000D000F /* MSMineViewController.m in Sources */,
 				658221371A787E71006B599D /* MSModel.m in Sources */,
+				652982AB1A85C53800322E8B /* MSLoginReq.m in Sources */,
 				65FD5B801A721BF8007239B9 /* AppDelegate.m in Sources */,
 				6582211D1A77C63F006B599D /* MSLayoutItem.m in Sources */,
 				65FD5B821A721BF8007239B9 /* RDVTabBar.m in Sources */,
@@ -833,6 +1099,7 @@
 			baseConfigurationReference = 78A6FC599A5A46880589E7CD /* Pods-MoShang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

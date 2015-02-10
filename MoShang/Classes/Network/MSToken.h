@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface MSToken : NSObject
+@property (nonatomic, strong) NSString* account;
 @property (nonatomic, strong) NSString* token;
 @property (nonatomic, strong) NSDate* experiedDate;
+
+- (instancetype) initWithToken:(NSString*)token account:(NSString*)account;
 @end

@@ -11,6 +11,13 @@
 #import <MagicalRecord+Setup.h>
 #import "MSUser.h"
 #import <CoreData+MagicalRecord.h>
+#import "MSRegisterReq.h"
+#import "MSSyncCenter.h"
+#import "MSAccountManager.h"
+#import "MSSingleFeedReq.h"
+#import "MSDebugCenter.h"
+#import "MSLog.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,8 +26,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
+
+    [MSLog setup];
+    [[MSDebugCenter shareCenter] globalTest];
     [MagicalRecord setupCoreDataStack];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

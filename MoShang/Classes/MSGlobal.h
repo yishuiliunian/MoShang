@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "NSDate+Read.h"
+#import "NSError+MS.h"
+
+
+#define NUM_TO_STRING(x) [@(x) stringValue]
 
 FOUNDATION_EXTERN BOOL IS_MSColorString(NSString* str);
 @interface MSGlobal : NSObject

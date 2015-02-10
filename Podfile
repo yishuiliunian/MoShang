@@ -18,6 +18,10 @@ target 'MoShang' do
   pod 'JSQMessagesViewController'
   pod 'AVOSCloud'
   pod 'CocoaLumberjack'
+  pod "AFNetworking", "~> 2.0"
+  pod 'JSONModel'
+  pod 'INTULocationManager'
+  pod "Realm"
 end
 
 target 'MoShangTests' do

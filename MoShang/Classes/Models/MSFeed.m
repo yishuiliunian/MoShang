@@ -9,5 +9,4 @@
 #import "MSFeed.h"
 
 @implementation MSFeed
-@synthesize backgroundURL = _backgroundURL;
 @end

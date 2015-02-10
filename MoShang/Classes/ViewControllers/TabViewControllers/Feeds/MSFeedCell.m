@@ -16,6 +16,8 @@
 #import "MSLeftImageButton.h"
 #import <TTTAttributedLabel.h>
 #import <DZImageCache.h>
+#import "MSSetLikeReq.h"
+#import "MSSyncCenter.h"
 @interface MSFeedCell()
 @property (nonatomic, strong) UIImageView* headImageView;
 @property (nonatomic, strong) UIImageView* backgroudImageView;
@@ -105,8 +107,20 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
     
     DecorateButton(_pinglunButton, @"zan_normal", @"zan_click");
     
+    //
+    
+    [_pinglunButton addTarget:self action:@selector(likeIt) forControlEvents:UIControlEventTouchUpInside];
     return self;
 }
+
+- (void) likeIt
+{
+    MSSetLikeReq* likeReq = [MSSetLikeReq new];
+    likeReq.feedid = NUM_TO_STRING(_feed.recordid);
+    likeReq.bLike = YES;
+    [MSDefaultSyncCenter performRequest:likeReq];
+}
+
 - (void) layouts
 {
     MSLineVerticalLayout* layout = [MSLineVerticalLayout new];
@@ -117,16 +131,17 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
 {
     if (_feed != feed) {
         _feed = feed;
-        _nickNameLabel.text = feed.nickName;
-        _detailFeedLabel.text = feed.detailText;
+        _nickNameLabel.text = feed.nick;
+        _detailFeedLabel.text = feed.content;
         _detailFeedLabel.font = feed.layoutItem.detailTextLayout.font;
-        [_headImageView hnk_setImageFromURL:[NSURL URLWithString:feed.avaterURL]];
-        if (IS_MSColorString(feed.backgroundURL)) {
-            _headImageView.backgroundColor = [UIColor colorWithHexString:feed.backgroundURL];
+        [_headImageView hnk_setImageFromURL:[NSURL URLWithString:feed.head]];
+        if (IS_MSColorString(feed.bg)) {
+            _headImageView.backgroundColor = [UIColor colorWithHexString:feed.bg];
         } else {
-            [_backgroudImageView hnk_setImageFromURL:[NSURL URLWithString:feed.backgroundURL]];
+            [_backgroudImageView hnk_setImageFromURL:[NSURL URLWithString:feed.bg]];
         }
         _timeLabel.text = @"腾讯大厦";
+        [_pinglunButton setTitle:[@(_feed.likecount) stringValue] forState:UIControlStateNormal];
     }
 }
 

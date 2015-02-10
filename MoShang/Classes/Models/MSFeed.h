@@ -10,10 +10,24 @@
 #import "MSModel.h"
 #import "MSFeedLayoutItem.h"
 #import <DZProgramDefines.h>
-@interface MSFeed : MSModel
-@property (nonatomic, strong) MSFeedLayoutItem* layoutItem;
-DEFINE_PROPERTY_STRONG_NSString(detailText);
-DEFINE_PROPERTY_STRONG_NSString(nickName);
-DEFINE_PROPERTY_STRONG_NSString(avaterURL);
-DEFINE_PROPERTY_STRONG_NSString(backgroundURL);
+#import <JSONAPI.h>
+@interface MSFeed : JSONModel
+@property (nonatomic, strong) MSFeedLayoutItem<Optional>* layoutItem;
+
+@property (nonatomic, strong) NSString<Optional>* author;
+@property (nonatomic, strong) NSString* bg;
+@property (nonatomic, strong) NSString* birth;
+@property (nonatomic, strong) NSString* content;
+@property (nonatomic, assign) NSTimeInterval createtime;
+@property (nonatomic, assign) double gender;
+@property (nonatomic, strong) NSString* head;
+@property (nonatomic, assign) int likecount;
+@property (nonatomic, assign) NSTimeInterval modifytime;
+@property (nonatomic, strong) NSString* nick;
+@property (nonatomic, strong) NSString* piclist;
+@property (nonatomic, strong) NSString* pos;
+@property (nonatomic, assign) int recordid;
+@property (nonatomic, strong) NSString* sign;
+@property (nonatomic, strong) NSString* taglist;
+
 @end
