@@ -110,6 +110,8 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
     //
     
     [_pinglunButton addTarget:self action:@selector(likeIt) forControlEvents:UIControlEventTouchUpInside];
+    //
+    _headImageView.image = DZCachedImageByName(@"default_avater_man.png");
     return self;
 }
 

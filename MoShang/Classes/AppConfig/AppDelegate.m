@@ -17,6 +17,7 @@
 #import "MSSingleFeedReq.h"
 #import "MSDebugCenter.h"
 #import "MSLog.h"
+#import "MSChinaMapController.h"
 
 @interface AppDelegate ()
 
@@ -33,7 +34,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
    
-    self.window.rootViewController = [[MSGlobalNavViewController alloc] init];
+//    self.window.rootViewController = [[MSGlobalNavViewController alloc] init];
+    self.window.rootViewController = [MSChinaMapController new];
     
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.

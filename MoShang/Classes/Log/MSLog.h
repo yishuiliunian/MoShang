@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <DDLog.h>
-static const DDLogLevel ddLogLevel = DDLogLevelAll;
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @interface MSLog : NSObject
 + (void) setup;

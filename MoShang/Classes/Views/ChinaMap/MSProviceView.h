@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MSProviceView;
+@interface MSProvice : NSObject
+@property (nonatomic, weak) MSProviceView* view;
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong, readonly) UIImage* image;
+@property (nonatomic, strong, readonly) UIImage* hightlightImage;
+@property (nonatomic, assign) CGRect scaleRect;
+- (instancetype) initWithProviceImage:(NSString*)name highlightImage:(NSString*)name scaleRect:(CGRect)scaleRect;
+@end
 
-@interface MSProviceView : UIView
 
+@interface MSProviceView : UIImageView
+@property (nonatomic, strong) MSProvice* province;
 @end

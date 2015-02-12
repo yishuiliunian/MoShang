@@ -7,7 +7,10 @@
 //
 
 #import "MSLog.h"
-#import <CocoaLumberjack.h>
+#import <CocoaLumberjack/DDLog.h>
+#import <DDTTYLogger.h>
+#import <DDASLLogger.h>
+#import <DDFileLogger.h>
 
 @implementation MSLog
 + (void) setup

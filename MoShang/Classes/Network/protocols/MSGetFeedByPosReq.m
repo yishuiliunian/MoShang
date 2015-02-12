@@ -42,8 +42,6 @@
         }
         [self doUIOnSuccced:decodeFeeds];
     }
-    
-    
 }
 
 - (void) onError:(NSError *)error

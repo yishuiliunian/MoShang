@@ -83,6 +83,41 @@
 		65BCBBCE1A88962C00A37E08 /* MSGetFeedByPosReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBCD1A88962C00A37E08 /* MSGetFeedByPosReq.m */; };
 		65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460A1A8A100B00CF1536 /* MSChinaMap.m */; };
 		65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460D1A8A103600CF1536 /* MSProviceView.m */; };
+		65DA46321A8AF42A00CF1536 /* default_avater_lady.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46301A8AF42A00CF1536 /* default_avater_lady.png */; };
+		65DA46331A8AF42A00CF1536 /* default_avater_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46311A8AF42A00CF1536 /* default_avater_man.png */; };
+		65DA46551A8AFA5900CF1536 /* 上海.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46351A8AFA5900CF1536 /* 上海.png */; };
+		65DA46561A8AFA5900CF1536 /* 云南.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46361A8AFA5900CF1536 /* 云南.png */; };
+		65DA46571A8AFA5900CF1536 /* 内蒙古.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46371A8AFA5900CF1536 /* 内蒙古.png */; };
+		65DA46581A8AFA5900CF1536 /* 北京.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46381A8AFA5900CF1536 /* 北京.png */; };
+		65DA46591A8AFA5900CF1536 /* 台湾.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46391A8AFA5900CF1536 /* 台湾.png */; };
+		65DA465A1A8AFA5900CF1536 /* 吉林.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA463A1A8AFA5900CF1536 /* 吉林.png */; };
+		65DA465B1A8AFA5900CF1536 /* 四川.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA463B1A8AFA5900CF1536 /* 四川.png */; };
+		65DA465C1A8AFA5900CF1536 /* 天津.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA463C1A8AFA5900CF1536 /* 天津.png */; };
+		65DA465D1A8AFA5900CF1536 /* 宁夏.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA463D1A8AFA5900CF1536 /* 宁夏.png */; };
+		65DA465E1A8AFA5900CF1536 /* 安徽.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA463E1A8AFA5900CF1536 /* 安徽.png */; };
+		65DA465F1A8AFA5900CF1536 /* 山东.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA463F1A8AFA5900CF1536 /* 山东.png */; };
+		65DA46601A8AFA5900CF1536 /* 山西.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46401A8AFA5900CF1536 /* 山西.png */; };
+		65DA46611A8AFA5900CF1536 /* 广东.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46411A8AFA5900CF1536 /* 广东.png */; };
+		65DA46621A8AFA5900CF1536 /* 广西.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46421A8AFA5900CF1536 /* 广西.png */; };
+		65DA46631A8AFA5900CF1536 /* 新疆省.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46431A8AFA5900CF1536 /* 新疆省.png */; };
+		65DA46641A8AFA5900CF1536 /* 江苏.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46441A8AFA5900CF1536 /* 江苏.png */; };
+		65DA46651A8AFA5900CF1536 /* 江西.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46451A8AFA5900CF1536 /* 江西.png */; };
+		65DA46661A8AFA5900CF1536 /* 河北.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46461A8AFA5900CF1536 /* 河北.png */; };
+		65DA46671A8AFA5900CF1536 /* 河南.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46471A8AFA5900CF1536 /* 河南.png */; };
+		65DA46681A8AFA5900CF1536 /* 浙江.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46481A8AFA5900CF1536 /* 浙江.png */; };
+		65DA46691A8AFA5900CF1536 /* 海南.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46491A8AFA5900CF1536 /* 海南.png */; };
+		65DA466A1A8AFA5900CF1536 /* 湖北.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA464A1A8AFA5900CF1536 /* 湖北.png */; };
+		65DA466B1A8AFA5900CF1536 /* 湖南.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA464B1A8AFA5900CF1536 /* 湖南.png */; };
+		65DA466C1A8AFA5900CF1536 /* 甘肃.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA464C1A8AFA5900CF1536 /* 甘肃.png */; };
+		65DA466D1A8AFA5900CF1536 /* 福建.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA464D1A8AFA5900CF1536 /* 福建.png */; };
+		65DA466E1A8AFA5900CF1536 /* 西藏.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA464E1A8AFA5900CF1536 /* 西藏.png */; };
+		65DA466F1A8AFA5900CF1536 /* 贵州.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA464F1A8AFA5900CF1536 /* 贵州.png */; };
+		65DA46701A8AFA5900CF1536 /* 辽宁.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46501A8AFA5900CF1536 /* 辽宁.png */; };
+		65DA46711A8AFA5900CF1536 /* 重庆.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46511A8AFA5900CF1536 /* 重庆.png */; };
+		65DA46721A8AFA5900CF1536 /* 陕西.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46521A8AFA5900CF1536 /* 陕西.png */; };
+		65DA46731A8AFA5900CF1536 /* 青海.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46531A8AFA5900CF1536 /* 青海.png */; };
+		65DA46741A8AFA5900CF1536 /* 黑龙江.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46541A8AFA5900CF1536 /* 黑龙江.png */; };
+		65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA46761A8AFCDC00CF1536 /* MSChinaMapController.m */; };
 		65FD5B551A721B4F007239B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B541A721B4F007239B9 /* Images.xcassets */; };
 		65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B561A721B4F007239B9 /* LaunchScreen.xib */; };
 		65FD5B641A721B50007239B9 /* MoShangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD5B631A721B50007239B9 /* MoShangTests.m */; };
@@ -240,6 +275,42 @@
 		65DA460A1A8A100B00CF1536 /* MSChinaMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChinaMap.m; sourceTree = "<group>"; };
 		65DA460C1A8A103600CF1536 /* MSProviceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSProviceView.h; sourceTree = "<group>"; };
 		65DA460D1A8A103600CF1536 /* MSProviceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSProviceView.m; sourceTree = "<group>"; };
+		65DA46301A8AF42A00CF1536 /* default_avater_lady.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_avater_lady.png; sourceTree = "<group>"; };
+		65DA46311A8AF42A00CF1536 /* default_avater_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_avater_man.png; sourceTree = "<group>"; };
+		65DA46351A8AFA5900CF1536 /* 上海.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上海.png"; sourceTree = "<group>"; };
+		65DA46361A8AFA5900CF1536 /* 云南.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "云南.png"; sourceTree = "<group>"; };
+		65DA46371A8AFA5900CF1536 /* 内蒙古.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "内蒙古.png"; sourceTree = "<group>"; };
+		65DA46381A8AFA5900CF1536 /* 北京.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "北京.png"; sourceTree = "<group>"; };
+		65DA46391A8AFA5900CF1536 /* 台湾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "台湾.png"; sourceTree = "<group>"; };
+		65DA463A1A8AFA5900CF1536 /* 吉林.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "吉林.png"; sourceTree = "<group>"; };
+		65DA463B1A8AFA5900CF1536 /* 四川.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "四川.png"; sourceTree = "<group>"; };
+		65DA463C1A8AFA5900CF1536 /* 天津.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天津.png"; sourceTree = "<group>"; };
+		65DA463D1A8AFA5900CF1536 /* 宁夏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宁夏.png"; sourceTree = "<group>"; };
+		65DA463E1A8AFA5900CF1536 /* 安徽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "安徽.png"; sourceTree = "<group>"; };
+		65DA463F1A8AFA5900CF1536 /* 山东.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "山东.png"; sourceTree = "<group>"; };
+		65DA46401A8AFA5900CF1536 /* 山西.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "山西.png"; sourceTree = "<group>"; };
+		65DA46411A8AFA5900CF1536 /* 广东.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "广东.png"; sourceTree = "<group>"; };
+		65DA46421A8AFA5900CF1536 /* 广西.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "广西.png"; sourceTree = "<group>"; };
+		65DA46431A8AFA5900CF1536 /* 新疆省.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新疆省.png"; sourceTree = "<group>"; };
+		65DA46441A8AFA5900CF1536 /* 江苏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "江苏.png"; sourceTree = "<group>"; };
+		65DA46451A8AFA5900CF1536 /* 江西.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "江西.png"; sourceTree = "<group>"; };
+		65DA46461A8AFA5900CF1536 /* 河北.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "河北.png"; sourceTree = "<group>"; };
+		65DA46471A8AFA5900CF1536 /* 河南.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "河南.png"; sourceTree = "<group>"; };
+		65DA46481A8AFA5900CF1536 /* 浙江.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "浙江.png"; sourceTree = "<group>"; };
+		65DA46491A8AFA5900CF1536 /* 海南.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "海南.png"; sourceTree = "<group>"; };
+		65DA464A1A8AFA5900CF1536 /* 湖北.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "湖北.png"; sourceTree = "<group>"; };
+		65DA464B1A8AFA5900CF1536 /* 湖南.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "湖南.png"; sourceTree = "<group>"; };
+		65DA464C1A8AFA5900CF1536 /* 甘肃.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "甘肃.png"; sourceTree = "<group>"; };
+		65DA464D1A8AFA5900CF1536 /* 福建.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "福建.png"; sourceTree = "<group>"; };
+		65DA464E1A8AFA5900CF1536 /* 西藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "西藏.png"; sourceTree = "<group>"; };
+		65DA464F1A8AFA5900CF1536 /* 贵州.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "贵州.png"; sourceTree = "<group>"; };
+		65DA46501A8AFA5900CF1536 /* 辽宁.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "辽宁.png"; sourceTree = "<group>"; };
+		65DA46511A8AFA5900CF1536 /* 重庆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "重庆.png"; sourceTree = "<group>"; };
+		65DA46521A8AFA5900CF1536 /* 陕西.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "陕西.png"; sourceTree = "<group>"; };
+		65DA46531A8AFA5900CF1536 /* 青海.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "青海.png"; sourceTree = "<group>"; };
+		65DA46541A8AFA5900CF1536 /* 黑龙江.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "黑龙江.png"; sourceTree = "<group>"; };
+		65DA46751A8AFCDC00CF1536 /* MSChinaMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSChinaMapController.h; sourceTree = "<group>"; };
+		65DA46761A8AFCDC00CF1536 /* MSChinaMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChinaMapController.m; sourceTree = "<group>"; };
 		65FD5B441A721B4F007239B9 /* MoShang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoShang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FD5B481A721B4F007239B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65FD5B541A721B4F007239B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -503,6 +574,9 @@
 		6570FC391A78B8E8000021C7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				65DA46341A8AFA5900CF1536 /* province */,
+				65DA46301A8AF42A00CF1536 /* default_avater_lady.png */,
+				65DA46311A8AF42A00CF1536 /* default_avater_man.png */,
 				650303881A78E7F400F30A2D /* liaoliao_normal@2x.png */,
 				650303A21A79113B00F30A2D /* avatar_corner@2x.png */,
 				650303891A78E7F400F30A2D /* liaoliao_click@2x.png */,
@@ -568,8 +642,56 @@
 				65DA460A1A8A100B00CF1536 /* MSChinaMap.m */,
 				65DA460C1A8A103600CF1536 /* MSProviceView.h */,
 				65DA460D1A8A103600CF1536 /* MSProviceView.m */,
+				65DA46751A8AFCDC00CF1536 /* MSChinaMapController.h */,
+				65DA46761A8AFCDC00CF1536 /* MSChinaMapController.m */,
 			);
 			path = ChinaMap;
+			sourceTree = "<group>";
+		};
+		65DA46341A8AFA5900CF1536 /* province */ = {
+			isa = PBXGroup;
+			children = (
+				65DA46351A8AFA5900CF1536 /* 上海.png */,
+				65DA46361A8AFA5900CF1536 /* 云南.png */,
+				65DA46371A8AFA5900CF1536 /* 内蒙古.png */,
+				65DA46381A8AFA5900CF1536 /* 北京.png */,
+				65DA46391A8AFA5900CF1536 /* 台湾.png */,
+				65DA463A1A8AFA5900CF1536 /* 吉林.png */,
+				65DA463B1A8AFA5900CF1536 /* 四川.png */,
+				65DA463C1A8AFA5900CF1536 /* 天津.png */,
+				65DA463D1A8AFA5900CF1536 /* 宁夏.png */,
+				65DA463E1A8AFA5900CF1536 /* 安徽.png */,
+				65DA463F1A8AFA5900CF1536 /* 山东.png */,
+				65DA46401A8AFA5900CF1536 /* 山西.png */,
+				65DA46411A8AFA5900CF1536 /* 广东.png */,
+				65DA46421A8AFA5900CF1536 /* 广西.png */,
+				65DA46431A8AFA5900CF1536 /* 新疆省.png */,
+				65DA46441A8AFA5900CF1536 /* 江苏.png */,
+				65DA46451A8AFA5900CF1536 /* 江西.png */,
+				65DA46461A8AFA5900CF1536 /* 河北.png */,
+				65DA46471A8AFA5900CF1536 /* 河南.png */,
+				65DA46481A8AFA5900CF1536 /* 浙江.png */,
+				65DA46491A8AFA5900CF1536 /* 海南.png */,
+				65DA464A1A8AFA5900CF1536 /* 湖北.png */,
+				65DA464B1A8AFA5900CF1536 /* 湖南.png */,
+				65DA464C1A8AFA5900CF1536 /* 甘肃.png */,
+				65DA464D1A8AFA5900CF1536 /* 福建.png */,
+				65DA464E1A8AFA5900CF1536 /* 西藏.png */,
+				65DA464F1A8AFA5900CF1536 /* 贵州.png */,
+				65DA46501A8AFA5900CF1536 /* 辽宁.png */,
+				65DA46511A8AFA5900CF1536 /* 重庆.png */,
+				65DA46521A8AFA5900CF1536 /* 陕西.png */,
+				65DA46531A8AFA5900CF1536 /* 青海.png */,
+				65DA46541A8AFA5900CF1536 /* 黑龙江.png */,
+			);
+			path = province;
+			sourceTree = "<group>";
+		};
+		65DA46C11A8C439500CF1536 /* inputScroll */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = inputScroll;
 			sourceTree = "<group>";
 		};
 		65FD5B3B1A721B4F007239B9 = {
@@ -730,6 +852,7 @@
 		65FD5B7F1A721BF8007239B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65DA46C11A8C439500CF1536 /* inputScroll */,
 				65DA46081A8A0FFB00CF1536 /* ChinaMap */,
 				6533C39D1A78CC06007603CC /* utities */,
 				6582210A1A77BBA5006B599D /* Layout */,
@@ -853,21 +976,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DA465B1A8AFA5900CF1536 /* 四川.png in Resources */,
 				65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */,
 				6570FC481A78B94E000021C7 /* tab_hotnew_click@2x.png in Resources */,
 				6503038C1A78E7F400F30A2D /* liaoliao_normal@2x.png in Resources */,
+				65DA46331A8AF42A00CF1536 /* default_avater_man.png in Resources */,
+				65DA46601A8AFA5900CF1536 /* 山西.png in Resources */,
 				6503038E1A78E7F500F30A2D /* zan_normal@2x.png in Resources */,
+				65DA46561A8AFA5900CF1536 /* 云南.png in Resources */,
 				6570FC3F1A78B8F7000021C7 /* tab_hotnew@2x.png in Resources */,
+				65DA46641A8AFA5900CF1536 /* 江苏.png in Resources */,
+				65DA466C1A8AFA5900CF1536 /* 甘肃.png in Resources */,
+				65DA46611A8AFA5900CF1536 /* 广东.png in Resources */,
+				65DA46711A8AFA5900CF1536 /* 重庆.png in Resources */,
+				65DA46721A8AFA5900CF1536 /* 陕西.png in Resources */,
 				6503038D1A78E7F500F30A2D /* liaoliao_click@2x.png in Resources */,
+				65DA46321A8AF42A00CF1536 /* default_avater_lady.png in Resources */,
+				65DA46691A8AFA5900CF1536 /* 海南.png in Resources */,
+				65DA466E1A8AFA5900CF1536 /* 西藏.png in Resources */,
+				65DA465A1A8AFA5900CF1536 /* 吉林.png in Resources */,
 				6570FC4A1A78B94E000021C7 /* tab_mine_click@2x.png in Resources */,
 				650303A31A79113B00F30A2D /* avatar_corner@2x.png in Resources */,
+				65DA46741A8AFA5900CF1536 /* 黑龙江.png in Resources */,
+				65DA465C1A8AFA5900CF1536 /* 天津.png in Resources */,
+				65DA465D1A8AFA5900CF1536 /* 宁夏.png in Resources */,
 				6570FC471A78B94E000021C7 /* tab_nearby_click@2x.png in Resources */,
+				65DA46731A8AFA5900CF1536 /* 青海.png in Resources */,
+				65DA46581A8AFA5900CF1536 /* 北京.png in Resources */,
+				65DA46651A8AFA5900CF1536 /* 江西.png in Resources */,
 				6570FC411A78B8F7000021C7 /* tab_message@2x.png in Resources */,
+				65DA466F1A8AFA5900CF1536 /* 贵州.png in Resources */,
+				65DA46591A8AFA5900CF1536 /* 台湾.png in Resources */,
+				65DA465E1A8AFA5900CF1536 /* 安徽.png in Resources */,
 				6570FC3E1A78B8F7000021C7 /* tab_nearby@2x.png in Resources */,
+				65DA46671A8AFA5900CF1536 /* 河南.png in Resources */,
+				65DA46621A8AFA5900CF1536 /* 广西.png in Resources */,
+				65DA46681A8AFA5900CF1536 /* 浙江.png in Resources */,
+				65DA46631A8AFA5900CF1536 /* 新疆省.png in Resources */,
+				65DA46701A8AFA5900CF1536 /* 辽宁.png in Resources */,
+				65DA466A1A8AFA5900CF1536 /* 湖北.png in Resources */,
+				65DA46661A8AFA5900CF1536 /* 河北.png in Resources */,
 				6570FC401A78B8F7000021C7 /* tab_mine@2x.png in Resources */,
+				65DA46571A8AFA5900CF1536 /* 内蒙古.png in Resources */,
+				65DA466D1A8AFA5900CF1536 /* 福建.png in Resources */,
 				65FD5B551A721B4F007239B9 /* Images.xcassets in Resources */,
+				65DA46551A8AFA5900CF1536 /* 上海.png in Resources */,
 				6570FC491A78B94E000021C7 /* tab_upload_feed@2x.png in Resources */,
 				6503038F1A78E7F500F30A2D /* zan_click@2x.png in Resources */,
+				65DA466B1A8AFA5900CF1536 /* 湖南.png in Resources */,
+				65DA465F1A8AFA5900CF1536 /* 山东.png in Resources */,
 				6570FC4B1A78B94E000021C7 /* tab_message_click@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -929,6 +1086,7 @@
 				650303921A79020600F30A2D /* MSMessageCell.m in Sources */,
 				6503039E1A790D7F00F30A2D /* MSMyCardViewController.m in Sources */,
 				65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */,
+				65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */,
 				658221311A787D11006B599D /* MSTextLayoutItem.m in Sources */,
 				652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */,
 				658221161A77BCFB006B599D /* MSLineHorizontalLayout.m in Sources */,
