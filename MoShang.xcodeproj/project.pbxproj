@@ -44,6 +44,10 @@
 		6545C4661A7F76200066C7FC /* MCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4651A7F76200066C7FC /* MCSession.m */; };
 		6545C4691A7F766C0066C7FC /* MCSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4681A7F766C0066C7FC /* MCSessionManager.m */; };
 		655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */; };
+		655E3BA11A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */; };
+		655E3BA21A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */; };
+		655E3BA51A8DD74500C79B43 /* UIButton+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E3BA41A8DD74500C79B43 /* UIButton+Custom.m */; };
+		655E3BA71A8DD82D00C79B43 /* common_big_button_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3BA61A8DD82D00C79B43 /* common_big_button_disabled@2x.png */; };
 		6563964D1A80C98300E61638 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6563964C1A80C98300E61638 /* CoreTelephony.framework */; };
 		656396521A82157900E61638 /* MSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 656396511A82157900E61638 /* MSRouter.m */; };
 		656396551A82161E00E61638 /* MSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656396541A82161E00E61638 /* MSRequest.m */; };
@@ -210,6 +214,11 @@
 		6545C4681A7F766C0066C7FC /* MCSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSessionManager.m; sourceTree = "<group>"; };
 		655E3B8B1A8C904300C79B43 /* QQSurroundLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSurroundLineTextField.h; sourceTree = "<group>"; };
 		655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSurroundLineTextField.m; sourceTree = "<group>"; };
+		655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_big_button_focus_nor@2x.png"; sourceTree = "<group>"; };
+		655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_big_button_focus_pressed@2x.png"; sourceTree = "<group>"; };
+		655E3BA31A8DD74500C79B43 /* UIButton+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Custom.h"; path = "untitled folder/UIButton+Custom.h"; sourceTree = "<group>"; };
+		655E3BA41A8DD74500C79B43 /* UIButton+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Custom.m"; path = "untitled folder/UIButton+Custom.m"; sourceTree = "<group>"; };
+		655E3BA61A8DD82D00C79B43 /* common_big_button_disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_big_button_disabled@2x.png"; sourceTree = "<group>"; };
 		6563964C1A80C98300E61638 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		656396501A82157900E61638 /* MSRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRouter.h; sourceTree = "<group>"; };
 		656396511A82157900E61638 /* MSRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRouter.m; sourceTree = "<group>"; };
@@ -518,6 +527,8 @@
 				6503039A1A79049600F30A2D /* NSDate+Read.m */,
 				652982981A85B3F200322E8B /* NSError+MS.h */,
 				652982991A85B3F200322E8B /* NSError+MS.m */,
+				655E3BA31A8DD74500C79B43 /* UIButton+Custom.h */,
+				655E3BA41A8DD74500C79B43 /* UIButton+Custom.m */,
 			);
 			name = Unities;
 			sourceTree = "<group>";
@@ -600,6 +611,9 @@
 				6570FC3B1A78B8F7000021C7 /* tab_hotnew@2x.png */,
 				6570FC3C1A78B8F7000021C7 /* tab_mine@2x.png */,
 				6570FC3D1A78B8F7000021C7 /* tab_message@2x.png */,
+				655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */,
+				655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */,
+				655E3BA61A8DD82D00C79B43 /* common_big_button_disabled@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1000,10 +1014,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				65DA465B1A8AFA5900CF1536 /* 四川.png in Resources */,
+				655E3BA71A8DD82D00C79B43 /* common_big_button_disabled@2x.png in Resources */,
 				65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */,
 				6570FC481A78B94E000021C7 /* tab_hotnew_click@2x.png in Resources */,
 				6503038C1A78E7F400F30A2D /* liaoliao_normal@2x.png in Resources */,
 				65DA46331A8AF42A00CF1536 /* default_avater_man.png in Resources */,
+				655E3BA11A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png in Resources */,
 				65DA46601A8AFA5900CF1536 /* 山西.png in Resources */,
 				6503038E1A78E7F500F30A2D /* zan_normal@2x.png in Resources */,
 				65DA46561A8AFA5900CF1536 /* 云南.png in Resources */,
@@ -1022,6 +1038,7 @@
 				650303A31A79113B00F30A2D /* avatar_corner@2x.png in Resources */,
 				65DA46741A8AFA5900CF1536 /* 黑龙江.png in Resources */,
 				65DA465C1A8AFA5900CF1536 /* 天津.png in Resources */,
+				655E3BA21A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png in Resources */,
 				65DA465D1A8AFA5900CF1536 /* 宁夏.png in Resources */,
 				6570FC471A78B94E000021C7 /* tab_nearby_click@2x.png in Resources */,
 				65DA46731A8AFA5900CF1536 /* 青海.png in Resources */,
@@ -1144,6 +1161,7 @@
 				656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */,
 				650DC2461A722C52000D000F /* MSTabBarItem.m in Sources */,
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
+				655E3BA51A8DD74500C79B43 /* UIButton+Custom.m in Sources */,
 				656DB54F1A89AC2F008AE224 /* MSUserInfo.m in Sources */,
 				656DB5521A89AE80008AE224 /* MSSetUserInfoReq.m in Sources */,
 				65DA46C41A8C43F800CF1536 /* MSInputScrollViewController.m in Sources */,
