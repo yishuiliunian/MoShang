@@ -43,6 +43,7 @@
 		6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4621A7F75BA0066C7FC /* MCRecord.m */; };
 		6545C4661A7F76200066C7FC /* MCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4651A7F76200066C7FC /* MCSession.m */; };
 		6545C4691A7F766C0066C7FC /* MCSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4681A7F766C0066C7FC /* MCSessionManager.m */; };
+		655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */; };
 		6563964D1A80C98300E61638 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6563964C1A80C98300E61638 /* CoreTelephony.framework */; };
 		656396521A82157900E61638 /* MSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 656396511A82157900E61638 /* MSRouter.m */; };
 		656396551A82161E00E61638 /* MSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656396541A82161E00E61638 /* MSRequest.m */; };
@@ -118,6 +119,8 @@
 		65DA46731A8AFA5900CF1536 /* 青海.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46531A8AFA5900CF1536 /* 青海.png */; };
 		65DA46741A8AFA5900CF1536 /* 黑龙江.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46541A8AFA5900CF1536 /* 黑龙江.png */; };
 		65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA46761A8AFCDC00CF1536 /* MSChinaMapController.m */; };
+		65DA46C41A8C43F800CF1536 /* MSInputScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA46C31A8C43F800CF1536 /* MSInputScrollViewController.m */; };
+		65DA46C81A8C8CAA00CF1536 /* MSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA46C71A8C8CAA00CF1536 /* MSLoginViewController.m */; };
 		65FD5B551A721B4F007239B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B541A721B4F007239B9 /* Images.xcassets */; };
 		65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B561A721B4F007239B9 /* LaunchScreen.xib */; };
 		65FD5B641A721B50007239B9 /* MoShangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD5B631A721B50007239B9 /* MoShangTests.m */; };
@@ -205,6 +208,8 @@
 		6545C4651A7F76200066C7FC /* MCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSession.m; sourceTree = "<group>"; };
 		6545C4671A7F766C0066C7FC /* MCSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSessionManager.h; sourceTree = "<group>"; };
 		6545C4681A7F766C0066C7FC /* MCSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSessionManager.m; sourceTree = "<group>"; };
+		655E3B8B1A8C904300C79B43 /* QQSurroundLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSurroundLineTextField.h; sourceTree = "<group>"; };
+		655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSurroundLineTextField.m; sourceTree = "<group>"; };
 		6563964C1A80C98300E61638 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		656396501A82157900E61638 /* MSRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRouter.h; sourceTree = "<group>"; };
 		656396511A82157900E61638 /* MSRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRouter.m; sourceTree = "<group>"; };
@@ -311,6 +316,10 @@
 		65DA46541A8AFA5900CF1536 /* 黑龙江.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "黑龙江.png"; sourceTree = "<group>"; };
 		65DA46751A8AFCDC00CF1536 /* MSChinaMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSChinaMapController.h; sourceTree = "<group>"; };
 		65DA46761A8AFCDC00CF1536 /* MSChinaMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChinaMapController.m; sourceTree = "<group>"; };
+		65DA46C21A8C43F800CF1536 /* MSInputScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSInputScrollViewController.h; sourceTree = "<group>"; };
+		65DA46C31A8C43F800CF1536 /* MSInputScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSInputScrollViewController.m; sourceTree = "<group>"; };
+		65DA46C61A8C8CAA00CF1536 /* MSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLoginViewController.h; sourceTree = "<group>"; };
+		65DA46C71A8C8CAA00CF1536 /* MSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLoginViewController.m; sourceTree = "<group>"; };
 		65FD5B441A721B4F007239B9 /* MoShang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoShang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FD5B481A721B4F007239B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65FD5B541A721B4F007239B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -690,8 +699,21 @@
 		65DA46C11A8C439500CF1536 /* inputScroll */ = {
 			isa = PBXGroup;
 			children = (
+				65DA46C21A8C43F800CF1536 /* MSInputScrollViewController.h */,
+				65DA46C31A8C43F800CF1536 /* MSInputScrollViewController.m */,
 			);
 			path = inputScroll;
+			sourceTree = "<group>";
+		};
+		65DA46C51A8C547E00CF1536 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				655E3B8B1A8C904300C79B43 /* QQSurroundLineTextField.h */,
+				655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */,
+				65DA46C61A8C8CAA00CF1536 /* MSLoginViewController.h */,
+				65DA46C71A8C8CAA00CF1536 /* MSLoginViewController.m */,
+			);
+			path = Guide;
 			sourceTree = "<group>";
 		};
 		65FD5B3B1A721B4F007239B9 = {
@@ -841,6 +863,7 @@
 		65FD5B7E1A721BF8007239B9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				65DA46C51A8C547E00CF1536 /* Guide */,
 				653A4E871A7E25B4001384AC /* Messages */,
 				650DC24A1A72322A000D000F /* TabViewControllers */,
 				65FD5B8A1A721DCF007239B9 /* GlobalNav */,
@@ -1076,6 +1099,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DA46C81A8C8CAA00CF1536 /* MSLoginViewController.m in Sources */,
 				652982B01A85DA9800322E8B /* MSSingleFeedReq.m in Sources */,
 				650DC25E1A723275000D000F /* MSCreateFeedViewController.m in Sources */,
 				650303A11A790DF400F30A2D /* MSMineTopView.m in Sources */,
@@ -1122,6 +1146,7 @@
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
 				656DB54F1A89AC2F008AE224 /* MSUserInfo.m in Sources */,
 				656DB5521A89AE80008AE224 /* MSSetUserInfoReq.m in Sources */,
+				65DA46C41A8C43F800CF1536 /* MSInputScrollViewController.m in Sources */,
 				656396521A82157900E61638 /* MSRouter.m in Sources */,
 				6582213A1A787E81006B599D /* MSFeed.m in Sources */,
 				6533C3A21A78D974007603CC /* MSGlobal.m in Sources */,
@@ -1129,6 +1154,7 @@
 				65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */,
 				650DC25B1A723266000D000F /* MSMasterTableViewController.m in Sources */,
 				656DB5581A89E798008AE224 /* MSGetMyTalksReq.m in Sources */,
+				655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */,
 				65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */,
 				65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */,
 				650303871A78E39400F30A2D /* MSLeftImageButton.m in Sources */,

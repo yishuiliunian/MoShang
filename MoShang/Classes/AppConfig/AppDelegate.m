@@ -18,6 +18,7 @@
 #import "MSDebugCenter.h"
 #import "MSLog.h"
 #import "MSChinaMapController.h"
+#import "MSLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +36,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
    
 //    self.window.rootViewController = [[MSGlobalNavViewController alloc] init];
-    self.window.rootViewController = [MSChinaMapController new];
+    self.window.rootViewController = [MSLoginViewController new];
     
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
