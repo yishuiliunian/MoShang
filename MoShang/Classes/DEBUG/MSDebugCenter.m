@@ -24,6 +24,6 @@
 {
     MSUserInfoReq* infoReq = [MSUserInfoReq new];
     
-    [MSDefaultSyncCenter performRequest:infoReq];
+//    [MSDefaultSyncCenter performRequest:infoReq];
 }
 @end

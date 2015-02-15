@@ -72,6 +72,12 @@
 #define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 9
 #define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 2
 
+// CocoaSecurity
+#define COCOAPODS_POD_AVAILABLE_CocoaSecurity
+#define COCOAPODS_VERSION_MAJOR_CocoaSecurity 1
+#define COCOAPODS_VERSION_MINOR_CocoaSecurity 2
+#define COCOAPODS_VERSION_PATCH_CocoaSecurity 4
+
 // DZCDNFiles
 #define COCOAPODS_POD_AVAILABLE_DZCDNFiles
 #define COCOAPODS_VERSION_MAJOR_DZCDNFiles 1
@@ -156,6 +162,12 @@
 #define COCOAPODS_VERSION_MINOR_LKBadgeView 2
 #define COCOAPODS_VERSION_PATCH_LKBadgeView 0
 
+// MTStringAttributes
+#define COCOAPODS_POD_AVAILABLE_MTStringAttributes
+#define COCOAPODS_VERSION_MAJOR_MTStringAttributes 0
+#define COCOAPODS_VERSION_MINOR_MTStringAttributes 1
+#define COCOAPODS_VERSION_PATCH_MTStringAttributes 0
+
 // MagicalRecord
 #define COCOAPODS_POD_AVAILABLE_MagicalRecord
 #define COCOAPODS_VERSION_MAJOR_MagicalRecord 2
@@ -180,6 +192,12 @@
 #define COCOAPODS_VERSION_MINOR_ObjectiveSugar 1
 #define COCOAPODS_VERSION_PATCH_ObjectiveSugar 0
 
+// RKDropdownAlert
+#define COCOAPODS_POD_AVAILABLE_RKDropdownAlert
+#define COCOAPODS_VERSION_MAJOR_RKDropdownAlert 0
+#define COCOAPODS_VERSION_MINOR_RKDropdownAlert 1
+#define COCOAPODS_VERSION_PATCH_RKDropdownAlert 1
+
 // Realm
 #define COCOAPODS_POD_AVAILABLE_Realm
 #define COCOAPODS_VERSION_MAJOR_Realm 0
@@ -191,6 +209,30 @@
 #define COCOAPODS_VERSION_MAJOR_Realm_Headers 0
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 90
 #define COCOAPODS_VERSION_PATCH_Realm_Headers 5
+
+// SCLAlertView-Objective-C
+#define COCOAPODS_POD_AVAILABLE_SCLAlertView_Objective_C
+#define COCOAPODS_VERSION_MAJOR_SCLAlertView_Objective_C 0
+#define COCOAPODS_VERSION_MINOR_SCLAlertView_Objective_C 5
+#define COCOAPODS_VERSION_PATCH_SCLAlertView_Objective_C 4
+
+// Slash
+#define COCOAPODS_POD_AVAILABLE_Slash
+#define COCOAPODS_VERSION_MAJOR_Slash 0
+#define COCOAPODS_VERSION_MINOR_Slash 1
+#define COCOAPODS_VERSION_PATCH_Slash 2
+
+// Slash/arc
+#define COCOAPODS_POD_AVAILABLE_Slash_arc
+#define COCOAPODS_VERSION_MAJOR_Slash_arc 0
+#define COCOAPODS_VERSION_MINOR_Slash_arc 1
+#define COCOAPODS_VERSION_PATCH_Slash_arc 2
+
+// Slash/no-arc
+#define COCOAPODS_POD_AVAILABLE_Slash_no_arc
+#define COCOAPODS_VERSION_MAJOR_Slash_no_arc 0
+#define COCOAPODS_VERSION_MINOR_Slash_no_arc 1
+#define COCOAPODS_VERSION_PATCH_Slash_no_arc 2
 
 // TTTAttributedLabel
 #define COCOAPODS_POD_AVAILABLE_TTTAttributedLabel

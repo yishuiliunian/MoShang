@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71120D7ED456E4533C39443B"
+               BlueprintIdentifier = "723FC5D87DE87553A3D96E68"
                BuildableName = "libPods-MoShang-JSQMessagesViewController.a"
                BlueprintName = "Pods-MoShang-JSQMessagesViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

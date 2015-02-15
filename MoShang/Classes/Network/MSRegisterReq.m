@@ -8,14 +8,27 @@
 
 #import "MSRegisterReq.h"
 #import "MSTokenManager.h"
+#import <CocoaSecurity.h>
+@interface MSRegisterReq ()
+{
+}
+@end
 @implementation MSRegisterReq
+
+- (void) setPassword:(NSString *)password
+{
+    if (_password != password) {
+        _password = password;
+        _passwordMD5 = [CocoaSecurity md5:_password].hex;
+    }
+}
 - (NSString*) method
 {
     return @"register.php";
 }
 - (BOOL) loadParamters:(NSError *__autoreleasing *)error
 {
-    [self addParamter:self.password forKey:@"pw"];
+    [self addParamter:self.passwordMD5 forKey:@"pw"];
     [self addParamter:self.accountName forKey:@"account"];
     [self addParamter:self.email forKey:@"email"];
     [self addParamter:self.phoneNumber forKey:@"mobile"];

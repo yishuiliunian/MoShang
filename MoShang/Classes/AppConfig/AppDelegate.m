@@ -19,7 +19,7 @@
 #import "MSLog.h"
 #import "MSChinaMapController.h"
 #import "MSLoginViewController.h"
-
+#import "MSLayoutEngine.h"
 @interface AppDelegate ()
 
 @end
@@ -29,14 +29,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    MSDefaultLayoutEngine;
     [MSLog setup];
     [[MSDebugCenter shareCenter] globalTest];
     [MagicalRecord setupCoreDataStack];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
    
-//    self.window.rootViewController = [[MSGlobalNavViewController alloc] init];
-    self.window.rootViewController = [MSLoginViewController new];
+    self.window.rootViewController = [[MSGlobalNavViewController alloc] init];
+//    self.window.rootViewController = [MSLoginViewController new];
     
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.

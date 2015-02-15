@@ -26,5 +26,4 @@ CG_EXTERN CGFloat const MSDefaultCellHeightSpace;
 FOUNDATION_EXTERN HNKCacheFormat* HNKCreateCacheFormatWithSize(CGSize size, NSString* key);
 @interface MSLayoutEngine : NSObject
 + (MSLayoutEngine*) defaultEngine;
-- (CGFloat) feedCellWidth;
 @end

@@ -26,6 +26,7 @@ PODS:
   - CocoaLumberjack/Core (1.9.2)
   - CocoaLumberjack/Extensions (1.9.2):
     - CocoaLumberjack/Core
+  - CocoaSecurity (1.2.4)
   - DZCache (1.0.0):
     - DZCDNFiles
     - DZGeometryTools
@@ -49,18 +50,28 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
+  - MTStringAttributes (0.1.0):
+    - Slash (~> 0.1)
   - ObjectiveRecord (1.5.0):
     - ObjectiveSugar
   - ObjectiveSugar (1.1.0)
   - Realm (0.90.5):
     - Realm/Headers (= 0.90.5)
   - Realm/Headers (0.90.5)
+  - RKDropdownAlert (0.1.1)
+  - SCLAlertView-Objective-C (0.5.4)
+  - Slash (0.1.2):
+    - Slash/arc (= 0.1.2)
+    - Slash/no-arc (= 0.1.2)
+  - Slash/arc (0.1.2)
+  - Slash/no-arc (0.1.2)
   - TTTAttributedLabel (1.13.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - AVOSCloud
   - CocoaLumberjack
+  - CocoaSecurity
   - DZCache
   - DZGeometryTools
   - DZProgrameDefines
@@ -73,8 +84,11 @@ DEPENDENCIES:
   - JSQMessagesViewController
   - LKBadgeView (from `https://github.com/lakesoft/LKBadgeView.git`)
   - MagicalRecord
+  - MTStringAttributes
   - ObjectiveRecord
   - Realm
+  - RKDropdownAlert
+  - SCLAlertView-Objective-C
   - TTTAttributedLabel
 
 EXTERNAL SOURCES:
@@ -85,6 +99,7 @@ SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
   AVOSCloud: 903429163bce9feabb4473ab07ea30ed47ba5db1
   CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
+  CocoaSecurity: 7ce1b967863d4e96dcffdbad17671117900e6c6e
   DZCache: 1db011f8f60a0cf288dadcfe64b72f46491ac3f5
   DZCDNFiles: 0a6b071b8d57dadfcb0089c314d2e70435742559
   DZGeometryTools: e1c57508aa0679684bf2ccc3a05d3b6c797c8196
@@ -100,9 +115,13 @@ SPEC CHECKSUMS:
   JSQSystemSoundPlayer: 55528c699a283aae2220d3ae7b8b527d2ecef4b4
   LKBadgeView: 178c43bcf11ada8052271d0d418505153634938f
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  MTStringAttributes: 83a352dc6e65def1bfb95d2bcb39e041611a582d
   ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
   Realm: aea25534b97be77995650c2339aa6ed010dfcc8a
+  RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
+  SCLAlertView-Objective-C: 842e6e4052110ea5ee11607ba2f71595df6b1fdf
+  Slash: d98d6ff27ece4297d8d65fb49fc1ce4307a75f46
   TTTAttributedLabel: 71843ac4178e1ebd6b0950b54325146726a124ae
 
 COCOAPODS: 0.35.0.rc2

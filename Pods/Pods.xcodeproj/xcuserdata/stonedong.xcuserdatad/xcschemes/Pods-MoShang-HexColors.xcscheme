@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56179ABD6F77F715CECF6D3B"
+               BlueprintIdentifier = "7F7B2BF42283B3EE73D84BC0"
                BuildableName = "libPods-MoShang-HexColors.a"
                BlueprintName = "Pods-MoShang-HexColors"
                ReferencedContainer = "container:Pods.xcodeproj">

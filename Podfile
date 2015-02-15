@@ -22,6 +22,11 @@ target 'MoShang' do
   pod 'JSONModel'
   pod 'INTULocationManager'
   pod "Realm"
+  pod 'TTTAttributedLabel'
+  pod "MTStringAttributes"
+  pod 'CocoaSecurity'
+  pod 'SCLAlertView-Objective-C'
+  pod 'RKDropdownAlert'
 end
 
 target 'MoShangTests' do

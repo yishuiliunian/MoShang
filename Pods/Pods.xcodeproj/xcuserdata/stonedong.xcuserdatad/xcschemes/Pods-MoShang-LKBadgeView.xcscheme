@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EBA8F383DFD4608A56279F8C"
+               BlueprintIdentifier = "11254184A0C5CAF239D99698"
                BuildableName = "libPods-MoShang-LKBadgeView.a"
                BlueprintName = "Pods-MoShang-LKBadgeView"
                ReferencedContainer = "container:Pods.xcodeproj">

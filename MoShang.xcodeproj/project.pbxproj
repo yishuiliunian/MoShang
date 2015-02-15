@@ -82,6 +82,12 @@
 		658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221331A787E52006B599D /* MSFeedLayoutItem.m */; };
 		658221371A787E71006B599D /* MSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221361A787E71006B599D /* MSModel.m */; };
 		6582213A1A787E81006B599D /* MSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221391A787E81006B599D /* MSFeed.m */; };
+		6598D9301A8DF86200813939 /* MSGuideUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D92F1A8DF86200813939 /* MSGuideUserInfoViewController.m */; };
+		6598D9331A8DFDED00813939 /* MSGuideContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9321A8DFDED00813939 /* MSGuideContentViewController.m */; };
+		6598D9361A8E02AA00813939 /* MSSetAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9351A8E02AA00813939 /* MSSetAvatarViewController.m */; };
+		6598D9391A8E046C00813939 /* MSChoceProviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9381A8E046C00813939 /* MSChoceProviceViewController.m */; };
+		6598D93D1A90479200813939 /* MSTipsPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D93C1A90479200813939 /* MSTipsPool.m */; };
+		6598D9401A9048EE00813939 /* MSAlertPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D93F1A9048EE00813939 /* MSAlertPool.m */; };
 		65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC41A8884E500A37E08 /* MSLocationManager.m */; };
 		65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC81A8886D900A37E08 /* MSLog.m */; };
 		65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */; };
@@ -278,6 +284,18 @@
 		658221361A787E71006B599D /* MSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSModel.m; sourceTree = "<group>"; };
 		658221381A787E81006B599D /* MSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeed.h; sourceTree = "<group>"; };
 		658221391A787E81006B599D /* MSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeed.m; sourceTree = "<group>"; };
+		6598D92E1A8DF86200813939 /* MSGuideUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGuideUserInfoViewController.h; sourceTree = "<group>"; };
+		6598D92F1A8DF86200813939 /* MSGuideUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGuideUserInfoViewController.m; sourceTree = "<group>"; };
+		6598D9311A8DFDED00813939 /* MSGuideContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGuideContentViewController.h; sourceTree = "<group>"; };
+		6598D9321A8DFDED00813939 /* MSGuideContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGuideContentViewController.m; sourceTree = "<group>"; };
+		6598D9341A8E02AA00813939 /* MSSetAvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSetAvatarViewController.h; sourceTree = "<group>"; };
+		6598D9351A8E02AA00813939 /* MSSetAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSetAvatarViewController.m; sourceTree = "<group>"; };
+		6598D9371A8E046C00813939 /* MSChoceProviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSChoceProviceViewController.h; sourceTree = "<group>"; };
+		6598D9381A8E046C00813939 /* MSChoceProviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChoceProviceViewController.m; sourceTree = "<group>"; };
+		6598D93B1A90479200813939 /* MSTipsPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTipsPool.h; sourceTree = "<group>"; };
+		6598D93C1A90479200813939 /* MSTipsPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTipsPool.m; sourceTree = "<group>"; };
+		6598D93E1A9048EE00813939 /* MSAlertPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAlertPool.h; sourceTree = "<group>"; };
+		6598D93F1A9048EE00813939 /* MSAlertPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAlertPool.m; sourceTree = "<group>"; };
 		65BCBBC31A8884E500A37E08 /* MSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLocationManager.h; sourceTree = "<group>"; };
 		65BCBBC41A8884E500A37E08 /* MSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLocationManager.m; sourceTree = "<group>"; };
 		65BCBBC71A8886D900A37E08 /* MSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLog.h; sourceTree = "<group>"; };
@@ -640,6 +658,17 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		6598D93A1A90476F00813939 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				6598D93B1A90479200813939 /* MSTipsPool.h */,
+				6598D93C1A90479200813939 /* MSTipsPool.m */,
+				6598D93E1A9048EE00813939 /* MSAlertPool.h */,
+				6598D93F1A9048EE00813939 /* MSAlertPool.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		65BCBBC21A8884CF00A37E08 /* Assist */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +755,14 @@
 				655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */,
 				65DA46C61A8C8CAA00CF1536 /* MSLoginViewController.h */,
 				65DA46C71A8C8CAA00CF1536 /* MSLoginViewController.m */,
+				6598D9341A8E02AA00813939 /* MSSetAvatarViewController.h */,
+				6598D9351A8E02AA00813939 /* MSSetAvatarViewController.m */,
+				6598D92E1A8DF86200813939 /* MSGuideUserInfoViewController.h */,
+				6598D92F1A8DF86200813939 /* MSGuideUserInfoViewController.m */,
+				6598D9371A8E046C00813939 /* MSChoceProviceViewController.h */,
+				6598D9381A8E046C00813939 /* MSChoceProviceViewController.m */,
+				6598D9311A8DFDED00813939 /* MSGuideContentViewController.h */,
+				6598D9321A8DFDED00813939 /* MSGuideContentViewController.m */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
@@ -790,6 +827,7 @@
 		65FD5B6D1A721BF8007239B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6598D93A1A90476F00813939 /* Alert */,
 				65BCBBC61A88868200A37E08 /* Log */,
 				65BCBBC21A8884CF00A37E08 /* Assist */,
 				652982B41A85ECA700322E8B /* DEBUG */,
@@ -1124,6 +1162,7 @@
 				65FD5B841A721BF8007239B9 /* RDVTabBarItem.m in Sources */,
 				652982B31A85E77F00322E8B /* MSPostFeedReq.m in Sources */,
 				6545C4691A7F766C0066C7FC /* MCSessionManager.m in Sources */,
+				6598D9331A8DFDED00813939 /* MSGuideContentViewController.m in Sources */,
 				650303921A79020600F30A2D /* MSMessageCell.m in Sources */,
 				6503039E1A790D7F00F30A2D /* MSMyCardViewController.m in Sources */,
 				65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */,
@@ -1133,6 +1172,7 @@
 				658221161A77BCFB006B599D /* MSLineHorizontalLayout.m in Sources */,
 				6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */,
 				6545C4661A7F76200066C7FC /* MCSession.m in Sources */,
+				6598D9361A8E02AA00813939 /* MSSetAvatarViewController.m in Sources */,
 				652982A11A85B86900322E8B /* MSSyncCenter.m in Sources */,
 				6529829E1A85B7D200322E8B /* MSRequestOperation.m in Sources */,
 				653A4E821A7E196B001384AC /* MSMessageHistoryModel.m in Sources */,
@@ -1158,6 +1198,7 @@
 				656DB5491A89A72E008AE224 /* MSSetLikeReq.m in Sources */,
 				6503039B1A79049600F30A2D /* NSDate+Read.m in Sources */,
 				656DB5611A89E941008AE224 /* MSGetFeedByUidReq.m in Sources */,
+				6598D9301A8DF86200813939 /* MSGuideUserInfoViewController.m in Sources */,
 				656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */,
 				650DC2461A722C52000D000F /* MSTabBarItem.m in Sources */,
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
@@ -1168,12 +1209,14 @@
 				656396521A82157900E61638 /* MSRouter.m in Sources */,
 				6582213A1A787E81006B599D /* MSFeed.m in Sources */,
 				6533C3A21A78D974007603CC /* MSGlobal.m in Sources */,
+				6598D9401A9048EE00813939 /* MSAlertPool.m in Sources */,
 				653A4E6F1A7E0EF3001384AC /* MSToken.m in Sources */,
 				65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */,
 				650DC25B1A723266000D000F /* MSMasterTableViewController.m in Sources */,
 				656DB5581A89E798008AE224 /* MSGetMyTalksReq.m in Sources */,
 				655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */,
 				65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */,
+				6598D93D1A90479200813939 /* MSTipsPool.m in Sources */,
 				65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */,
 				650303871A78E39400F30A2D /* MSLeftImageButton.m in Sources */,
 				656DB55E1A89E8D2008AE224 /* MSReportPosReq.m in Sources */,
@@ -1183,6 +1226,7 @@
 				6563965F1A821F1800E61638 /* MSRegisterReq.m in Sources */,
 				650DC2581A723259000D000F /* MSMineViewController.m in Sources */,
 				658221371A787E71006B599D /* MSModel.m in Sources */,
+				6598D9391A8E046C00813939 /* MSChoceProviceViewController.m in Sources */,
 				652982AB1A85C53800322E8B /* MSLoginReq.m in Sources */,
 				65FD5B801A721BF8007239B9 /* AppDelegate.m in Sources */,
 				6582211D1A77C63F006B599D /* MSLayoutItem.m in Sources */,

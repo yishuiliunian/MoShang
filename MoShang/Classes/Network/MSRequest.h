@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MSSyncCenter.h"
 #define SendSuperFunctionWithError(func)  BOOL ret =  [super func:error];\
 if (!ret) {\
     return ret;\

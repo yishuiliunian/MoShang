@@ -15,6 +15,7 @@
 #import "MSMasterTableViewController.h"
 #import "MSTabBarItem.h"
 #import <DZImageCache.h>
+#import "MSGuideContentViewController.h"
 @interface MSGlobalNavViewController () <MSMainViewControllerDelegate>
 @end
 
@@ -23,7 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
+    [self loadGuideVC];
+
+    // Do any additional setup after loading the view.
+}
+
+- (void) loadGuideVC
+{
+    [self changMainViewController:[MSGuideContentViewController new]];
+}
+
+- (void) loadApplicationMainVC
+{
+    
     UINavigationController* (^CreateNavigationWithParams)(NSString* title,
                                                           Class cla,
                                                           NSString* imageName,
@@ -46,11 +59,13 @@
     mainVC.centerDelegate = self;
     [mainVC setViewControllers:viewControllers];
     
-    [self ms_AddChildViewController:mainVC];
-    _mainViewController = mainVC;
-    // Do any additional setup after loading the view.
+    [self changMainViewController:mainVC];
 }
-
+- (void) changMainViewController:(UIViewController*)vc
+{
+    [self ms_AddChildViewController:vc];
+    _mainViewController = vc;
+}
 
 - (void) mainViewControllerDidTapCenterButton:(MSMainViewController *)mainVC
 {
@@ -62,7 +77,6 @@
 - (void) ms_AddChildViewController:(UIViewController*)viewController
 {
     [viewController willMoveToParentViewController:self];
-    
     [self addChildViewController:viewController];
     [self.view addSubview:viewController.view];
     viewController.view.frame = self.view.bounds;

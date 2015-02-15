@@ -12,4 +12,5 @@
 @property (nonatomic, strong) NSString* password;
 @property (nonatomic, strong) NSString* email;
 @property (nonatomic, strong) NSString* phoneNumber;
+@property (nonatomic, strong, readonly) NSString* passwordMD5;
 @end

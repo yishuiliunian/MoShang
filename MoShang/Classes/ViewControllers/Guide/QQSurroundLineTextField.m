@@ -76,6 +76,8 @@
     self.leftView =  _rightPrefixView;
     self.leftViewMode = UITextFieldViewModeAlways;
     _leftLabel.textAlignment = NSTextAlignmentRight;
+    
+    _maxInputLength = 100;
 }
 
 

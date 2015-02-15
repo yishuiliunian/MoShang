@@ -40,6 +40,8 @@
     _paramters[key] = paramter;
 }
 - (BOOL) addCommonParamters:(NSError *__autoreleasing *)error {
+    [self addParamter:@"1.0.1" forKey:@"clientversion"];
+    [self addParamter:@"ios" forKey:@"platform"];
     return YES;
 }
 

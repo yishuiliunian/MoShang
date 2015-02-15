@@ -9,6 +9,8 @@
 #import "MSLayoutEngine.h"
 #import <DZSingletonFactory.h>
 #import <HexColor.h>
+#import <MTStringAttributes.h>
+#import <MTStringParser.h>
 
 CGFloat const MSDefaultCellSpace = 15;
 CGFloat const MSDefaultCellHeightSpace = 10;
@@ -16,6 +18,20 @@ CGFloat const MSDefaultCellHeightSpace = 10;
 + (DZSingletonFactory*) defaultEngine
 {
     return DZSingleForClass([MSLayoutEngine class]);
+}
+
+- (instancetype) init
+{
+    self = [super init];
+    if (!self) {
+        return self;
+    }
+    
+    [[MTStringParser sharedParser] addStyleWithTagName:@"normal" font:MSDefaultDetailFont() color:[UIColor lightGrayColor]];
+    [[MTStringParser sharedParser] addStyleWithTagName:@"action" font:MSDefaultDetailFont() color:[UIColor blueColor]];
+    [[MTStringParser sharedParser] addStyleWithTagName:@"tn" font:[UIFont systemFontOfSize:14] color:[UIColor blueColor]];
+    [[MTStringParser sharedParser] addStyleWithTagName:@"th1" font:[UIFont systemFontOfSize:16] color:[UIColor blueColor]];
+    return self;
 }
 @end
 

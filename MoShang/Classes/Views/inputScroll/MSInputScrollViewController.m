@@ -43,5 +43,11 @@
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_scrollView];
     _scrollView.contentSize = self.view.bounds.size;
+    
+    
+    _headTitleLabel = [TTTAttributedLabel new];
+    _headTitleLabel.numberOfLines = 0;
+    _headTitleLabel.textAlignment = UITextAlignmentCenter;
+    [self.scrollView addSubview:_headTitleLabel];
 }
 @end
