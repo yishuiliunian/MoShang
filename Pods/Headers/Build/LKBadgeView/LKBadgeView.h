@@ -1,0 +1,1 @@
+../../../LKBadgeView/Classes/LKBadgeView.h

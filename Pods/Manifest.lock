@@ -66,6 +66,7 @@ PODS:
     - Slash/no-arc (= 0.1.2)
   - Slash/arc (0.1.2)
   - Slash/no-arc (0.1.2)
+  - TDSemiModal (1.0.0)
   - THCalendarDatePicker (0.2.8):
     - KNSemiModalViewController (~> 0.3)
   - TTTAttributedLabel (1.13.1)
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - Realm
   - RKDropdownAlert
   - SCLAlertView-Objective-C
+  - TDSemiModal
   - THCalendarDatePicker (~> 0.2.8)
   - TTTAttributedLabel
 
@@ -127,6 +129,7 @@ SPEC CHECKSUMS:
   RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
   SCLAlertView-Objective-C: 842e6e4052110ea5ee11607ba2f71595df6b1fdf
   Slash: d98d6ff27ece4297d8d65fb49fc1ce4307a75f46
+  TDSemiModal: c2fd3fe003fe0c575c14fbcf75950cf2e075d3a2
   THCalendarDatePicker: 6e7a9e0877e9c84272fe856bc76ea2f4f22c41a7
   TTTAttributedLabel: 71843ac4178e1ebd6b0950b54325146726a124ae
 
