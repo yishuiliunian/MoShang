@@ -8,7 +8,11 @@
 
 #import "MSChoceProviceViewController.h"
 #import "MSChinaMap.h"
+#import "MSLabelProviceCollectionViewController.h"
 @interface MSChoceProviceViewController ()
+{
+    MSLabelProviceCollectionViewController* _provicesCollectionVC;
+}
 @property (nonatomic, strong, readonly) MSChinaMap* chinaMap;
 @end
 
@@ -18,6 +22,17 @@
     [super viewDidLoad];
     _chinaMap = [MSChinaMap new];
     [self.scrollView addSubview:_chinaMap];
+    
+    UICollectionViewFlowLayout* flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(75, 30);
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    _provicesCollectionVC = [[MSLabelProviceCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    [_provicesCollectionVC willMoveToParentViewController:self];
+    [self addChildViewController:_provicesCollectionVC];
+    [self.scrollView addSubview:_provicesCollectionVC.view];
+    [_provicesCollectionVC didMoveToParentViewController:self];
+    
+    _provicesCollectionVC.chinaMap = self.chinaMap;
     // Do any additional setup after loading the view.
 }
 
@@ -40,6 +55,7 @@
 {
     self.headTitleLabel.frame = CGRectMake(10, 10, CGRectGetViewControllerWidth, 100);
     _chinaMap.frame = CGRectMake(0, CGRectGetMaxY(self.headTitleLabel.frame), CGRectGetViewControllerWidth, 320);
+    _provicesCollectionVC.view.frame = CGRectMake(10, CGRectGetMaxY(_chinaMap.frame), CGRectGetViewControllerWidth - 20, 90);
 }
 
 @end

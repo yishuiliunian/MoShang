@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MSChinaMap : UIView
-
+- (void) setProvince:(NSString*)province selected:(BOOL)selected;
 @end

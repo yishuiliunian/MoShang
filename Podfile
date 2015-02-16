@@ -27,6 +27,8 @@ target 'MoShang' do
   pod 'CocoaSecurity'
   pod 'SCLAlertView-Objective-C'
   pod 'RKDropdownAlert'
+  pod 'THCalendarDatePicker', '~> 0.2.8'
+  pod 'TDSemiModal'
 end
 
 target 'MoShangTests' do

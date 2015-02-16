@@ -19,7 +19,7 @@
 {
     if (_password != password) {
         _password = password;
-        _passwordMD5 = [CocoaSecurity md5:_password].hex;
+        _passwordMD5 = [CocoaSecurity md5:_password].hexLower;
     }
 }
 - (NSString*) method
@@ -28,6 +28,9 @@
 }
 - (BOOL) loadParamters:(NSError *__autoreleasing *)error
 {
+    if (!self.email) {
+       self.email = @"example@example.com";
+    }
     [self addParamter:self.passwordMD5 forKey:@"pw"];
     [self addParamter:self.accountName forKey:@"account"];
     [self addParamter:self.email forKey:@"email"];

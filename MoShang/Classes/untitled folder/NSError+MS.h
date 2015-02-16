@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
+FOUNDATION_EXTERN NSString* ServerErrorMessageWithCode(int code);
 @interface NSError (MS)
 + (NSError*) ms_errorWithMessage:(NSString*)message code:(int)code;
 @end

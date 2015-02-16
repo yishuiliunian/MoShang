@@ -83,4 +83,13 @@
         view.frame = rect;
     }
 }
+
+- (void) setProvince:(NSString *)province selected:(BOOL)selected
+{
+    for (MSProvice* p in _provices) {
+        if ([p.name hasPrefix:province]) {
+            p.view.selected = selected;
+        }
+    }
+}
 @end

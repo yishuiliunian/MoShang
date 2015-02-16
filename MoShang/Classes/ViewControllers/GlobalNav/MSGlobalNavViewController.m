@@ -25,6 +25,7 @@
     [super viewDidLoad];
     
     [self loadGuideVC];
+//    [self loadApplicationMainVC];
 
     // Do any additional setup after loading the view.
 }

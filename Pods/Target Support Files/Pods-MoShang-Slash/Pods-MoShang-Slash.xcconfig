@@ -1,1 +1,0 @@
-PODS_MOSHANG_SLASH_OTHER_LDFLAGS = -framework "CoreText"

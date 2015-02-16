@@ -88,6 +88,10 @@
 		6598D9391A8E046C00813939 /* MSChoceProviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9381A8E046C00813939 /* MSChoceProviceViewController.m */; };
 		6598D93D1A90479200813939 /* MSTipsPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D93C1A90479200813939 /* MSTipsPool.m */; };
 		6598D9401A9048EE00813939 /* MSAlertPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D93F1A9048EE00813939 /* MSAlertPool.m */; };
+		6598D9431A9062E100813939 /* MSLabelProviceCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9421A9062E100813939 /* MSLabelProviceCollectionViewController.m */; };
+		6598D9471A90632E00813939 /* MSProvinceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9461A90632E00813939 /* MSProvinceCollectionViewCell.m */; };
+		6598D9491A907A5600813939 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 6598D9481A907A5600813939 /* flower.png */; };
+		6598D94C1A90804E00813939 /* MSHoricalImagesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D94B1A90804E00813939 /* MSHoricalImagesVC.m */; };
 		65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC41A8884E500A37E08 /* MSLocationManager.m */; };
 		65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC81A8886D900A37E08 /* MSLog.m */; };
 		65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */; };
@@ -296,6 +300,13 @@
 		6598D93C1A90479200813939 /* MSTipsPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTipsPool.m; sourceTree = "<group>"; };
 		6598D93E1A9048EE00813939 /* MSAlertPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAlertPool.h; sourceTree = "<group>"; };
 		6598D93F1A9048EE00813939 /* MSAlertPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAlertPool.m; sourceTree = "<group>"; };
+		6598D9411A9062E100813939 /* MSLabelProviceCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLabelProviceCollectionViewController.h; sourceTree = "<group>"; };
+		6598D9421A9062E100813939 /* MSLabelProviceCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLabelProviceCollectionViewController.m; sourceTree = "<group>"; };
+		6598D9451A90632E00813939 /* MSProvinceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSProvinceCollectionViewCell.h; sourceTree = "<group>"; };
+		6598D9461A90632E00813939 /* MSProvinceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSProvinceCollectionViewCell.m; sourceTree = "<group>"; };
+		6598D9481A907A5600813939 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
+		6598D94A1A90804E00813939 /* MSHoricalImagesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHoricalImagesVC.h; sourceTree = "<group>"; };
+		6598D94B1A90804E00813939 /* MSHoricalImagesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHoricalImagesVC.m; sourceTree = "<group>"; };
 		65BCBBC31A8884E500A37E08 /* MSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLocationManager.h; sourceTree = "<group>"; };
 		65BCBBC41A8884E500A37E08 /* MSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLocationManager.m; sourceTree = "<group>"; };
 		65BCBBC71A8886D900A37E08 /* MSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLog.h; sourceTree = "<group>"; };
@@ -419,6 +430,8 @@
 			children = (
 				650DC25C1A723275000D000F /* MSCreateFeedViewController.h */,
 				650DC25D1A723275000D000F /* MSCreateFeedViewController.m */,
+				6598D94A1A90804E00813939 /* MSHoricalImagesVC.h */,
+				6598D94B1A90804E00813939 /* MSHoricalImagesVC.m */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -632,6 +645,7 @@
 				655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */,
 				655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */,
 				655E3BA61A8DD82D00C79B43 /* common_big_button_disabled@2x.png */,
+				6598D9481A907A5600813939 /* flower.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -667,6 +681,17 @@
 				6598D93F1A9048EE00813939 /* MSAlertPool.m */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		6598D9441A90630400813939 /* labelProvince */ = {
+			isa = PBXGroup;
+			children = (
+				6598D9411A9062E100813939 /* MSLabelProviceCollectionViewController.h */,
+				6598D9421A9062E100813939 /* MSLabelProviceCollectionViewController.m */,
+				6598D9451A90632E00813939 /* MSProvinceCollectionViewCell.h */,
+				6598D9461A90632E00813939 /* MSProvinceCollectionViewCell.m */,
+			);
+			name = labelProvince;
 			sourceTree = "<group>";
 		};
 		65BCBBC21A8884CF00A37E08 /* Assist */ = {
@@ -751,6 +776,7 @@
 		65DA46C51A8C547E00CF1536 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
+				6598D9441A90630400813939 /* labelProvince */,
 				655E3B8B1A8C904300C79B43 /* QQSurroundLineTextField.h */,
 				655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */,
 				65DA46C61A8C8CAA00CF1536 /* MSLoginViewController.h */,
@@ -1081,6 +1107,7 @@
 				6570FC471A78B94E000021C7 /* tab_nearby_click@2x.png in Resources */,
 				65DA46731A8AFA5900CF1536 /* 青海.png in Resources */,
 				65DA46581A8AFA5900CF1536 /* 北京.png in Resources */,
+				6598D9491A907A5600813939 /* flower.png in Resources */,
 				65DA46651A8AFA5900CF1536 /* 江西.png in Resources */,
 				6570FC411A78B8F7000021C7 /* tab_message@2x.png in Resources */,
 				65DA466F1A8AFA5900CF1536 /* 贵州.png in Resources */,
@@ -1154,6 +1181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6598D9431A9062E100813939 /* MSLabelProviceCollectionViewController.m in Sources */,
 				65DA46C81A8C8CAA00CF1536 /* MSLoginViewController.m in Sources */,
 				652982B01A85DA9800322E8B /* MSSingleFeedReq.m in Sources */,
 				650DC25E1A723275000D000F /* MSCreateFeedViewController.m in Sources */,
@@ -1188,6 +1216,7 @@
 				652982A81A85BF6600322E8B /* MSAccountManager.m in Sources */,
 				653A4E8A1A7E2624001384AC /* MSMessagesViewController.m in Sources */,
 				656DB5551A89E589008AE224 /* MSCommentFeedReq.m in Sources */,
+				6598D9471A90632E00813939 /* MSProvinceCollectionViewCell.m in Sources */,
 				656DB54C1A89A9F5008AE224 /* MSUserInfoReq.m in Sources */,
 				653A4E731A7E1252001384AC /* MoShang.xcdatamodeld in Sources */,
 				6582211A1A77C4DF006B599D /* MSFeedCell.m in Sources */,
@@ -1231,6 +1260,7 @@
 				65FD5B801A721BF8007239B9 /* AppDelegate.m in Sources */,
 				6582211D1A77C63F006B599D /* MSLayoutItem.m in Sources */,
 				65FD5B821A721BF8007239B9 /* RDVTabBar.m in Sources */,
+				6598D94C1A90804E00813939 /* MSHoricalImagesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

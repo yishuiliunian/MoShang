@@ -9,6 +9,18 @@
 #import "MSGuideContentViewController.h"
 #import "MSLoginViewController.h"
 
+@implementation UIViewController (MSGuideContentViewController)
+
+- (MSGuideContentViewController*) guideContentViewController
+{
+    if ([self.navigationController isKindOfClass:[MSGuideContentViewController class]]) {
+        return (MSGuideContentViewController*)self.navigationController;
+    }
+    return nil;
+}
+
+@end
+
 @interface MSGuideContentViewController ()
 
 @end
@@ -21,7 +33,7 @@
     if (!self) {
         return self;
     }
-    
+    _userInfo = [MSUserInfo new];
     return self;
 }
 - (void)viewDidLoad {

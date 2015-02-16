@@ -1,1 +1,0 @@
-../../../MTStringAttributes/MTStringAttributes/MTStringParser.h

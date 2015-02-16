@@ -11,8 +11,8 @@
 #import <Realm.h>
 @interface MSAccount : JSONModel
 @property (nonatomic, strong) NSString* accountID;
-@property (nonatomic, strong) NSString* nickName;
+@property (nonatomic, strong) NSString<Optional>* nickName;
 @property (nonatomic, strong) NSString* password;
-@property (nonatomic, strong) NSString* email;
+@property (nonatomic, strong) NSString<Optional>* email;
 @property (nonatomic, strong) NSString* phoneNumber;
 @end

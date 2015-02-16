@@ -90,9 +90,13 @@
     [request setValue:[@([paramData length]) stringValue] forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"*/*" forHTTPHeaderField:@"Accept"];
    
-    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
-    
+    NSURLResponse* response ;
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     MSRequestOnErrorAndReturn(error);
+    if (!data || data.length == 0) {
+        NSError* error = [NSError ms_errorWithMessage:@"服务器跑路了，返回了空数据" code:-931];
+        MSRequestOnErrorAndReturn(error);
+    }
     NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     MSRequestOnErrorAndReturn(error);
     if (![dic isKindOfClass:[NSDictionary class]]) {

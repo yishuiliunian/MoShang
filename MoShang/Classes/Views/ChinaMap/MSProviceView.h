@@ -20,4 +20,5 @@
 
 @interface MSProviceView : UIImageView
 @property (nonatomic, strong) MSProvice* province;
+@property (nonatomic, assign) BOOL selected;
 @end

@@ -16,6 +16,8 @@
 #import "MSGuideUserInfoViewController.h"
 #import "MSTipsPool.h"
 #import "MSAlertPool.h"
+#import "MSGuideContentViewController.h"
+#import "MSAccountManager.h"
 
 @interface MSLoginViewController () <TTTAttributedLabelDelegate, MSRequestUIDelegate>
 {
@@ -73,7 +75,7 @@
     
     
 #ifdef DEBUG
-   _phonerNumberTextField.text = @"18500040284";
+   _phonerNumberTextField.text = @"18500040282";
     _passwordTextField.text = @"system32";
 #endif
 }
@@ -92,12 +94,6 @@
 
 - (void) doLoginFromSender:(id)sender
 {
-    
-//#ifdef DEBUG
-//    MSGuideUserInfoViewController* guideVC = [MSGuideUserInfoViewController new];
-//    [self.navigationController pushViewController:guideVC animated:YES];
-//    return;
-//#endif
     MSRegisterReq* registerReq = [MSRegisterReq new];
     registerReq.uidelegate = self;
     registerReq.password = _passwordTextField.text;
@@ -118,11 +114,33 @@
     [MSDefaultAlertPool hideAllAlert];
 }
 
+
 - (void) request:(MSRequest *)request onSucced:(id)object
 {
     [self setAllControlEnable:YES];
-    
     [MSDefaultAlertPool hideAllAlert];
+    MSRegisterReq* registerRequest = (MSRegisterReq*)request;
+    MSAccount* account = [[MSAccount alloc] init];
+    account.accountID = registerRequest.accountName;
+    account.phoneNumber = registerRequest.phoneNumber;
+    account.password = registerRequest.passwordMD5;
+    [[MSAccountManager shareManager] reloadAccount:account];
+    
+    [self moveToNextStep];
+
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+#ifdef DEBUG
+    [self moveToNextStep];
+#endif
+}
+- (void) moveToNextStep
+{
+    MSGuideUserInfoViewController* guideVC = [MSGuideUserInfoViewController new];
+    [self.navigationController pushViewController:guideVC animated:YES];
 }
 - (void) viewWillLayoutSubviews
 {

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC5306CD1BA71EED46D70FA8"
+               BlueprintIdentifier = "C033BDBBF43E68E89A43DE0D"
                BuildableName = "libPods-MoShang-DZReadability.a"
                BlueprintName = "Pods-MoShang-DZReadability"
                ReferencedContainer = "container:Pods.xcodeproj">

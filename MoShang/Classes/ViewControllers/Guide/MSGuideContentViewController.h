@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MSUserInfo.h"
 
+
+@class MSGuideContentViewController;
+@interface UIViewController (MSGuideContentViewController)
+@property (nonatomic, strong, readonly) MSGuideContentViewController* guideContentViewController;
+@end
 @interface MSGuideContentViewController : UINavigationController
-
+@property (nonatomic, strong, readonly) MSUserInfo* userInfo;
 @end

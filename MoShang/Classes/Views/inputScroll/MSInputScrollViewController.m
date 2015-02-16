@@ -40,6 +40,7 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_scrollView];
     _scrollView.contentSize = self.view.bounds.size;

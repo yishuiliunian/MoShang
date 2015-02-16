@@ -1,1 +1,0 @@
-../../../DZReadability/Pod/Classes/DZReadability.h
