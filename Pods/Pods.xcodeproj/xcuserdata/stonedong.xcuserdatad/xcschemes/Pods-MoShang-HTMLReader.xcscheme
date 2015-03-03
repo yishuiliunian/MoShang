@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB73285AAB017E4D28983267"
+               BlueprintIdentifier = "6C51207E836727C17609AA37"
                BuildableName = "libPods-MoShang-HTMLReader.a"
                BlueprintName = "Pods-MoShang-HTMLReader"
                ReferencedContainer = "container:Pods.xcodeproj">

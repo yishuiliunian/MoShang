@@ -14,6 +14,14 @@
 @interface UIViewController (MSGuideContentViewController)
 @property (nonatomic, strong, readonly) MSGuideContentViewController* guideContentViewController;
 @end
+
+@protocol MSGuideContentDelegate <NSObject>
+
+- (void) guideContentViewController:(MSGuideContentViewController*)guideVC finished:(BOOL)finished;
+
+@end
+
 @interface MSGuideContentViewController : UINavigationController
+@property (nonatomic, weak) id<MSGuideContentDelegate> guideContentDelegate;
 @property (nonatomic, strong, readonly) MSUserInfo* userInfo;
 @end

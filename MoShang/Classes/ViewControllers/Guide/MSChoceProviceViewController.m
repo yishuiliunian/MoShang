@@ -9,9 +9,16 @@
 #import "MSChoceProviceViewController.h"
 #import "MSChinaMap.h"
 #import "MSLabelProviceCollectionViewController.h"
-@interface MSChoceProviceViewController ()
+#import "UIButton+Custom.h"
+#import "MSGuideContentViewController.h"
+#import "MSSetUserInfoReq.h"
+#import "MSAlertPool.h"
+#import "MSTipsPool.h"
+@interface MSChoceProviceViewController () <MSRequestUIDelegate>
 {
     MSLabelProviceCollectionViewController* _provicesCollectionVC;
+    
+    UIButton* _sendInfosButton;
 }
 @property (nonatomic, strong, readonly) MSChinaMap* chinaMap;
 @end
@@ -33,9 +40,41 @@
     [_provicesCollectionVC didMoveToParentViewController:self];
     
     _provicesCollectionVC.chinaMap = self.chinaMap;
+    
+    
+    _sendInfosButton = [UIButton CommonBlueButtonForTitle:@"开始" target:self action:@selector(sendUserInfos)];
+    [self.scrollView addSubview:_sendInfosButton];
     // Do any additional setup after loading the view.
 }
 
+- (void) nextSetp
+{
+    [self.guideContentViewController.guideContentDelegate guideContentViewController:self.guideContentViewController finished:YES];
+}
+
+
+- (void) sendUserInfos
+{
+    self.guideContentViewController.userInfo.style= @"";
+    MSSetUserInfoReq* setUserInfoReq = [MSSetUserInfoReq new];
+    setUserInfoReq.userInfo = self.guideContentViewController.userInfo;
+    [MSDefaultSyncCenter performRequest:setUserInfoReq];
+    setUserInfoReq.uidelegate = self;
+    
+    [MSDefaultAlertPool showLoadingWithMessage:@"正在提交您的信息...."];
+}
+
+- (void) request:(MSRequest *)request onError:(NSError *)error
+{
+    [MSDefaultAlertPool hideAllAlert];
+    [MSDefaultTipsPool showError:error];
+}
+
+- (void) request:(MSRequest *)request onSucced:(id)object
+{
+    [MSDefaultAlertPool hideAllAlert];
+    [self nextSetp];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -54,8 +93,9 @@
 - (void) viewWillLayoutSubviews
 {
     self.headTitleLabel.frame = CGRectMake(10, 10, CGRectGetViewControllerWidth, 100);
-    _chinaMap.frame = CGRectMake(0, CGRectGetMaxY(self.headTitleLabel.frame), CGRectGetViewControllerWidth, 320);
+    _chinaMap.frame = CGRectMake(0, CGRectGetMaxY(self.headTitleLabel.frame), CGRectGetViewControllerWidth, 200);
     _provicesCollectionVC.view.frame = CGRectMake(10, CGRectGetMaxY(_chinaMap.frame), CGRectGetViewControllerWidth - 20, 90);
+    _sendInfosButton.frame = CGRectMake(10, CGRectGetMaxY(_provicesCollectionVC.view.frame), CGRectGetViewControllerWidth - 20, 44);
 }
 
 @end

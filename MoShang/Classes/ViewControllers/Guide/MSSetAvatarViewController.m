@@ -28,10 +28,21 @@
     // Do any additional setup after loading the view.
 }
 
-- (void) setAvatar
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+#ifdef DEBUG
+    [self nextStep];
+#endif
+}
+- (void) nextStep
 {
     MSChoceProviceViewController* vc = [MSChoceProviceViewController new];
     [self.navigationController pushViewController:vc animated:YES];
+}
+- (void) setAvatar
+{
+
 }
 
 - (void)didReceiveMemoryWarning {

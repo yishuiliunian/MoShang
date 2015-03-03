@@ -51,6 +51,13 @@
     // Do any additional setup after loading the view.
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+#ifdef DEBUG
+    [self nextSetp];
+#endif
+}
 - (void) changeBirthDay
 {
     

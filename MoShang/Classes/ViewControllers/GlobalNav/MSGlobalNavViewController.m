@@ -16,7 +16,7 @@
 #import "MSTabBarItem.h"
 #import <DZImageCache.h>
 #import "MSGuideContentViewController.h"
-@interface MSGlobalNavViewController () <MSMainViewControllerDelegate>
+@interface MSGlobalNavViewController () <MSMainViewControllerDelegate, MSGuideContentDelegate>
 @end
 
 @implementation MSGlobalNavViewController
@@ -32,7 +32,9 @@
 
 - (void) loadGuideVC
 {
-    [self changMainViewController:[MSGuideContentViewController new]];
+    MSGuideContentViewController* guideVC = [MSGuideContentViewController new];
+    guideVC.guideContentDelegate = self;
+    [self changMainViewController:guideVC];
 }
 
 - (void) loadApplicationMainVC
@@ -107,5 +109,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark Guide Finished
+
+- (void) guideContentViewController:(MSGuideContentViewController *)guideVC finished:(BOOL)finished
+{
+    
+    [self loadApplicationMainVC];
+}
 
 @end

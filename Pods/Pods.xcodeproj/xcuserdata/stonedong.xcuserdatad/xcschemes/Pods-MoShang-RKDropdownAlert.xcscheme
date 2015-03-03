@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CF8FA5897B203B79FAFA9ECE"
+               BlueprintIdentifier = "063B7D1DD1985FD972C9D39F"
                BuildableName = "libPods-MoShang-RKDropdownAlert.a"
                BlueprintName = "Pods-MoShang-RKDropdownAlert"
                ReferencedContainer = "container:Pods.xcodeproj">

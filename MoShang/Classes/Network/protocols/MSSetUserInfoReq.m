@@ -27,6 +27,6 @@
 
 - (void) onSuccess:(id)retObject
 {
-    [self doUIOnError:retObject];
+    [self doUIOnSuccced:retObject];
 }
 @end
