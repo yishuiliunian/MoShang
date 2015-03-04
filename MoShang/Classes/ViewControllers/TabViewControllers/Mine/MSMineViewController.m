@@ -8,26 +8,37 @@
 
 #import "MSMineViewController.h"
 #import "MSMineTopView.h"
+#import "MSAvarterCollectionViewController.h"
 @interface MSMineViewController ()
-@property (nonatomic, strong) MSMineTopView* topView;
+{
+    MSAvarterCollectionViewController* _avarterVC;
+}
 @end
 
 @implementation MSMineViewController
 
+- (void) ms_addChildViewController:(UIViewController*)vc
+{
+    [vc willMoveToParentViewController:self];
+    [self addChildViewController:vc];
+    [self.view addSubview:vc.view];
+    [vc didMoveToParentViewController:self];
+}
 - (void) initUIControls
 {
-    _topView = [MSMineTopView new];
-    [self.view addSubview:_topView];
+    _avarterVC = [[MSAvarterCollectionViewController alloc] initWithAvarters:@[@"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg",
+                                                                               @"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg",
+                                                                               @"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg",
+                                                                               @"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg"]
+                                                                    itemSize:CGSizeMake(100, 100)];
+    
+    [self ms_addChildViewController:_avarterVC];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
     [self initUIControls];
     
-    _topView.imageURLs = @[@"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg",
-                           @"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg",
-                           @"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg",
-                           @"http://img1.mydrivers.com/img/20141014/46769b2731584375a308d455000bce3b.jpg"];
     // Do any additional setup after loading the view.
 }
 
@@ -41,7 +52,7 @@
 - (void) viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
-    _topView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame)/4 + 30);
+    _avarterVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame)/4 + 30);
 }
 /*
 #pragma mark - Navigation

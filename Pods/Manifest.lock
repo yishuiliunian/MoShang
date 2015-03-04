@@ -38,6 +38,8 @@ PODS:
   - DZReadability (0.2.1):
     - HTMLReader
   - DZSinglonFactory (1.0.0)
+  - FCUUID (1.1.4):
+    - UICKeyChainStore (~> 1.0.5)
   - Haneke (1.0.1)
   - HexColors (2.2.1)
   - HTMLReader (0.6.1)
@@ -46,6 +48,7 @@ PODS:
   - JSQMessagesViewController (6.1.3):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - JTSImageViewController (1.4)
   - KNSemiModalViewController (0.3)
   - LKBadgeView (1.2.0)
   - MagicalRecord (2.2):
@@ -56,20 +59,21 @@ PODS:
   - ObjectiveRecord (1.5.0):
     - ObjectiveSugar
   - ObjectiveSugar (1.1.0)
-  - Realm (0.90.5):
-    - Realm/Headers (= 0.90.5)
-  - Realm/Headers (0.90.5)
+  - Realm (0.90.6):
+    - Realm/Headers (= 0.90.6)
+  - Realm/Headers (0.90.6)
   - RKDropdownAlert (0.1.1)
-  - SCLAlertView-Objective-C (0.5.4)
+  - SCLAlertView-Objective-C (0.5.5)
   - Slash (0.1.2):
     - Slash/arc (= 0.1.2)
     - Slash/no-arc (= 0.1.2)
   - Slash/arc (0.1.2)
   - Slash/no-arc (0.1.2)
   - TDSemiModal (1.0.0)
-  - THCalendarDatePicker (0.2.8):
+  - THCalendarDatePicker (0.2.9):
     - KNSemiModalViewController (~> 0.3)
-  - TTTAttributedLabel (1.13.1)
+  - TTTAttributedLabel (1.13.2)
+  - UICKeyChainStore (1.0.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -81,11 +85,13 @@ DEPENDENCIES:
   - DZProgrameDefines
   - DZReadability
   - DZSinglonFactory
+  - FCUUID
   - Haneke (~> 1.0)
   - HexColors
   - INTULocationManager
   - JSONModel
   - JSQMessagesViewController
+  - JTSImageViewController
   - LKBadgeView (from `https://github.com/lakesoft/LKBadgeView.git`)
   - MagicalRecord
   - MTStringAttributes
@@ -112,6 +118,7 @@ SPEC CHECKSUMS:
   DZProgrameDefines: 8c89ec3a8d9aa5ef705438690ec6fa496eb2b6d5
   DZReadability: bc1fff8ff0f4c7c1d325da4f418d80b6a3713c93
   DZSinglonFactory: b7fdac485e282c583a85e644a20878fe3d4cf891
+  FCUUID: 4f4650dff4625130a0a4f65ff07e4c93a0eba0e5
   Haneke: 943f7121b50d31a31a0942afdacb7e6a26ea6181
   HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
   HTMLReader: dbcd34d10785e73b3763ab4a534ffa65b669acbd
@@ -119,18 +126,20 @@ SPEC CHECKSUMS:
   JSONModel: cbdef0fdff1cc70e913a860861d3072860efd3a1
   JSQMessagesViewController: e93a288a9662d4519c95a28a8c0eec10beae1bfc
   JSQSystemSoundPlayer: 55528c699a283aae2220d3ae7b8b527d2ecef4b4
+  JTSImageViewController: 9fe6402194b7679f0e28d0c1002d6164301fc34a
   KNSemiModalViewController: 6fb1e2f6a4d84238b524cb705e91118b0fa6bbc9
   LKBadgeView: 178c43bcf11ada8052271d0d418505153634938f
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
   MTStringAttributes: 83a352dc6e65def1bfb95d2bcb39e041611a582d
   ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
-  Realm: aea25534b97be77995650c2339aa6ed010dfcc8a
+  Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
-  SCLAlertView-Objective-C: 842e6e4052110ea5ee11607ba2f71595df6b1fdf
+  SCLAlertView-Objective-C: 7ff3bfcc569c52da13801652e67029e4611f04bc
   Slash: d98d6ff27ece4297d8d65fb49fc1ce4307a75f46
   TDSemiModal: c2fd3fe003fe0c575c14fbcf75950cf2e075d3a2
-  THCalendarDatePicker: 6e7a9e0877e9c84272fe856bc76ea2f4f22c41a7
-  TTTAttributedLabel: 71843ac4178e1ebd6b0950b54325146726a124ae
+  THCalendarDatePicker: 6f2c3f78b52dc07f08398814664f3a089399208a
+  TTTAttributedLabel: 7c4592f9a806badb8b48dc634cb9800447c51594
+  UICKeyChainStore: 4f9719600cc70025064e26f28f1210bcfc3b0c35
 
 COCOAPODS: 0.35.0.rc2

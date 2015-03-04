@@ -9,11 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "NSDate+Read.h"
 #import "NSError+MS.h"
+#import "UIViewController+Custom.h"
 
 
 #define NUM_TO_STRING(x) [@(x) stringValue]
-
 FOUNDATION_EXTERN BOOL IS_MSColorString(NSString* str);
+
+#define MSGenerateRandomUUID MSGenRandomUUID()
+FOUNDATION_EXTERN NSString* MSGenRandomUUID();
+
+
 @interface MSGlobal : NSObject
 
 @end

@@ -92,6 +92,14 @@
 		6598D9471A90632E00813939 /* MSProvinceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9461A90632E00813939 /* MSProvinceCollectionViewCell.m */; };
 		6598D9491A907A5600813939 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 6598D9481A907A5600813939 /* flower.png */; };
 		6598D94C1A90804E00813939 /* MSHoricalImagesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D94B1A90804E00813939 /* MSHoricalImagesVC.m */; };
+		659F24701AA5E6EE0080096B /* MSAvarterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F246F1AA5E6EE0080096B /* MSAvarterCollectionViewController.m */; };
+		659F24731AA5E9460080096B /* MSAddAvarterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24721AA5E9460080096B /* MSAddAvarterCell.m */; };
+		659F24761AA5E95A0080096B /* MSPhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24751AA5E95A0080096B /* MSPhotoViewCell.m */; };
+		659F24841AA5F5CF0080096B /* libOSS_IOS_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 659F24781AA5F5CF0080096B /* libOSS_IOS_SDK.a */; };
+		659F24871AA5F8C20080096B /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24861AA5F8C20080096B /* AppConfig.m */; };
+		659F248B1AA5FB6A0080096B /* MSOssManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F248A1AA5FB6A0080096B /* MSOssManager.m */; };
+		659F24A01AA6F44B0080096B /* MSAppearenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F249F1AA6F44B0080096B /* MSAppearenceManager.m */; };
+		659F24A31AA6F5C80080096B /* UIViewController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24A21AA6F5C80080096B /* UIViewController+Custom.m */; };
 		65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC41A8884E500A37E08 /* MSLocationManager.m */; };
 		65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC81A8886D900A37E08 /* MSLog.m */; };
 		65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */; };
@@ -307,6 +315,32 @@
 		6598D9481A907A5600813939 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
 		6598D94A1A90804E00813939 /* MSHoricalImagesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSHoricalImagesVC.h; sourceTree = "<group>"; };
 		6598D94B1A90804E00813939 /* MSHoricalImagesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSHoricalImagesVC.m; sourceTree = "<group>"; };
+		659F246E1AA5E6EE0080096B /* MSAvarterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAvarterCollectionViewController.h; sourceTree = "<group>"; };
+		659F246F1AA5E6EE0080096B /* MSAvarterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAvarterCollectionViewController.m; sourceTree = "<group>"; };
+		659F24711AA5E9460080096B /* MSAddAvarterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAddAvarterCell.h; sourceTree = "<group>"; };
+		659F24721AA5E9460080096B /* MSAddAvarterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSAddAvarterCell.m; sourceTree = "<group>"; };
+		659F24741AA5E95A0080096B /* MSPhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPhotoViewCell.h; sourceTree = "<group>"; };
+		659F24751AA5E95A0080096B /* MSPhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPhotoViewCell.m; sourceTree = "<group>"; };
+		659F24781AA5F5CF0080096B /* libOSS_IOS_SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOSS_IOS_SDK.a; sourceTree = "<group>"; };
+		659F24791AA5F5CF0080096B /* OSSArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSArgs.h; sourceTree = "<group>"; };
+		659F247A1AA5F5CF0080096B /* OSSBucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSBucket.h; sourceTree = "<group>"; };
+		659F247B1AA5F5CF0080096B /* OSSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSClient.h; sourceTree = "<group>"; };
+		659F247C1AA5F5CF0080096B /* OSSData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSData.h; sourceTree = "<group>"; };
+		659F247D1AA5F5CF0080096B /* OSSFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSFile.h; sourceTree = "<group>"; };
+		659F247E1AA5F5CF0080096B /* OSSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSLog.h; sourceTree = "<group>"; };
+		659F247F1AA5F5CF0080096B /* OSSMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSMeta.h; sourceTree = "<group>"; };
+		659F24801AA5F5CF0080096B /* OSSMultipart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSMultipart.h; sourceTree = "<group>"; };
+		659F24811AA5F5CF0080096B /* OSSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSObject.h; sourceTree = "<group>"; };
+		659F24821AA5F5CF0080096B /* OSSRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSRange.h; sourceTree = "<group>"; };
+		659F24831AA5F5CF0080096B /* OSSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSTool.h; sourceTree = "<group>"; };
+		659F24851AA5F8C20080096B /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		659F24861AA5F8C20080096B /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		659F24891AA5FB6A0080096B /* MSOssManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSOssManager.h; sourceTree = "<group>"; };
+		659F248A1AA5FB6A0080096B /* MSOssManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSOssManager.m; sourceTree = "<group>"; };
+		659F249E1AA6F44B0080096B /* MSAppearenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSAppearenceManager.h; path = Appearence/MSAppearenceManager.h; sourceTree = "<group>"; };
+		659F249F1AA6F44B0080096B /* MSAppearenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAppearenceManager.m; path = Appearence/MSAppearenceManager.m; sourceTree = "<group>"; };
+		659F24A11AA6F5C80080096B /* UIViewController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Custom.h"; sourceTree = "<group>"; };
+		659F24A21AA6F5C80080096B /* UIViewController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Custom.m"; sourceTree = "<group>"; };
 		65BCBBC31A8884E500A37E08 /* MSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLocationManager.h; sourceTree = "<group>"; };
 		65BCBBC41A8884E500A37E08 /* MSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLocationManager.m; sourceTree = "<group>"; };
 		65BCBBC71A8886D900A37E08 /* MSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLog.h; sourceTree = "<group>"; };
@@ -390,6 +424,7 @@
 			files = (
 				65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */,
 				6563964D1A80C98300E61638 /* CoreTelephony.framework in Frameworks */,
+				659F24841AA5F5CF0080096B /* libOSS_IOS_SDK.a in Frameworks */,
 				1AEB1FB39C24A23980A749A2 /* libPods-MoShang.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +595,8 @@
 				652982991A85B3F200322E8B /* NSError+MS.m */,
 				655E3BA31A8DD74500C79B43 /* UIButton+Custom.h */,
 				655E3BA41A8DD74500C79B43 /* UIButton+Custom.m */,
+				659F24A11AA6F5C80080096B /* UIViewController+Custom.h */,
+				659F24A21AA6F5C80080096B /* UIViewController+Custom.m */,
 			);
 			name = Unities;
 			sourceTree = "<group>";
@@ -692,6 +729,56 @@
 				6598D9461A90632E00813939 /* MSProvinceCollectionViewCell.m */,
 			);
 			name = labelProvince;
+			sourceTree = "<group>";
+		};
+		659F246D1AA5E6AA0080096B /* Avarter */ = {
+			isa = PBXGroup;
+			children = (
+				659F246E1AA5E6EE0080096B /* MSAvarterCollectionViewController.h */,
+				659F246F1AA5E6EE0080096B /* MSAvarterCollectionViewController.m */,
+				659F24711AA5E9460080096B /* MSAddAvarterCell.h */,
+				659F24721AA5E9460080096B /* MSAddAvarterCell.m */,
+				659F24741AA5E95A0080096B /* MSPhotoViewCell.h */,
+				659F24751AA5E95A0080096B /* MSPhotoViewCell.m */,
+			);
+			path = Avarter;
+			sourceTree = "<group>";
+		};
+		659F24771AA5F5CF0080096B /* Release-iPhoneOS */ = {
+			isa = PBXGroup;
+			children = (
+				659F24781AA5F5CF0080096B /* libOSS_IOS_SDK.a */,
+				659F24791AA5F5CF0080096B /* OSSArgs.h */,
+				659F247A1AA5F5CF0080096B /* OSSBucket.h */,
+				659F247B1AA5F5CF0080096B /* OSSClient.h */,
+				659F247C1AA5F5CF0080096B /* OSSData.h */,
+				659F247D1AA5F5CF0080096B /* OSSFile.h */,
+				659F247E1AA5F5CF0080096B /* OSSLog.h */,
+				659F247F1AA5F5CF0080096B /* OSSMeta.h */,
+				659F24801AA5F5CF0080096B /* OSSMultipart.h */,
+				659F24811AA5F5CF0080096B /* OSSObject.h */,
+				659F24821AA5F5CF0080096B /* OSSRange.h */,
+				659F24831AA5F5CF0080096B /* OSSTool.h */,
+			);
+			path = "Release-iPhoneOS";
+			sourceTree = "<group>";
+		};
+		659F24881AA5FB430080096B /* OSS */ = {
+			isa = PBXGroup;
+			children = (
+				659F24891AA5FB6A0080096B /* MSOssManager.h */,
+				659F248A1AA5FB6A0080096B /* MSOssManager.m */,
+			);
+			path = OSS;
+			sourceTree = "<group>";
+		};
+		659F249D1AA6F4300080096B /* Appearence */ = {
+			isa = PBXGroup;
+			children = (
+				659F249E1AA6F44B0080096B /* MSAppearenceManager.h */,
+				659F249F1AA6F44B0080096B /* MSAppearenceManager.m */,
+			);
+			name = Appearence;
 			sourceTree = "<group>";
 		};
 		65BCBBC21A8884CF00A37E08 /* Assist */ = {
@@ -876,6 +963,8 @@
 				65FD5B6F1A721BF8007239B9 /* AppDelegate.h */,
 				65FD5B701A721BF8007239B9 /* AppDelegate.m */,
 				65FD5B711A721BF8007239B9 /* main.m */,
+				659F24851AA5F8C20080096B /* AppConfig.h */,
+				659F24861AA5F8C20080096B /* AppConfig.m */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -900,6 +989,7 @@
 		65FD5B731A721BF8007239B9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				659F24881AA5FB430080096B /* OSS */,
 				652982AD1A85DA7B00322E8B /* protocols */,
 				6529829B1A85B7BB00322E8B /* operation */,
 				6563965C1A821F0600E61638 /* author */,
@@ -920,6 +1010,7 @@
 		65FD5B741A721BF8007239B9 /* ThirdFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				659F24771AA5F5CF0080096B /* Release-iPhoneOS */,
 				65FD5B751A721BF8007239B9 /* RDVTabBarController */,
 			);
 			path = ThirdFrameWork;
@@ -953,6 +1044,8 @@
 		65FD5B7F1A721BF8007239B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				659F249D1AA6F4300080096B /* Appearence */,
+				659F246D1AA5E6AA0080096B /* Avarter */,
 				65DA46C11A8C439500CF1536 /* inputScroll */,
 				65DA46081A8A0FFB00CF1536 /* ChinaMap */,
 				6533C39D1A78CC06007603CC /* utities */,
@@ -1184,6 +1277,7 @@
 				6598D9431A9062E100813939 /* MSLabelProviceCollectionViewController.m in Sources */,
 				65DA46C81A8C8CAA00CF1536 /* MSLoginViewController.m in Sources */,
 				652982B01A85DA9800322E8B /* MSSingleFeedReq.m in Sources */,
+				659F24A31AA6F5C80080096B /* UIViewController+Custom.m in Sources */,
 				650DC25E1A723275000D000F /* MSCreateFeedViewController.m in Sources */,
 				650303A11A790DF400F30A2D /* MSMineTopView.m in Sources */,
 				65FD5B8D1A721DE0007239B9 /* MSGlobalNavViewController.m in Sources */,
@@ -1194,6 +1288,7 @@
 				650303921A79020600F30A2D /* MSMessageCell.m in Sources */,
 				6503039E1A790D7F00F30A2D /* MSMyCardViewController.m in Sources */,
 				65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */,
+				659F248B1AA5FB6A0080096B /* MSOssManager.m in Sources */,
 				65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */,
 				658221311A787D11006B599D /* MSTextLayoutItem.m in Sources */,
 				652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */,
@@ -1210,6 +1305,7 @@
 				658221101A77BC5C006B599D /* MSLayout.m in Sources */,
 				65FD5B831A721BF8007239B9 /* RDVTabBarController.m in Sources */,
 				6563965B1A821CA700E61638 /* MSTokenManager.m in Sources */,
+				659F24871AA5F8C20080096B /* AppConfig.m in Sources */,
 				650DC2491A722FC5000D000F /* MSCenterAddButton.m in Sources */,
 				65BCBBCE1A88962C00A37E08 /* MSGetFeedByPosReq.m in Sources */,
 				6582210D1A77BBB0006B599D /* MSLayoutEngine.m in Sources */,
@@ -1218,11 +1314,13 @@
 				656DB5551A89E589008AE224 /* MSCommentFeedReq.m in Sources */,
 				6598D9471A90632E00813939 /* MSProvinceCollectionViewCell.m in Sources */,
 				656DB54C1A89A9F5008AE224 /* MSUserInfoReq.m in Sources */,
+				659F24701AA5E6EE0080096B /* MSAvarterCollectionViewController.m in Sources */,
 				653A4E731A7E1252001384AC /* MoShang.xcdatamodeld in Sources */,
 				6582211A1A77C4DF006B599D /* MSFeedCell.m in Sources */,
 				65FD5B811A721BF8007239B9 /* main.m in Sources */,
 				653A4E7F1A7E138F001384AC /* MSUser.m in Sources */,
 				658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */,
+				659F24731AA5E9460080096B /* MSAddAvarterCell.m in Sources */,
 				656396551A82161E00E61638 /* MSRequest.m in Sources */,
 				656DB5491A89A72E008AE224 /* MSSetLikeReq.m in Sources */,
 				6503039B1A79049600F30A2D /* NSDate+Read.m in Sources */,
@@ -1236,6 +1334,7 @@
 				656DB5521A89AE80008AE224 /* MSSetUserInfoReq.m in Sources */,
 				65DA46C41A8C43F800CF1536 /* MSInputScrollViewController.m in Sources */,
 				656396521A82157900E61638 /* MSRouter.m in Sources */,
+				659F24761AA5E95A0080096B /* MSPhotoViewCell.m in Sources */,
 				6582213A1A787E81006B599D /* MSFeed.m in Sources */,
 				6533C3A21A78D974007603CC /* MSGlobal.m in Sources */,
 				6598D9401A9048EE00813939 /* MSAlertPool.m in Sources */,
@@ -1257,6 +1356,7 @@
 				658221371A787E71006B599D /* MSModel.m in Sources */,
 				6598D9391A8E046C00813939 /* MSChoceProviceViewController.m in Sources */,
 				652982AB1A85C53800322E8B /* MSLoginReq.m in Sources */,
+				659F24A01AA6F44B0080096B /* MSAppearenceManager.m in Sources */,
 				65FD5B801A721BF8007239B9 /* AppDelegate.m in Sources */,
 				6582211D1A77C63F006B599D /* MSLayoutItem.m in Sources */,
 				65FD5B821A721BF8007239B9 /* RDVTabBar.m in Sources */,
@@ -1385,6 +1485,10 @@
 				INFOPLIST_FILE = MoShang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoShang/Classes/ThirdFrameWork/Release-iPhoneOS",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1405,6 +1509,10 @@
 				INFOPLIST_FILE = MoShang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoShang/Classes/ThirdFrameWork/Release-iPhoneOS",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

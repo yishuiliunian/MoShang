@@ -29,6 +29,8 @@ target 'MoShang' do
   pod 'RKDropdownAlert'
   pod 'THCalendarDatePicker', '~> 0.2.8'
   pod 'TDSemiModal'
+  pod 'FCUUID'
+  pod 'JTSImageViewController'
 end
 
 target 'MoShangTests' do

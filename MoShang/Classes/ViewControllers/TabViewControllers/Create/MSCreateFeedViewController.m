@@ -7,18 +7,36 @@
 //
 
 #import "MSCreateFeedViewController.h"
-
+#import "MSAvarterCollectionViewController.h"
+#import <DZProgramDefines.h>
+#import <DZGeometryTools.h>
+#import "MSGlobal.h"
 @interface MSCreateFeedViewController ()
-
+@property (nonatomic, strong) MSAvarterCollectionViewController* avarterViewController;
+@property (nonatomic, strong) UITextView* textView;
 @end
 
 @implementation MSCreateFeedViewController
-
+- (void) ms_AddChildViewController:(UIViewController*)viewController
+{
+    [viewController willMoveToParentViewController:self];
+    [self addChildViewController:viewController];
+    [self.view addSubview:viewController.view];
+    [viewController didMoveToParentViewController:self];
+}
+- (void) initControls
+{
+    INIT_SUBVIEW(self.view, UITextView, _textView);
+    _avarterViewController = [[MSAvarterCollectionViewController alloc] initWithAvarters:0 itemSize:CGSizeMake(100, 100)];
+    [self ms_AddChildViewController:_avarterViewController];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIBarButtonItem* barItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(dismissNavigationController)];
-    self.navigationItem.rightBarButtonItem =barItem;
+    [self initControls];
+    [self loadLeftBarItemWithTitle:@"取消" action:@selector(dismissNavigationController)];
+    [self loadRightBarItemWithTitle:@"发表" action:@selector(postFeed)];
+    self.title = @"发表留言";
     // Do any additional setup after loading the view.
 }
 
@@ -34,14 +52,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (void) viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    _textView.frame = CGRectMake(10, 10, CGRectGetViewControllerWidth - 20, 100);
+    _avarterViewController.view.frame = CGRectMake(10, CGRectGetMaxY(_textView.frame) + 10, CGRectGetViewControllerWidth-20, 100);
 }
-*/
 
+- (void) postFeed
+{
+    
+}
 @end

@@ -114,6 +114,12 @@
 #define COCOAPODS_VERSION_MINOR_DZSinglonFactory 0
 #define COCOAPODS_VERSION_PATCH_DZSinglonFactory 0
 
+// FCUUID
+#define COCOAPODS_POD_AVAILABLE_FCUUID
+#define COCOAPODS_VERSION_MAJOR_FCUUID 1
+#define COCOAPODS_VERSION_MINOR_FCUUID 1
+#define COCOAPODS_VERSION_PATCH_FCUUID 4
+
 // HTMLReader
 #define COCOAPODS_POD_AVAILABLE_HTMLReader
 #define COCOAPODS_VERSION_MAJOR_HTMLReader 0
@@ -155,6 +161,12 @@
 #define COCOAPODS_VERSION_MAJOR_JSQSystemSoundPlayer 2
 #define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 0
 #define COCOAPODS_VERSION_PATCH_JSQSystemSoundPlayer 1
+
+// JTSImageViewController
+#define COCOAPODS_POD_AVAILABLE_JTSImageViewController
+#define COCOAPODS_VERSION_MAJOR_JTSImageViewController 1
+#define COCOAPODS_VERSION_MINOR_JTSImageViewController 4
+#define COCOAPODS_VERSION_PATCH_JTSImageViewController 0
 
 // KNSemiModalViewController
 #define COCOAPODS_POD_AVAILABLE_KNSemiModalViewController
@@ -208,19 +220,19 @@
 #define COCOAPODS_POD_AVAILABLE_Realm
 #define COCOAPODS_VERSION_MAJOR_Realm 0
 #define COCOAPODS_VERSION_MINOR_Realm 90
-#define COCOAPODS_VERSION_PATCH_Realm 5
+#define COCOAPODS_VERSION_PATCH_Realm 6
 
 // Realm/Headers
 #define COCOAPODS_POD_AVAILABLE_Realm_Headers
 #define COCOAPODS_VERSION_MAJOR_Realm_Headers 0
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 90
-#define COCOAPODS_VERSION_PATCH_Realm_Headers 5
+#define COCOAPODS_VERSION_PATCH_Realm_Headers 6
 
 // SCLAlertView-Objective-C
 #define COCOAPODS_POD_AVAILABLE_SCLAlertView_Objective_C
 #define COCOAPODS_VERSION_MAJOR_SCLAlertView_Objective_C 0
 #define COCOAPODS_VERSION_MINOR_SCLAlertView_Objective_C 5
-#define COCOAPODS_VERSION_PATCH_SCLAlertView_Objective_C 4
+#define COCOAPODS_VERSION_PATCH_SCLAlertView_Objective_C 5
 
 // Slash
 #define COCOAPODS_POD_AVAILABLE_Slash
@@ -250,11 +262,17 @@
 #define COCOAPODS_POD_AVAILABLE_THCalendarDatePicker
 #define COCOAPODS_VERSION_MAJOR_THCalendarDatePicker 0
 #define COCOAPODS_VERSION_MINOR_THCalendarDatePicker 2
-#define COCOAPODS_VERSION_PATCH_THCalendarDatePicker 8
+#define COCOAPODS_VERSION_PATCH_THCalendarDatePicker 9
 
 // TTTAttributedLabel
 #define COCOAPODS_POD_AVAILABLE_TTTAttributedLabel
 #define COCOAPODS_VERSION_MAJOR_TTTAttributedLabel 1
 #define COCOAPODS_VERSION_MINOR_TTTAttributedLabel 13
-#define COCOAPODS_VERSION_PATCH_TTTAttributedLabel 1
+#define COCOAPODS_VERSION_PATCH_TTTAttributedLabel 2
+
+// UICKeyChainStore
+#define COCOAPODS_POD_AVAILABLE_UICKeyChainStore
+#define COCOAPODS_VERSION_MAJOR_UICKeyChainStore 1
+#define COCOAPODS_VERSION_MINOR_UICKeyChainStore 0
+#define COCOAPODS_VERSION_PATCH_UICKeyChainStore 5
 

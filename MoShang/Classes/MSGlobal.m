@@ -7,9 +7,16 @@
 //
 
 #import "MSGlobal.h"
+#import <FCUUID.h>
 BOOL IS_MSColorString(NSString* str) {
     return [str hasPrefix:@"#"];
 }
+
+NSString* MSGenRandomUUID() {
+    return [FCUUID uuid];
+}
+
+
 @implementation MSGlobal
 
 @end

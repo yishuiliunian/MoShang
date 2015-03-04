@@ -13,6 +13,8 @@
 #import "MSLocationManager.h"
 #import "MSGetFeedByPosReq.h"
 #import "MSUserInfoReq.h"
+#import "MSOssManager.h"
+#import <DZImageCache.h>
 
 @implementation MSDebugCenter
 + (MSDebugCenter*) shareCenter
@@ -24,6 +26,5 @@
 {
     MSUserInfoReq* infoReq = [MSUserInfoReq new];
     
-//    [MSDefaultSyncCenter performRequest:infoReq];
 }
 @end

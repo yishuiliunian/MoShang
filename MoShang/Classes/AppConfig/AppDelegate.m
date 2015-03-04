@@ -20,6 +20,7 @@
 #import "MSChinaMapController.h"
 #import "MSLoginViewController.h"
 #import "MSLayoutEngine.h"
+#import "AppConfig.h"
 @interface AppDelegate ()
 
 @end
@@ -30,6 +31,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     MSDefaultLayoutEngine;
+    [AppDefaultConfig setup];
     [MSLog setup];
     [[MSDebugCenter shareCenter] globalTest];
     [MagicalRecord setupCoreDataStack];
