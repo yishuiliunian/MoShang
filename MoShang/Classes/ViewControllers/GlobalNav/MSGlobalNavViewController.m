@@ -16,6 +16,7 @@
 #import "MSTabBarItem.h"
 #import <DZImageCache.h>
 #import "MSGuideContentViewController.h"
+#import "MSAccountManager.h"
 @interface MSGlobalNavViewController () <MSMainViewControllerDelegate, MSGuideContentDelegate>
 @end
 
@@ -24,10 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadGuideVC];
-//    [self loadApplicationMainVC];
-
-    // Do any additional setup after loading the view.
+    if (MSShareAccountManager.currentAccount) {
+        [self loadApplicationMainVC];
+    } else
+    {
+        [self loadGuideVC];
+    }
 }
 
 - (void) loadGuideVC

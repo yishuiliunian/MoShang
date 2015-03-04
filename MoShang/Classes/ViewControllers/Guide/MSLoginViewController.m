@@ -133,9 +133,7 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-#ifdef DEBUG
-    [self moveToNextStep];
-#endif
+
 }
 - (void) moveToNextStep
 {

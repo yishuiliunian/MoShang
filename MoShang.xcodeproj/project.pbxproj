@@ -100,6 +100,7 @@
 		659F248B1AA5FB6A0080096B /* MSOssManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F248A1AA5FB6A0080096B /* MSOssManager.m */; };
 		659F24A01AA6F44B0080096B /* MSAppearenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F249F1AA6F44B0080096B /* MSAppearenceManager.m */; };
 		659F24A31AA6F5C80080096B /* UIViewController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24A21AA6F5C80080096B /* UIViewController+Custom.m */; };
+		659F24A91AA70DB20080096B /* MSMyPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24A81AA70DB20080096B /* MSMyPostViewController.m */; };
 		65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC41A8884E500A37E08 /* MSLocationManager.m */; };
 		65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC81A8886D900A37E08 /* MSLog.m */; };
 		65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */; };
@@ -341,6 +342,8 @@
 		659F249F1AA6F44B0080096B /* MSAppearenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAppearenceManager.m; path = Appearence/MSAppearenceManager.m; sourceTree = "<group>"; };
 		659F24A11AA6F5C80080096B /* UIViewController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Custom.h"; sourceTree = "<group>"; };
 		659F24A21AA6F5C80080096B /* UIViewController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Custom.m"; sourceTree = "<group>"; };
+		659F24A71AA70DB20080096B /* MSMyPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMyPostViewController.h; sourceTree = "<group>"; };
+		659F24A81AA70DB20080096B /* MSMyPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMyPostViewController.m; sourceTree = "<group>"; };
 		65BCBBC31A8884E500A37E08 /* MSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLocationManager.h; sourceTree = "<group>"; };
 		65BCBBC41A8884E500A37E08 /* MSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLocationManager.m; sourceTree = "<group>"; };
 		65BCBBC71A8886D900A37E08 /* MSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLog.h; sourceTree = "<group>"; };
@@ -509,6 +512,8 @@
 				650DC2571A723259000D000F /* MSMineViewController.m */,
 				6503039C1A790D7F00F30A2D /* MSMyCardViewController.h */,
 				6503039D1A790D7F00F30A2D /* MSMyCardViewController.m */,
+				659F24A71AA70DB20080096B /* MSMyPostViewController.h */,
+				659F24A81AA70DB20080096B /* MSMyPostViewController.m */,
 				6503039F1A790DF400F30A2D /* MSMineTopView.h */,
 				650303A01A790DF400F30A2D /* MSMineTopView.m */,
 			);
@@ -1296,6 +1301,7 @@
 				6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */,
 				6545C4661A7F76200066C7FC /* MCSession.m in Sources */,
 				6598D9361A8E02AA00813939 /* MSSetAvatarViewController.m in Sources */,
+				659F24A91AA70DB20080096B /* MSMyPostViewController.m in Sources */,
 				652982A11A85B86900322E8B /* MSSyncCenter.m in Sources */,
 				6529829E1A85B7D200322E8B /* MSRequestOperation.m in Sources */,
 				653A4E821A7E196B001384AC /* MSMessageHistoryModel.m in Sources */,

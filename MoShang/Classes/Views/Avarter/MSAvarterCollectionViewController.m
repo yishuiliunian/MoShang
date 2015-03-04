@@ -63,7 +63,10 @@ int MS_IndexFromUploadKey(NSString*key) {
     [_avaters addObjectsFromArray:avarters];
     return self;
 }
-
+- (NSArray*) avarters
+{
+    return [_avaters copy];
+}
 - (void) viewDidLoad
 {
     [super viewDidLoad];

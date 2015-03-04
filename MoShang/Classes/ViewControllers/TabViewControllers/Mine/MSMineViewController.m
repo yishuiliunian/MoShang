@@ -9,9 +9,14 @@
 #import "MSMineViewController.h"
 #import "MSMineTopView.h"
 #import "MSAvarterCollectionViewController.h"
+#import <RKSwipeBetweenViewControllers.h>
+#import "MSMyCardViewController.h"
+#import "MSMyPostViewController.h"
+#import <DZGeometryTools.h>
 @interface MSMineViewController ()
 {
     MSAvarterCollectionViewController* _avarterVC;
+    RKSwipeBetweenViewControllers* _swipeVC;
 }
 @end
 
@@ -34,6 +39,23 @@
     
     [self ms_addChildViewController:_avarterVC];
 }
+
+- (void) initDetailViewControllers
+{
+    MSMyCardViewController* cardVC = [MSMyCardViewController new];
+    MSMyPostViewController* postVC = [MSMyPostViewController new];
+    
+    UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+
+    RKSwipeBetweenViewControllers* swipeVC = [[RKSwipeBetweenViewControllers alloc] initWithRootViewController:pageController];
+    [swipeVC.viewControllerArray addObjectsFromArray:@[cardVC, postVC]];
+    
+    [self ms_addChildViewController:swipeVC];
+    
+    _swipeVC = swipeVC;
+    
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
@@ -53,6 +75,7 @@
 {
     [super viewWillLayoutSubviews];
     _avarterVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame)/4 + 30);
+    _swipeVC.view.frame = CGRectMake(0, CGRectGetMaxY(_avarterVC.view.frame), CGRectGetViewControllerWidth, CGRectGetViewControllerHeight - CGRectGetMaxY(_avarterVC.view.frame));
 }
 /*
 #pragma mark - Navigation

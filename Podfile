@@ -31,6 +31,7 @@ target 'MoShang' do
   pod 'TDSemiModal'
   pod 'FCUUID'
   pod 'JTSImageViewController'
+  pod 'RKSwipeBetweenViewControllers'
 end
 
 target 'MoShangTests' do

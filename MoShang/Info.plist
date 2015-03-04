@@ -32,9 +32,11 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>com.apple.coretelephony.Identity.get</key>
-	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
+	<true/>
+	<key>NSLocationUsageDescription</key>
+	<string>打开地理位置信息</string>
+	<key>NSLocationAlwaysUsageDescription</key>
 	<true/>
 </dict>
 </plist>

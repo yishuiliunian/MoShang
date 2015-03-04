@@ -87,10 +87,10 @@ NSString* const kDZOssScretKey = @"ZJQXjHz90Ez9cOPQjRzC8hFoh9nNLW";
     __weak OSSData* weakData = ossData;
     [ossData uploadWithUploadCallback:^(BOOL y, NSError * error) {
         
-        NSString* u = [weakData getResourceURL:kDZOssAceessKey andExpire:100000000];
+        NSString* u = [weakData getResourceURL:kDZOssAceessKey andExpire:100000000000];
         for (id<MSOssUploadObserver> ob in _delegateArray) {
             if (y) {
-                [ob  uploadImageWithKeySucceed:key url:url];
+                [ob  uploadImageWithKeySucceed:key url:u];
             } else {
                 [ob uploadImageWithKey:key faild:error];
             }

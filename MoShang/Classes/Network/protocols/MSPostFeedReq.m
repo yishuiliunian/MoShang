@@ -30,11 +30,11 @@
 
 - (void) onSuccess:(id)retObject
 {
-    
+    [self doUIOnSuccced:retObject];
 }
 
 - (void) onError:(NSError *)error
 {
-    
+    [self doUIOnError:error];
 }
 @end

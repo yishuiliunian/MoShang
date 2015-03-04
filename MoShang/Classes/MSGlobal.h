@@ -10,6 +10,8 @@
 #import "NSDate+Read.h"
 #import "NSError+MS.h"
 #import "UIViewController+Custom.h"
+#import "MSAlertPool.h"
+#import "MSTipsPool.h"
 
 
 #define NUM_TO_STRING(x) [@(x) stringValue]

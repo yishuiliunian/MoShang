@@ -38,9 +38,15 @@
     if (!self) {
         return self;
     }
-    _locationManager = [[CLLocationManager alloc] init];
-    _locationManager.delegate = self;
-    [_locationManager startUpdatingLocation];
+
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        _locationManager = [[CLLocationManager alloc] init];
+        [_locationManager requestWhenInUseAuthorization];
+        _locationManager.delegate = self;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        _locationManager.distanceFilter = kCLDistanceFilterNone;
+        [_locationManager startUpdatingLocation];
+    });
     _currentLocation = [self loadStorageLocation];
     return self;
 }
@@ -88,6 +94,25 @@ INIT_DZ_EXTERN_STRING(kMSLocationCurrentData, kMSLocationCurrentData1);
     loc.altitude = location.altitude;
     _currentLocation = loc;
     [self storageCurrentLocation];
+}
+
+- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    
+}
+
+- (void) startMoniter
+{
+    [[INTULocationManager sharedInstance] subscribeToLocationUpdatesWithBlock:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+        NSLog(@"xxxxx");
+    }];
+    [[INTULocationManager sharedInstance] requestLocationWithDesiredAccuracy:INTULocationAccuracyRoom timeout:1 delayUntilAuthorized:YES block:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+       
+        if (status == INTULocationStatusSuccess) {
+            
+        }
+        
+    }];
 }
 
 @end

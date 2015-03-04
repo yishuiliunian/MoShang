@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #define MSDefaultAlertPool [MSAlertPool defaultPool]
+
+#define MSAlertShowLoading(mssage) [MSDefaultAlertPool showLoadingWithMessage:mssage];
+#define MSAlertHideLoading  [MSDefaultAlertPool hideAllAlert];
 @interface MSAlertPool : NSObject
 + (MSAlertPool*) defaultPool;
 - (void) showLoadingWithMessage:(NSString*)msg;

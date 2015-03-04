@@ -63,6 +63,7 @@ PODS:
     - Realm/Headers (= 0.90.6)
   - Realm/Headers (0.90.6)
   - RKDropdownAlert (0.1.1)
+  - RKSwipeBetweenViewControllers (0.1.3)
   - SCLAlertView-Objective-C (0.5.5)
   - Slash (0.1.2):
     - Slash/arc (= 0.1.2)
@@ -98,6 +99,7 @@ DEPENDENCIES:
   - ObjectiveRecord
   - Realm
   - RKDropdownAlert
+  - RKSwipeBetweenViewControllers
   - SCLAlertView-Objective-C
   - TDSemiModal
   - THCalendarDatePicker (~> 0.2.8)
@@ -135,6 +137,7 @@ SPEC CHECKSUMS:
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
   Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
+  RKSwipeBetweenViewControllers: a0697cf3acfb523700815c01e911367c84c9240a
   SCLAlertView-Objective-C: 7ff3bfcc569c52da13801652e67029e4611f04bc
   Slash: d98d6ff27ece4297d8d65fb49fc1ce4307a75f46
   TDSemiModal: c2fd3fe003fe0c575c14fbcf75950cf2e075d3a2

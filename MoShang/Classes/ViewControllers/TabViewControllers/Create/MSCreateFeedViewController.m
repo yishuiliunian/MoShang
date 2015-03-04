@@ -11,7 +11,10 @@
 #import <DZProgramDefines.h>
 #import <DZGeometryTools.h>
 #import "MSGlobal.h"
-@interface MSCreateFeedViewController ()
+#import "MSPostFeedReq.h"
+#import "MSAlertPool.h"
+#import "MSLocationManager.h"
+@interface MSCreateFeedViewController () <MSRequestUIDelegate>
 @property (nonatomic, strong) MSAvarterCollectionViewController* avarterViewController;
 @property (nonatomic, strong) UITextView* textView;
 @end
@@ -62,6 +65,30 @@
 
 - (void) postFeed
 {
+    NSString* picList = [NSString new];
+    for (NSString* a in self.avarterViewController.avarters) {
+       picList =  [picList stringByAppendingFormat:@"%@;", a];
+    }
+    MSPostFeedReq* postReq = [MSPostFeedReq new];
+    postReq.content = _textView.text;
+    postReq.piclist = picList;
+    postReq.backgroundColor = @"#333333";
+    postReq.position = [MSLocationManager shareManager].currentLocation.serverEncodeString;
+    postReq.uidelegate = self;
+    [MSDefaultSyncCenter performRequest:postReq];
     
+    MSAlertShowLoading(@"发表中....")
+}
+
+- (void) request:(MSRequest *)request onError:(NSError *)error
+{
+    MSAlertHideLoading
+    [MSDefaultTipsPool showError:error];
+}
+
+- (void) request:(MSRequest *)request onSucced:(id)object
+{
+    MSAlertHideLoading
+    [self dismissNavigationController];
 }
 @end
