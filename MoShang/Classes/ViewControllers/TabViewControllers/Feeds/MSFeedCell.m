@@ -19,6 +19,7 @@
 #import "MSSetLikeReq.h"
 #import "MSSyncCenter.h"
 #import "MSTipsPool.h"
+#import "MSFeedFuctionView.h"
 @interface MSFeedCell() <MSRequestUIDelegate>
 @property (nonatomic, strong) UIImageView* headImageView;
 @property (nonatomic, strong) UIImageView* backgroudImageView;
@@ -26,9 +27,7 @@
 @property (nonatomic, strong) UILabel* detailFeedLabel;
 @property (nonatomic, strong) UIView* functionsBackgroundView;
 @property (nonatomic, strong) UIView* detailTextBackgroudView;
-DEFINE_PROPERTY_STRONG(MSLeftImageButton*, pinglunButton);
-DEFINE_PROPERTY_STRONG(MSLeftImageButton*, liaoliaoButton);
-DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
+@property (nonatomic, strong) MSFeedFuctionView* functionView;
 @end
 @implementation MSFeedCell
 
@@ -46,9 +45,7 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
     INIT_SUBVIEW(self.contentView, UILabel, _nickNameLabel);
     INIT_SUBVIEW(self.contentView, UILabel, _detailFeedLabel);
     INIT_SUBVIEW(_backgroudImageView, UIView, _functionsBackgroundView);
-    INIT_SUBVIEW(self.contentView, TTTAttributedLabel, _timeLabel);
-    INIT_SUBVIEW(self.contentView, MSLeftImageButton, _liaoliaoButton);
-    INIT_SUBVIEW(self.contentView, MSLeftImageButton, _pinglunButton);
+
     _functionsBackgroundView.backgroundColor = [UIColor whiteColor];
     _detailFeedLabel.numberOfLines = 0;
     self.selectedBackgroundView = nil;
@@ -95,25 +92,14 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
     _detailTextBackgroudView.backgroundColor = [UIColor blackColor];
     _detailTextBackgroudView.alpha = 0.5;
     //
-    [_pinglunButton setTitle:@"199" forState:UIControlStateNormal];
-    [_liaoliaoButton setTitle:@"聊聊" forState:UIControlStateNormal];
-    
-    void(^DecorateButton)(UIButton* btn, NSString* imgeName, NSString* clickImageName) = ^(UIButton* btn ,NSString* imgeName, NSString* clickImageName) {
-        [btn setImage:DZCachedImageByName(imgeName) forState:UIControlStateNormal];
-        [btn setImage:DZCachedImageByName(clickImageName) forState:UIControlStateHighlighted];
-        [btn setTitleColor:[UIColor colorWithHexString:@"499df2"] forState:UIControlStateNormal];
-    };
-    
-    DecorateButton(_liaoliaoButton, @"liaoliao_normal", @"liaoliao_click");
-    
-    DecorateButton(_pinglunButton, @"zan_normal", @"zan_click");
-    
-    //
-    
-    [_pinglunButton addTarget:self action:@selector(likeIt) forControlEvents:UIControlEventTouchUpInside];
-    //h
-    [_liaoliaoButton addTarget:self action:@selector(begainTalk) forControlEvents:UIControlEventTouchUpInside];
+
     _headImageView.image = DZCachedImageByName(@"default_avater_man.png");
+    
+    INIT_SUBVIEW(self.contentView, MSFeedFuctionView, _functionView);
+    [_functionView.pinglunButton addTarget:self action:@selector(likeIt) forControlEvents:UIControlEventTouchUpInside];
+    //h
+    [_functionView.liaoliaoButton addTarget:self action:@selector(begainTalk) forControlEvents:UIControlEventTouchUpInside];
+    
     return self;
 }
 - (void) begainTalk
@@ -146,7 +132,7 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
 - (void) request:(MSRequest *)request onSucced:(id)object
 {
     self.feed.likecount = [@(self.feed.n_likecount+1) stringValue];
-    [_pinglunButton setTitle:self.feed.likecount forState:UIControlStateNormal];
+    [_functionView.pinglunButton setTitle:self.feed.likecount forState:UIControlStateNormal];
 }
 
 - (void) layouts
@@ -168,8 +154,8 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
         } else {
             [_backgroudImageView hnk_setImageFromURL:[NSURL URLWithString:feed.bg]];
         }
-        _timeLabel.text = @"腾讯大厦";
-        [_pinglunButton setTitle:[@(_feed.n_likecount) stringValue] forState:UIControlStateNormal];
+        _functionView.timeLabel.text = @"腾讯大厦";
+        [_functionView.pinglunButton setTitle:[@(_feed.n_likecount) stringValue] forState:UIControlStateNormal];
     }
 }
 
@@ -191,12 +177,7 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
                                                 CGRectGetMinY( [self convertRect:_functionsBackgroundView.frame fromView:_backgroudImageView])- CGRectGetMinY(_detailFeedLabel.frame));
     
     CGRect functionsRect = [self convertRect:_functionsBackgroundView.frame fromView:_backgroudImageView];
-    CGSize buttonSize = CGSizeMake(70, 15);
-    
-    CGFloat buttonStartY = CGRectGetMinY(functionsRect) + (CGRectGetHeight(_functionsBackgroundView.frame) - buttonSize.height)/2;
-    _pinglunButton.frame = CGRectMake(CGRectGetMaxX(functionsRect) - buttonSize.width - 10, buttonStartY, buttonSize.width, buttonSize.height);
-    _liaoliaoButton.frame = CGRectMake(CGRectGetMinX(_pinglunButton.frame) - buttonSize.width - 10, buttonStartY, buttonSize.width, buttonSize.height);
-    _timeLabel.frame = CGRectMake(CGRectGetMinX(functionsRect) + 10, buttonStartY, CGRectGetWidth(functionsRect) - 10 - CGRectGetMinX(_liaoliaoButton.frame) - 5, buttonSize.height);
+    _functionView.frame = functionsRect;
     
 }
 @end

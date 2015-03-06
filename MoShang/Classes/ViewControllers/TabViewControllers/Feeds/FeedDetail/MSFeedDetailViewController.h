@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MSFeed.h"
 @interface MSFeedDetailViewController : UIViewController
-
+@property (nonatomic, strong) MSFeed* feed;
 @end

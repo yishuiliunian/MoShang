@@ -17,6 +17,7 @@
 #import <RCIM.h>
 #import <RCChatViewController.h>
 #import <CBStoreHouseRefreshControl.h>
+#import "MSFeedDetailViewController.h"
 @interface MSFeedsTableViewController () <MSRequestUIDelegate, MSFeedCellDelegate >
 @property (nonatomic, assign) int lastRequestID;
 @property (nonatomic, strong) CBStoreHouseRefreshControl* storeRefreshControl;
@@ -111,6 +112,15 @@
     }];
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MSFeed* feed = [self.feedDataController.feeds objectAtIndex:indexPath.row];
+ 
+    MSFeedDetailViewController* detailVC = [MSFeedDetailViewController new];
+    detailVC.feed = feed;
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
 - (void) feedCell:(MSFeedCell *)cell didTapLiaoLiaoBtn:(MSFeed *)feed
 {
     RCChatViewController *chatViewController = [[RCIM sharedRCIM]createPrivateChat:@"1" title:@"自问自答" completion:^(){
@@ -121,6 +131,7 @@
     chatViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatViewController animated:YES];
 }
+
 
 
 #pragma mark ScrollView Delegate

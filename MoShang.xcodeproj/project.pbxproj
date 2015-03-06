@@ -112,6 +112,9 @@
 		65D49A0B1AA978AC00791A6C /* MSChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A0A1AA978AC00791A6C /* MSChatListViewController.m */; };
 		65D49A0F1AA97C1A00791A6C /* MSFeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A0E1AA97C1A00791A6C /* MSFeedDetailViewController.m */; };
 		65D49A121AA97C4C00791A6C /* MSFeedDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A111AA97C4C00791A6C /* MSFeedDetailView.m */; };
+		65D49A191AA97CE100791A6C /* MSBadgeContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A181AA97CE100791A6C /* MSBadgeContentView.m */; };
+		65D49A1C1AA97CF700791A6C /* MSBadgeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A1B1AA97CF700791A6C /* MSBadgeItem.m */; };
+		65D49A1F1AA98CDB00791A6C /* MSFeedFuctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A1E1AA98CDB00791A6C /* MSFeedFuctionView.m */; };
 		65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460A1A8A100B00CF1536 /* MSChinaMap.m */; };
 		65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460D1A8A103600CF1536 /* MSProviceView.m */; };
 		65DA46321A8AF42A00CF1536 /* default_avater_lady.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46301A8AF42A00CF1536 /* default_avater_lady.png */; };
@@ -381,6 +384,12 @@
 		65D49A0E1AA97C1A00791A6C /* MSFeedDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeedDetailViewController.m; sourceTree = "<group>"; };
 		65D49A101AA97C4C00791A6C /* MSFeedDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeedDetailView.h; sourceTree = "<group>"; };
 		65D49A111AA97C4C00791A6C /* MSFeedDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeedDetailView.m; sourceTree = "<group>"; };
+		65D49A171AA97CE100791A6C /* MSBadgeContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBadgeContentView.h; sourceTree = "<group>"; };
+		65D49A181AA97CE100791A6C /* MSBadgeContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBadgeContentView.m; sourceTree = "<group>"; };
+		65D49A1A1AA97CF700791A6C /* MSBadgeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBadgeItem.h; sourceTree = "<group>"; };
+		65D49A1B1AA97CF700791A6C /* MSBadgeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBadgeItem.m; sourceTree = "<group>"; };
+		65D49A1D1AA98CDB00791A6C /* MSFeedFuctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeedFuctionView.h; sourceTree = "<group>"; };
+		65D49A1E1AA98CDB00791A6C /* MSFeedFuctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeedFuctionView.m; sourceTree = "<group>"; };
 		65DA46091A8A100B00CF1536 /* MSChinaMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSChinaMap.h; sourceTree = "<group>"; };
 		65DA460A1A8A100B00CF1536 /* MSChinaMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChinaMap.m; sourceTree = "<group>"; };
 		65DA460C1A8A103600CF1536 /* MSProviceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSProviceView.h; sourceTree = "<group>"; };
@@ -530,6 +539,8 @@
 				650DC2511A723240000D000F /* MSFeedsTableViewController.m */,
 				658221181A77C4DF006B599D /* MSFeedCell.h */,
 				658221191A77C4DF006B599D /* MSFeedCell.m */,
+				65D49A1D1AA98CDB00791A6C /* MSFeedFuctionView.h */,
+				65D49A1E1AA98CDB00791A6C /* MSFeedFuctionView.m */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -884,6 +895,10 @@
 		65D49A161AA97C9300791A6C /* Bagde */ = {
 			isa = PBXGroup;
 			children = (
+				65D49A171AA97CE100791A6C /* MSBadgeContentView.h */,
+				65D49A181AA97CE100791A6C /* MSBadgeContentView.m */,
+				65D49A1A1AA97CF700791A6C /* MSBadgeItem.h */,
+				65D49A1B1AA97CF700791A6C /* MSBadgeItem.m */,
 			);
 			path = Bagde;
 			sourceTree = "<group>";
@@ -1421,6 +1436,7 @@
 				658221311A787D11006B599D /* MSTextLayoutItem.m in Sources */,
 				652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */,
 				658221161A77BCFB006B599D /* MSLineHorizontalLayout.m in Sources */,
+				65D49A1F1AA98CDB00791A6C /* MSFeedFuctionView.m in Sources */,
 				6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */,
 				65F4F2CE1AA88D7D00DD82BD /* MSCardItem.m in Sources */,
 				6545C4661A7F76200066C7FC /* MCSession.m in Sources */,
@@ -1459,6 +1475,7 @@
 				656DB5611A89E941008AE224 /* MSGetFeedByUidReq.m in Sources */,
 				6598D9301A8DF86200813939 /* MSGuideUserInfoViewController.m in Sources */,
 				656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */,
+				65D49A1C1AA97CF700791A6C /* MSBadgeItem.m in Sources */,
 				65D499FC1AA891A300791A6C /* MSCardItemCell.m in Sources */,
 				650DC2461A722C52000D000F /* MSTabBarItem.m in Sources */,
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
@@ -1476,6 +1493,7 @@
 				6598D9401A9048EE00813939 /* MSAlertPool.m in Sources */,
 				653A4E6F1A7E0EF3001384AC /* MSToken.m in Sources */,
 				65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */,
+				65D49A191AA97CE100791A6C /* MSBadgeContentView.m in Sources */,
 				650DC25B1A723266000D000F /* MSMasterTableViewController.m in Sources */,
 				656DB5581A89E798008AE224 /* MSGetMyTalksReq.m in Sources */,
 				655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */,
