@@ -9,18 +9,18 @@
 #import "JSONModel.h"
 
 @interface MSUserInfo : JSONModel
-@property (nonatomic, strong) NSString* achievement;
-@property (nonatomic, strong) NSString* baseinfo;
-@property (nonatomic, strong) NSString* birth;
-@property (nonatomic, assign) int gender;
-@property (nonatomic, strong) NSString* head;
-@property (nonatomic, strong) NSString* icare;
-@property (nonatomic, strong) NSString* lastpos;
-@property (nonatomic, strong) NSString* likelist;
-@property (nonatomic, strong) NSString* nick;
-@property (nonatomic, strong) NSString* sign;
-@property (nonatomic, strong) NSString* sns;
-@property (nonatomic, strong) NSString* style;
-@property (nonatomic, strong) NSString* taglist;
-@property (nonatomic, strong) NSString* trip;
+@property (nonatomic, strong) NSString<Optional>* achievement;
+@property (nonatomic, strong) NSString<Optional>* baseinfo;
+@property (nonatomic, strong) NSString<Optional>* birth;
+@property (nonatomic, strong) NSString<Optional>* gender;
+@property (nonatomic, strong) NSString<Optional>* head;
+@property (nonatomic, strong) NSString<Optional>* icare;
+@property (nonatomic, strong) NSString<Optional>* lastpos;
+@property (nonatomic, strong) NSString<Optional>* likelist;
+@property (nonatomic, strong) NSString<Optional>* nick;
+@property (nonatomic, strong) NSString<Optional>* sign;
+@property (nonatomic, strong) NSString<Optional>* sns;
+@property (nonatomic, strong) NSString<Optional>* style;
+@property (nonatomic, strong) NSString<Optional>* taglist;
+@property (nonatomic, strong) NSString<Optional>* trip;
 @end

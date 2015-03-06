@@ -12,6 +12,8 @@
 #import "OSSTool.h"
 #import "MSOssManager.h"
 #import "MSAppearenceManager.h"
+#import "MSDebugCenter.h"
+#import <RongCloudIMKit/RCIM.h>
 @implementation AppConfig
 + (AppConfig*) shareInstance
 {
@@ -38,9 +40,24 @@
 {
     [[MSAppearenceManager shareManager] loadGlobalAppearence];
 }
+
+- (void) rongYunIMSetup
+{
+    [RCIM initWithAppKey:@"3argexb6rnvue" deviceToken:nil];
+    
+    [RCIM connectWithToken:@"WnaRW7U4gk3YSfQdvROPDwdLTz8G4yI3awWnw14VYT5GfR7+XwA0C6Om7aEMAPz5xVIcxRP5mhpuHkZIG9OR0OABlCi9FnOS" completion:^(NSString *userId) {
+        
+        NSLog(@"%@",userId);
+    } error:^(RCConnectErrorCode status) {
+        
+    }];
+}
+
 - (void) setup
 {
     [self aliyunSetup];
     [self uisetup];
+    [self rongYunIMSetup];
+    [[MSDebugCenter shareCenter] globalTest];
 }
 @end

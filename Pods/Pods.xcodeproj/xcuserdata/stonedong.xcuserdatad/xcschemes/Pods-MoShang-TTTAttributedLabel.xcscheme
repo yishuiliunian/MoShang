@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "569C0816420CBCEBCFAA5C2A"
+               BlueprintIdentifier = "67F6C5B69DAF0B4E3458A9E5"
                BuildableName = "libPods-MoShang-TTTAttributedLabel.a"
                BlueprintName = "Pods-MoShang-TTTAttributedLabel"
                ReferencedContainer = "container:Pods.xcodeproj">

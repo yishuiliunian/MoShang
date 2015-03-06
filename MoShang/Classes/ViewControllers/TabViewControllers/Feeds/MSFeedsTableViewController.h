@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MSFeedDataController.h"
 @interface MSFeedsTableViewController : UITableViewController
+@property (nonatomic, strong) MSFeedDataController* feedDataController;
 
+- (void) didBeginReloadData;
+- (void) didEndReloadData;
 @end

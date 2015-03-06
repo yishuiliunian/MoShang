@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A4658BB997B38F25989493FE"
+               BlueprintIdentifier = "A96DF3F3A30D71B044E1D621"
                BuildableName = "DZCDNFiles.bundle"
                BlueprintName = "DZCDNFiles"
                ReferencedContainer = "container:Pods.xcodeproj">

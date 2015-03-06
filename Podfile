@@ -32,6 +32,10 @@ target 'MoShang' do
   pod 'FCUUID'
   pod 'JTSImageViewController'
   pod 'RKSwipeBetweenViewControllers'
+  pod 'NSString-UrlEncode'
+  pod 'RongCloudIMKit'
+  pod 'CBStoreHouseRefreshControl'
+
 end
 
 target 'MoShangTests' do

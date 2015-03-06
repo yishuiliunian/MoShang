@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_AVOSCloud 6
 #define COCOAPODS_VERSION_PATCH_AVOSCloud 10
 
+// CBStoreHouseRefreshControl
+#define COCOAPODS_POD_AVAILABLE_CBStoreHouseRefreshControl
+#define COCOAPODS_VERSION_MAJOR_CBStoreHouseRefreshControl 1
+#define COCOAPODS_VERSION_MINOR_CBStoreHouseRefreshControl 0
+#define COCOAPODS_VERSION_PATCH_CBStoreHouseRefreshControl 0
+
 // CocoaLumberjack
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
 #define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
@@ -198,6 +204,12 @@
 #define COCOAPODS_VERSION_MINOR_MagicalRecord_Core 2
 #define COCOAPODS_VERSION_PATCH_MagicalRecord_Core 0
 
+// NSString-UrlEncode
+#define COCOAPODS_POD_AVAILABLE_NSString_UrlEncode
+#define COCOAPODS_VERSION_MAJOR_NSString_UrlEncode 2
+#define COCOAPODS_VERSION_MINOR_NSString_UrlEncode 0
+#define COCOAPODS_VERSION_PATCH_NSString_UrlEncode 0
+
 // ObjectiveRecord
 #define COCOAPODS_POD_AVAILABLE_ObjectiveRecord
 #define COCOAPODS_VERSION_MAJOR_ObjectiveRecord 1
@@ -234,11 +246,17 @@
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 90
 #define COCOAPODS_VERSION_PATCH_Realm_Headers 6
 
+// RongCloudIMKit
+#define COCOAPODS_POD_AVAILABLE_RongCloudIMKit
+#define COCOAPODS_VERSION_MAJOR_RongCloudIMKit 1
+#define COCOAPODS_VERSION_MINOR_RongCloudIMKit 3
+#define COCOAPODS_VERSION_PATCH_RongCloudIMKit 4
+
 // SCLAlertView-Objective-C
 #define COCOAPODS_POD_AVAILABLE_SCLAlertView_Objective_C
 #define COCOAPODS_VERSION_MAJOR_SCLAlertView_Objective_C 0
 #define COCOAPODS_VERSION_MINOR_SCLAlertView_Objective_C 5
-#define COCOAPODS_VERSION_PATCH_SCLAlertView_Objective_C 5
+#define COCOAPODS_VERSION_PATCH_SCLAlertView_Objective_C 6
 
 // Slash
 #define COCOAPODS_POD_AVAILABLE_Slash

@@ -15,7 +15,11 @@
 #import "MSUserInfoReq.h"
 #import "MSOssManager.h"
 #import <DZImageCache.h>
+#import "MSSingleFeedReq.h"
 
+@interface MSDebugCenter () <MSRequestUIDelegate>
+
+@end
 @implementation MSDebugCenter
 + (MSDebugCenter*) shareCenter
 {
@@ -24,7 +28,21 @@
 
 - (void) globalTest
 {
-    MSUserInfoReq* infoReq = [MSUserInfoReq new];
+    MSSingleFeedReq* infoReq = [MSSingleFeedReq new];
+    infoReq.feedID = @"50";
+    
+    infoReq.uidelegate = self;
+    
+    [MSDefaultSyncCenter performRequest:infoReq];
+}
+
+- (void) request:(MSRequest *)request onSucced:(id)object
+{
+    
+}
+
+- (void) request:(MSRequest *)request onError:(NSError *)error
+{
     
 }
 @end

@@ -9,4 +9,8 @@
 #import "MSFeed.h"
 
 @implementation MSFeed
+- (int) n_likecount
+{
+    return [self.likecount intValue];
+}
 @end

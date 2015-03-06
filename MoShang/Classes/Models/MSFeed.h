@@ -15,19 +15,20 @@
 @property (nonatomic, strong) MSFeedLayoutItem<Optional>* layoutItem;
 
 @property (nonatomic, strong) NSString<Optional>* author;
-@property (nonatomic, strong) NSString* bg;
-@property (nonatomic, strong) NSString* birth;
-@property (nonatomic, strong) NSString* content;
+@property (nonatomic, strong) NSString<Optional>* bg;
+@property (nonatomic, strong) NSString<Optional>* birth;
+@property (nonatomic, strong) NSString<Optional>* content;
 @property (nonatomic, assign) NSTimeInterval createtime;
 @property (nonatomic, assign) double gender;
-@property (nonatomic, strong) NSString* head;
-@property (nonatomic, assign) int likecount;
+@property (nonatomic, strong) NSString<Optional>* head;
+@property (nonatomic, assign, readonly) int n_likecount;
+@property (nonatomic, strong) NSString<Optional>* likecount;
 @property (nonatomic, assign) NSTimeInterval modifytime;
-@property (nonatomic, strong) NSString* nick;
-@property (nonatomic, strong) NSString* piclist;
-@property (nonatomic, strong) NSString* pos;
+@property (nonatomic, strong) NSString<Optional>* nick;
+@property (nonatomic, strong) NSString<Optional>* piclist;
+@property (nonatomic, strong) NSString<Optional>* pos;
 @property (nonatomic, assign) int recordid;
-@property (nonatomic, strong) NSString* sign;
-@property (nonatomic, strong) NSString* taglist;
+@property (nonatomic, strong) NSString<Optional>* sign;
+@property (nonatomic, strong) NSString<Optional>* taglist;
 
 @end

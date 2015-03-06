@@ -18,7 +18,8 @@
 #import <DZImageCache.h>
 #import "MSSetLikeReq.h"
 #import "MSSyncCenter.h"
-@interface MSFeedCell()
+#import "MSTipsPool.h"
+@interface MSFeedCell() <MSRequestUIDelegate>
 @property (nonatomic, strong) UIImageView* headImageView;
 @property (nonatomic, strong) UIImageView* backgroudImageView;
 @property (nonatomic, strong) UILabel* nickNameLabel;
@@ -110,17 +111,42 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
     //
     
     [_pinglunButton addTarget:self action:@selector(likeIt) forControlEvents:UIControlEventTouchUpInside];
-    //
+    //h
+    [_liaoliaoButton addTarget:self action:@selector(begainTalk) forControlEvents:UIControlEventTouchUpInside];
     _headImageView.image = DZCachedImageByName(@"default_avater_man.png");
     return self;
 }
+- (void) begainTalk
+{
+    if ([self.delegate respondsToSelector:@selector(feedCell:didTapLiaoLiaoBtn:)]) {
+        [self.delegate feedCell:self didTapLiaoLiaoBtn:self.feed];
+    }
+}
 
+- (void) prepareForReuse
+{
+    [super prepareForReuse];
+    _backgroudImageView.image = nil;
+    _headImageView.image = nil;
+}
 - (void) likeIt
 {
     MSSetLikeReq* likeReq = [MSSetLikeReq new];
     likeReq.feedid = NUM_TO_STRING(_feed.recordid);
     likeReq.bLike = YES;
+    likeReq.uidelegate = self;
     [MSDefaultSyncCenter performRequest:likeReq];
+}
+
+- (void) request:(MSRequest *)request onError:(NSError *)error
+{
+    [MSDefaultTipsPool showError:error];
+}
+
+- (void) request:(MSRequest *)request onSucced:(id)object
+{
+    self.feed.likecount = [@(self.feed.n_likecount+1) stringValue];
+    [_pinglunButton setTitle:self.feed.likecount forState:UIControlStateNormal];
 }
 
 - (void) layouts
@@ -143,7 +169,7 @@ DEFINE_PROPERTY_STRONG(TTTAttributedLabel*, timeLabel);
             [_backgroudImageView hnk_setImageFromURL:[NSURL URLWithString:feed.bg]];
         }
         _timeLabel.text = @"腾讯大厦";
-        [_pinglunButton setTitle:[@(_feed.likecount) stringValue] forState:UIControlStateNormal];
+        [_pinglunButton setTitle:[@(_feed.n_likecount) stringValue] forState:UIControlStateNormal];
     }
 }
 

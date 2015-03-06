@@ -100,11 +100,18 @@
 		659F248B1AA5FB6A0080096B /* MSOssManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F248A1AA5FB6A0080096B /* MSOssManager.m */; };
 		659F24A01AA6F44B0080096B /* MSAppearenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F249F1AA6F44B0080096B /* MSAppearenceManager.m */; };
 		659F24A31AA6F5C80080096B /* UIViewController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24A21AA6F5C80080096B /* UIViewController+Custom.m */; };
-		659F24A91AA70DB20080096B /* MSMyPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659F24A81AA70DB20080096B /* MSMyPostViewController.m */; };
 		65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC41A8884E500A37E08 /* MSLocationManager.m */; };
 		65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBC81A8886D900A37E08 /* MSLog.m */; };
 		65BCBBCB1A888AE100A37E08 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */; };
 		65BCBBCE1A88962C00A37E08 /* MSGetFeedByPosReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BCBBCD1A88962C00A37E08 /* MSGetFeedByPosReq.m */; };
+		65D499FC1AA891A300791A6C /* MSCardItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D499FB1AA891A300791A6C /* MSCardItemCell.m */; };
+		65D49A001AA963EC00791A6C /* MSFeedDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D499FF1AA963EC00791A6C /* MSFeedDataController.m */; };
+		65D49A031AA9661700791A6C /* MSPosFeedDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A021AA9661700791A6C /* MSPosFeedDataController.m */; };
+		65D49A051AA96C5F00791A6C /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65D49A041AA96C5F00791A6C /* storehouse.plist */; };
+		65D49A081AA96F8F00791A6C /* MSUserFeedDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A071AA96F8F00791A6C /* MSUserFeedDataController.m */; };
+		65D49A0B1AA978AC00791A6C /* MSChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A0A1AA978AC00791A6C /* MSChatListViewController.m */; };
+		65D49A0F1AA97C1A00791A6C /* MSFeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A0E1AA97C1A00791A6C /* MSFeedDetailViewController.m */; };
+		65D49A121AA97C4C00791A6C /* MSFeedDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A111AA97C4C00791A6C /* MSFeedDetailView.m */; };
 		65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460A1A8A100B00CF1536 /* MSChinaMap.m */; };
 		65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460D1A8A103600CF1536 /* MSProviceView.m */; };
 		65DA46321A8AF42A00CF1536 /* default_avater_lady.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46301A8AF42A00CF1536 /* default_avater_lady.png */; };
@@ -144,6 +151,16 @@
 		65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA46761A8AFCDC00CF1536 /* MSChinaMapController.m */; };
 		65DA46C41A8C43F800CF1536 /* MSInputScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA46C31A8C43F800CF1536 /* MSInputScrollViewController.m */; };
 		65DA46C81A8C8CAA00CF1536 /* MSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA46C71A8C8CAA00CF1536 /* MSLoginViewController.m */; };
+		65F4F2BF1AA888F300DD82BD /* DZTabViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4F2B81AA888F300DD82BD /* DZTabViewItem.m */; };
+		65F4F2C01AA888F300DD82BD /* UIViewController+DZSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4F2BA1AA888F300DD82BD /* UIViewController+DZSwipeViewController.m */; };
+		65F4F2C11AA888F300DD82BD /* DZSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4F2BC1AA888F300DD82BD /* DZSwipeViewController.m */; };
+		65F4F2C21AA888F300DD82BD /* DZTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4F2BE1AA888F300DD82BD /* DZTabView.m */; };
+		65F4F2C71AA88B0B00DD82BD /* mine_infos_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F4F2C31AA88B0B00DD82BD /* mine_infos_clicked@2x.png */; };
+		65F4F2C81AA88B0B00DD82BD /* mine_infos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F4F2C41AA88B0B00DD82BD /* mine_infos@2x.png */; };
+		65F4F2C91AA88B0B00DD82BD /* mine_jilu_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F4F2C51AA88B0B00DD82BD /* mine_jilu_clicked@2x.png */; };
+		65F4F2CA1AA88B0B00DD82BD /* mine_jilu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F4F2C61AA88B0B00DD82BD /* mine_jilu@2x.png */; };
+		65F4F2CE1AA88D7D00DD82BD /* MSCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4F2CD1AA88D7D00DD82BD /* MSCardItem.m */; };
+		65F4F2D11AA88DD400DD82BD /* MSCardContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F4F2D01AA88DD400DD82BD /* MSCardContent.m */; };
 		65FD5B551A721B4F007239B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B541A721B4F007239B9 /* Images.xcassets */; };
 		65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FD5B561A721B4F007239B9 /* LaunchScreen.xib */; };
 		65FD5B641A721B50007239B9 /* MoShangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FD5B631A721B50007239B9 /* MoShangTests.m */; };
@@ -342,8 +359,6 @@
 		659F249F1AA6F44B0080096B /* MSAppearenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAppearenceManager.m; path = Appearence/MSAppearenceManager.m; sourceTree = "<group>"; };
 		659F24A11AA6F5C80080096B /* UIViewController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Custom.h"; sourceTree = "<group>"; };
 		659F24A21AA6F5C80080096B /* UIViewController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Custom.m"; sourceTree = "<group>"; };
-		659F24A71AA70DB20080096B /* MSMyPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMyPostViewController.h; sourceTree = "<group>"; };
-		659F24A81AA70DB20080096B /* MSMyPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMyPostViewController.m; sourceTree = "<group>"; };
 		65BCBBC31A8884E500A37E08 /* MSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLocationManager.h; sourceTree = "<group>"; };
 		65BCBBC41A8884E500A37E08 /* MSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLocationManager.m; sourceTree = "<group>"; };
 		65BCBBC71A8886D900A37E08 /* MSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLog.h; sourceTree = "<group>"; };
@@ -351,6 +366,21 @@
 		65BCBBCA1A888AE100A37E08 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		65BCBBCC1A88962C00A37E08 /* MSGetFeedByPosReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGetFeedByPosReq.h; sourceTree = "<group>"; };
 		65BCBBCD1A88962C00A37E08 /* MSGetFeedByPosReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGetFeedByPosReq.m; sourceTree = "<group>"; };
+		65D499FA1AA891A300791A6C /* MSCardItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCardItemCell.h; sourceTree = "<group>"; };
+		65D499FB1AA891A300791A6C /* MSCardItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCardItemCell.m; sourceTree = "<group>"; };
+		65D499FE1AA963EC00791A6C /* MSFeedDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeedDataController.h; sourceTree = "<group>"; };
+		65D499FF1AA963EC00791A6C /* MSFeedDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeedDataController.m; sourceTree = "<group>"; };
+		65D49A011AA9661700791A6C /* MSPosFeedDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPosFeedDataController.h; sourceTree = "<group>"; };
+		65D49A021AA9661700791A6C /* MSPosFeedDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPosFeedDataController.m; sourceTree = "<group>"; };
+		65D49A041AA96C5F00791A6C /* storehouse.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = storehouse.plist; sourceTree = "<group>"; };
+		65D49A061AA96F8F00791A6C /* MSUserFeedDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUserFeedDataController.h; sourceTree = "<group>"; };
+		65D49A071AA96F8F00791A6C /* MSUserFeedDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserFeedDataController.m; sourceTree = "<group>"; };
+		65D49A091AA978AC00791A6C /* MSChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSChatListViewController.h; sourceTree = "<group>"; };
+		65D49A0A1AA978AC00791A6C /* MSChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChatListViewController.m; sourceTree = "<group>"; };
+		65D49A0D1AA97C1A00791A6C /* MSFeedDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeedDetailViewController.h; sourceTree = "<group>"; };
+		65D49A0E1AA97C1A00791A6C /* MSFeedDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeedDetailViewController.m; sourceTree = "<group>"; };
+		65D49A101AA97C4C00791A6C /* MSFeedDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeedDetailView.h; sourceTree = "<group>"; };
+		65D49A111AA97C4C00791A6C /* MSFeedDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeedDetailView.m; sourceTree = "<group>"; };
 		65DA46091A8A100B00CF1536 /* MSChinaMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSChinaMap.h; sourceTree = "<group>"; };
 		65DA460A1A8A100B00CF1536 /* MSChinaMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChinaMap.m; sourceTree = "<group>"; };
 		65DA460C1A8A103600CF1536 /* MSProviceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSProviceView.h; sourceTree = "<group>"; };
@@ -395,6 +425,23 @@
 		65DA46C31A8C43F800CF1536 /* MSInputScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSInputScrollViewController.m; sourceTree = "<group>"; };
 		65DA46C61A8C8CAA00CF1536 /* MSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLoginViewController.h; sourceTree = "<group>"; };
 		65DA46C71A8C8CAA00CF1536 /* MSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLoginViewController.m; sourceTree = "<group>"; };
+		65F4F2B61AA888F300DD82BD /* DZTabViewItem_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTabViewItem_Private.h; sourceTree = "<group>"; };
+		65F4F2B71AA888F300DD82BD /* DZTabViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTabViewItem.h; sourceTree = "<group>"; };
+		65F4F2B81AA888F300DD82BD /* DZTabViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTabViewItem.m; sourceTree = "<group>"; };
+		65F4F2B91AA888F300DD82BD /* UIViewController+DZSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DZSwipeViewController.h"; sourceTree = "<group>"; };
+		65F4F2BA1AA888F300DD82BD /* UIViewController+DZSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DZSwipeViewController.m"; sourceTree = "<group>"; };
+		65F4F2BB1AA888F300DD82BD /* DZSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSwipeViewController.h; sourceTree = "<group>"; };
+		65F4F2BC1AA888F300DD82BD /* DZSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSwipeViewController.m; sourceTree = "<group>"; };
+		65F4F2BD1AA888F300DD82BD /* DZTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTabView.h; sourceTree = "<group>"; };
+		65F4F2BE1AA888F300DD82BD /* DZTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZTabView.m; sourceTree = "<group>"; };
+		65F4F2C31AA88B0B00DD82BD /* mine_infos_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_infos_clicked@2x.png"; sourceTree = "<group>"; };
+		65F4F2C41AA88B0B00DD82BD /* mine_infos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_infos@2x.png"; sourceTree = "<group>"; };
+		65F4F2C51AA88B0B00DD82BD /* mine_jilu_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_jilu_clicked@2x.png"; sourceTree = "<group>"; };
+		65F4F2C61AA88B0B00DD82BD /* mine_jilu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_jilu@2x.png"; sourceTree = "<group>"; };
+		65F4F2CC1AA88D7D00DD82BD /* MSCardItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCardItem.h; sourceTree = "<group>"; };
+		65F4F2CD1AA88D7D00DD82BD /* MSCardItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCardItem.m; sourceTree = "<group>"; };
+		65F4F2CF1AA88DD400DD82BD /* MSCardContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCardContent.h; sourceTree = "<group>"; };
+		65F4F2D01AA88DD400DD82BD /* MSCardContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCardContent.m; sourceTree = "<group>"; };
 		65FD5B441A721B4F007239B9 /* MoShang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoShang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FD5B481A721B4F007239B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65FD5B541A721B4F007239B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -477,6 +524,8 @@
 		650DC24C1A72322A000D000F /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
+				65D49A0C1AA97C0B00791A6C /* FeedDetail */,
+				65D499FD1AA963C200791A6C /* FeedControls */,
 				650DC2501A723240000D000F /* MSFeedsTableViewController.h */,
 				650DC2511A723240000D000F /* MSFeedsTableViewController.m */,
 				658221181A77C4DF006B599D /* MSFeedCell.h */,
@@ -501,6 +550,8 @@
 				650DC2541A72324E000D000F /* MSMessagesTableViewController.m */,
 				650303901A79020600F30A2D /* MSMessageCell.h */,
 				650303911A79020600F30A2D /* MSMessageCell.m */,
+				65D49A091AA978AC00791A6C /* MSChatListViewController.h */,
+				65D49A0A1AA978AC00791A6C /* MSChatListViewController.m */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -508,12 +559,9 @@
 		650DC24F1A72322A000D000F /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				65F4F2CB1AA88D6600DD82BD /* Cards */,
 				650DC2561A723259000D000F /* MSMineViewController.h */,
 				650DC2571A723259000D000F /* MSMineViewController.m */,
-				6503039C1A790D7F00F30A2D /* MSMyCardViewController.h */,
-				6503039D1A790D7F00F30A2D /* MSMyCardViewController.m */,
-				659F24A71AA70DB20080096B /* MSMyPostViewController.h */,
-				659F24A81AA70DB20080096B /* MSMyPostViewController.m */,
 				6503039F1A790DF400F30A2D /* MSMineTopView.h */,
 				650303A01A790DF400F30A2D /* MSMineTopView.m */,
 			);
@@ -658,6 +706,7 @@
 		6570FC381A78B8E8000021C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65D49A041AA96C5F00791A6C /* storehouse.plist */,
 				653A4E701A7E1232001384AC /* DBFiles */,
 				6570FC391A78B8E8000021C7 /* Images */,
 			);
@@ -688,6 +737,10 @@
 				655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */,
 				655E3BA61A8DD82D00C79B43 /* common_big_button_disabled@2x.png */,
 				6598D9481A907A5600813939 /* flower.png */,
+				65F4F2C31AA88B0B00DD82BD /* mine_infos_clicked@2x.png */,
+				65F4F2C41AA88B0B00DD82BD /* mine_infos@2x.png */,
+				65F4F2C51AA88B0B00DD82BD /* mine_jilu_clicked@2x.png */,
+				65F4F2C61AA88B0B00DD82BD /* mine_jilu@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -804,6 +857,37 @@
 			path = Log;
 			sourceTree = "<group>";
 		};
+		65D499FD1AA963C200791A6C /* FeedControls */ = {
+			isa = PBXGroup;
+			children = (
+				65D499FE1AA963EC00791A6C /* MSFeedDataController.h */,
+				65D499FF1AA963EC00791A6C /* MSFeedDataController.m */,
+				65D49A011AA9661700791A6C /* MSPosFeedDataController.h */,
+				65D49A021AA9661700791A6C /* MSPosFeedDataController.m */,
+				65D49A061AA96F8F00791A6C /* MSUserFeedDataController.h */,
+				65D49A071AA96F8F00791A6C /* MSUserFeedDataController.m */,
+			);
+			name = FeedControls;
+			sourceTree = "<group>";
+		};
+		65D49A0C1AA97C0B00791A6C /* FeedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				65D49A0D1AA97C1A00791A6C /* MSFeedDetailViewController.h */,
+				65D49A0E1AA97C1A00791A6C /* MSFeedDetailViewController.m */,
+				65D49A101AA97C4C00791A6C /* MSFeedDetailView.h */,
+				65D49A111AA97C4C00791A6C /* MSFeedDetailView.m */,
+			);
+			path = FeedDetail;
+			sourceTree = "<group>";
+		};
+		65D49A161AA97C9300791A6C /* Bagde */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bagde;
+			sourceTree = "<group>";
+		};
 		65DA46081A8A0FFB00CF1536 /* ChinaMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +967,37 @@
 				6598D9321A8DFDED00813939 /* MSGuideContentViewController.m */,
 			);
 			path = Guide;
+			sourceTree = "<group>";
+		};
+		65F4F2B51AA888EE00DD82BD /* SwipeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65F4F2B61AA888F300DD82BD /* DZTabViewItem_Private.h */,
+				65F4F2B71AA888F300DD82BD /* DZTabViewItem.h */,
+				65F4F2B81AA888F300DD82BD /* DZTabViewItem.m */,
+				65F4F2B91AA888F300DD82BD /* UIViewController+DZSwipeViewController.h */,
+				65F4F2BA1AA888F300DD82BD /* UIViewController+DZSwipeViewController.m */,
+				65F4F2BB1AA888F300DD82BD /* DZSwipeViewController.h */,
+				65F4F2BC1AA888F300DD82BD /* DZSwipeViewController.m */,
+				65F4F2BD1AA888F300DD82BD /* DZTabView.h */,
+				65F4F2BE1AA888F300DD82BD /* DZTabView.m */,
+			);
+			path = SwipeViewController;
+			sourceTree = "<group>";
+		};
+		65F4F2CB1AA88D6600DD82BD /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				6503039C1A790D7F00F30A2D /* MSMyCardViewController.h */,
+				6503039D1A790D7F00F30A2D /* MSMyCardViewController.m */,
+				65F4F2CC1AA88D7D00DD82BD /* MSCardItem.h */,
+				65F4F2CD1AA88D7D00DD82BD /* MSCardItem.m */,
+				65F4F2CF1AA88DD400DD82BD /* MSCardContent.h */,
+				65F4F2D01AA88DD400DD82BD /* MSCardContent.m */,
+				65D499FA1AA891A300791A6C /* MSCardItemCell.h */,
+				65D499FB1AA891A300791A6C /* MSCardItemCell.m */,
+			);
+			name = Cards;
 			sourceTree = "<group>";
 		};
 		65FD5B3B1A721B4F007239B9 = {
@@ -1049,6 +1164,8 @@
 		65FD5B7F1A721BF8007239B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65D49A161AA97C9300791A6C /* Bagde */,
+				65F4F2B51AA888EE00DD82BD /* SwipeViewController */,
 				659F249D1AA6F4300080096B /* Appearence */,
 				659F246D1AA5E6AA0080096B /* Avarter */,
 				65DA46C11A8C439500CF1536 /* inputScroll */,
@@ -1175,8 +1292,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F4F2CA1AA88B0B00DD82BD /* mine_jilu@2x.png in Resources */,
 				65DA465B1A8AFA5900CF1536 /* 四川.png in Resources */,
 				655E3BA71A8DD82D00C79B43 /* common_big_button_disabled@2x.png in Resources */,
+				65F4F2C71AA88B0B00DD82BD /* mine_infos_clicked@2x.png in Resources */,
 				65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */,
 				6570FC481A78B94E000021C7 /* tab_hotnew_click@2x.png in Resources */,
 				6503038C1A78E7F400F30A2D /* liaoliao_normal@2x.png in Resources */,
@@ -1190,6 +1309,7 @@
 				65DA466C1A8AFA5900CF1536 /* 甘肃.png in Resources */,
 				65DA46611A8AFA5900CF1536 /* 广东.png in Resources */,
 				65DA46711A8AFA5900CF1536 /* 重庆.png in Resources */,
+				65F4F2C91AA88B0B00DD82BD /* mine_jilu_clicked@2x.png in Resources */,
 				65DA46721A8AFA5900CF1536 /* 陕西.png in Resources */,
 				6503038D1A78E7F500F30A2D /* liaoliao_click@2x.png in Resources */,
 				65DA46321A8AF42A00CF1536 /* default_avater_lady.png in Resources */,
@@ -1204,6 +1324,7 @@
 				65DA465D1A8AFA5900CF1536 /* 宁夏.png in Resources */,
 				6570FC471A78B94E000021C7 /* tab_nearby_click@2x.png in Resources */,
 				65DA46731A8AFA5900CF1536 /* 青海.png in Resources */,
+				65F4F2C81AA88B0B00DD82BD /* mine_infos@2x.png in Resources */,
 				65DA46581A8AFA5900CF1536 /* 北京.png in Resources */,
 				6598D9491A907A5600813939 /* flower.png in Resources */,
 				65DA46651A8AFA5900CF1536 /* 江西.png in Resources */,
@@ -1225,6 +1346,7 @@
 				65FD5B551A721B4F007239B9 /* Images.xcassets in Resources */,
 				65DA46551A8AFA5900CF1536 /* 上海.png in Resources */,
 				6570FC491A78B94E000021C7 /* tab_upload_feed@2x.png in Resources */,
+				65D49A051AA96C5F00791A6C /* storehouse.plist in Resources */,
 				6503038F1A78E7F500F30A2D /* zan_click@2x.png in Resources */,
 				65DA466B1A8AFA5900CF1536 /* 湖南.png in Resources */,
 				65DA465F1A8AFA5900CF1536 /* 山东.png in Resources */,
@@ -1293,26 +1415,29 @@
 				650303921A79020600F30A2D /* MSMessageCell.m in Sources */,
 				6503039E1A790D7F00F30A2D /* MSMyCardViewController.m in Sources */,
 				65BCBBC51A8884E500A37E08 /* MSLocationManager.m in Sources */,
+				65F4F2C21AA888F300DD82BD /* DZTabView.m in Sources */,
 				659F248B1AA5FB6A0080096B /* MSOssManager.m in Sources */,
 				65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */,
 				658221311A787D11006B599D /* MSTextLayoutItem.m in Sources */,
 				652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */,
 				658221161A77BCFB006B599D /* MSLineHorizontalLayout.m in Sources */,
 				6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */,
+				65F4F2CE1AA88D7D00DD82BD /* MSCardItem.m in Sources */,
 				6545C4661A7F76200066C7FC /* MCSession.m in Sources */,
 				6598D9361A8E02AA00813939 /* MSSetAvatarViewController.m in Sources */,
-				659F24A91AA70DB20080096B /* MSMyPostViewController.m in Sources */,
 				652982A11A85B86900322E8B /* MSSyncCenter.m in Sources */,
 				6529829E1A85B7D200322E8B /* MSRequestOperation.m in Sources */,
 				653A4E821A7E196B001384AC /* MSMessageHistoryModel.m in Sources */,
 				656DB55B1A89E86F008AE224 /* MSDelTalsReq.m in Sources */,
 				652982A51A85BDDD00322E8B /* MSAccount.m in Sources */,
 				658221131A77BCD6006B599D /* MSLineVerticalLayout.m in Sources */,
+				65F4F2D11AA88DD400DD82BD /* MSCardContent.m in Sources */,
 				658221101A77BC5C006B599D /* MSLayout.m in Sources */,
 				65FD5B831A721BF8007239B9 /* RDVTabBarController.m in Sources */,
 				6563965B1A821CA700E61638 /* MSTokenManager.m in Sources */,
 				659F24871AA5F8C20080096B /* AppConfig.m in Sources */,
 				650DC2491A722FC5000D000F /* MSCenterAddButton.m in Sources */,
+				65D49A0B1AA978AC00791A6C /* MSChatListViewController.m in Sources */,
 				65BCBBCE1A88962C00A37E08 /* MSGetFeedByPosReq.m in Sources */,
 				6582210D1A77BBB0006B599D /* MSLayoutEngine.m in Sources */,
 				652982A81A85BF6600322E8B /* MSAccountManager.m in Sources */,
@@ -1325,6 +1450,7 @@
 				6582211A1A77C4DF006B599D /* MSFeedCell.m in Sources */,
 				65FD5B811A721BF8007239B9 /* main.m in Sources */,
 				653A4E7F1A7E138F001384AC /* MSUser.m in Sources */,
+				65F4F2C01AA888F300DD82BD /* UIViewController+DZSwipeViewController.m in Sources */,
 				658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */,
 				659F24731AA5E9460080096B /* MSAddAvarterCell.m in Sources */,
 				656396551A82161E00E61638 /* MSRequest.m in Sources */,
@@ -1333,6 +1459,7 @@
 				656DB5611A89E941008AE224 /* MSGetFeedByUidReq.m in Sources */,
 				6598D9301A8DF86200813939 /* MSGuideUserInfoViewController.m in Sources */,
 				656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */,
+				65D499FC1AA891A300791A6C /* MSCardItemCell.m in Sources */,
 				650DC2461A722C52000D000F /* MSTabBarItem.m in Sources */,
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
 				655E3BA51A8DD74500C79B43 /* UIButton+Custom.m in Sources */,
@@ -1340,6 +1467,9 @@
 				656DB5521A89AE80008AE224 /* MSSetUserInfoReq.m in Sources */,
 				65DA46C41A8C43F800CF1536 /* MSInputScrollViewController.m in Sources */,
 				656396521A82157900E61638 /* MSRouter.m in Sources */,
+				65F4F2C11AA888F300DD82BD /* DZSwipeViewController.m in Sources */,
+				65D49A121AA97C4C00791A6C /* MSFeedDetailView.m in Sources */,
+				65D49A001AA963EC00791A6C /* MSFeedDataController.m in Sources */,
 				659F24761AA5E95A0080096B /* MSPhotoViewCell.m in Sources */,
 				6582213A1A787E81006B599D /* MSFeed.m in Sources */,
 				6533C3A21A78D974007603CC /* MSGlobal.m in Sources */,
@@ -1360,13 +1490,17 @@
 				6563965F1A821F1800E61638 /* MSRegisterReq.m in Sources */,
 				650DC2581A723259000D000F /* MSMineViewController.m in Sources */,
 				658221371A787E71006B599D /* MSModel.m in Sources */,
+				65D49A081AA96F8F00791A6C /* MSUserFeedDataController.m in Sources */,
+				65D49A031AA9661700791A6C /* MSPosFeedDataController.m in Sources */,
 				6598D9391A8E046C00813939 /* MSChoceProviceViewController.m in Sources */,
 				652982AB1A85C53800322E8B /* MSLoginReq.m in Sources */,
 				659F24A01AA6F44B0080096B /* MSAppearenceManager.m in Sources */,
 				65FD5B801A721BF8007239B9 /* AppDelegate.m in Sources */,
 				6582211D1A77C63F006B599D /* MSLayoutItem.m in Sources */,
+				65D49A0F1AA97C1A00791A6C /* MSFeedDetailViewController.m in Sources */,
 				65FD5B821A721BF8007239B9 /* RDVTabBar.m in Sources */,
 				6598D94C1A90804E00813939 /* MSHoricalImagesVC.m in Sources */,
+				65F4F2BF1AA888F300DD82BD /* DZTabViewItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

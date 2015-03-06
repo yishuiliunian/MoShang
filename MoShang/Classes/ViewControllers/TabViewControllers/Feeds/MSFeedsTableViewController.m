@@ -14,9 +14,12 @@
 #import <DZGeometryTools.h>
 #import "MSGetFeedByPosReq.h"
 #import "MSSyncCenter.h"
-@interface MSFeedsTableViewController () <MSRequestUIDelegate>
-@property (nonatomic, strong) NSMutableArray* feeds;
+#import <RCIM.h>
+#import <RCChatViewController.h>
+#import <CBStoreHouseRefreshControl.h>
+@interface MSFeedsTableViewController () <MSRequestUIDelegate, MSFeedCellDelegate >
 @property (nonatomic, assign) int lastRequestID;
+@property (nonatomic, strong) CBStoreHouseRefreshControl* storeRefreshControl;
 @end
 
 @implementation MSFeedsTableViewController
@@ -24,7 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    _feeds = [NSMutableArray new];
 
     self.tableView.backgroundColor = MSDefaultBackgroundColor();
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -34,25 +36,36 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.storeRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView target:self refreshAction:@selector(reloadData) plist:@"storehouse"];
     [self reloadData];
 }
 
+- (void) setFeedDataController:(MSFeedDataController *)feedDataController
+{
+    if (_feedDataController != feedDataController) {
+        _feedDataController = feedDataController;
+        _feedDataController.delegate = self;
+        if (self.isViewLoaded) {
+            [self reloadData];
+        }
+    }
+}
 - (void) reloadData
 {
-    MSGetFeedByPosReq* request = [MSGetFeedByPosReq new];
-    request.uidelegate = self;
-    [MSDefaultSyncCenter performRequest:request];
+    if (!self.feedDataController.isDataSyncing) {
+        [self.feedDataController beginReloadData];
+    }
 }
-- (void) request:(MSRequest *)request onError:(NSError *)error
+
+- (void) didBeginReloadData
 {
     
 }
-
-- (void) request:(MSRequest *)request onSucced:(id)object
+- (void) didEndReloadData
 {
-    _feeds = object;
-    [self.tableView reloadData];
+    [self.storeRefreshControl finishingLoading];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -66,7 +79,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _feeds.count;
+    return self.feedDataController.feeds.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -74,15 +87,16 @@
     MSFeedCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[MSFeedCell alloc]  initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell.delegate = self;
     }
-    MSFeed* feed = [_feeds objectAtIndex:indexPath.row];
+    MSFeed* feed = [self.feedDataController.feeds objectAtIndex:indexPath.row];
     cell.feed = feed;
     return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MSFeed* feed = [_feeds objectAtIndex:indexPath.row];
+    MSFeed* feed = [self.feedDataController.feeds objectAtIndex:indexPath.row];
     return feed.layoutItem.layoutSize.height;
 }
 
@@ -95,5 +109,28 @@
         cell.alpha = 1;
         cell.frame = oldFrame;
     }];
+}
+
+- (void) feedCell:(MSFeedCell *)cell didTapLiaoLiaoBtn:(MSFeed *)feed
+{
+    RCChatViewController *chatViewController = [[RCIM sharedRCIM]createPrivateChat:@"1" title:@"自问自答" completion:^(){
+        // 创建 ViewController 后，调用的 Block，可以用来实现自定义行为。
+    }];
+    
+    // 把单聊视图控制器添加到导航栈。
+    chatViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatViewController animated:YES];
+}
+
+
+#pragma mark ScrollView Delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.storeRefreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self.storeRefreshControl scrollViewDidEndDragging];
 }
 @end

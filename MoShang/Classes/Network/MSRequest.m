@@ -11,7 +11,7 @@
 #import <AFNetworking.h>
 #import "MSGlobal.h"
 
-
+#import <NSString+URLEncode.h>
 
 @interface MSRequest ()
 
@@ -36,6 +36,9 @@
 {
     if (!paramter || !key) {
         return;
+    }
+    if ([paramter isKindOfClass:[NSString class]]) {
+        paramter = [(NSString*)paramter URLEncode];
     }
     _paramters[key] = paramter;
 }

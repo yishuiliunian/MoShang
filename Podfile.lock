@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - AVOSCloud (2.6.10.2)
+  - CBStoreHouseRefreshControl (1.0)
   - CocoaLumberjack (1.9.2):
     - CocoaLumberjack/Extensions (= 1.9.2)
   - CocoaLumberjack/Core (1.9.2)
@@ -56,6 +57,7 @@ PODS:
   - MagicalRecord/Core (2.2)
   - MTStringAttributes (0.1.0):
     - Slash (~> 0.1)
+  - NSString-UrlEncode (2.0.0)
   - ObjectiveRecord (1.5.0):
     - ObjectiveSugar
   - ObjectiveSugar (1.1.0)
@@ -64,7 +66,8 @@ PODS:
   - Realm/Headers (0.90.6)
   - RKDropdownAlert (0.1.1)
   - RKSwipeBetweenViewControllers (0.1.3)
-  - SCLAlertView-Objective-C (0.5.5)
+  - RongCloudIMKit (1.3.4)
+  - SCLAlertView-Objective-C (0.5.6)
   - Slash (0.1.2):
     - Slash/arc (= 0.1.2)
     - Slash/no-arc (= 0.1.2)
@@ -79,6 +82,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - AVOSCloud
+  - CBStoreHouseRefreshControl
   - CocoaLumberjack
   - CocoaSecurity
   - DZCache
@@ -96,10 +100,12 @@ DEPENDENCIES:
   - LKBadgeView (from `https://github.com/lakesoft/LKBadgeView.git`)
   - MagicalRecord
   - MTStringAttributes
+  - NSString-UrlEncode
   - ObjectiveRecord
   - Realm
   - RKDropdownAlert
   - RKSwipeBetweenViewControllers
+  - RongCloudIMKit
   - SCLAlertView-Objective-C
   - TDSemiModal
   - THCalendarDatePicker (~> 0.2.8)
@@ -112,6 +118,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
   AVOSCloud: 903429163bce9feabb4473ab07ea30ed47ba5db1
+  CBStoreHouseRefreshControl: 3c67731fe57aff3ccd2a151c9d13a6f2aed8a11e
   CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
   CocoaSecurity: 7ce1b967863d4e96dcffdbad17671117900e6c6e
   DZCache: 1db011f8f60a0cf288dadcfe64b72f46491ac3f5
@@ -133,12 +140,14 @@ SPEC CHECKSUMS:
   LKBadgeView: 178c43bcf11ada8052271d0d418505153634938f
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
   MTStringAttributes: 83a352dc6e65def1bfb95d2bcb39e041611a582d
+  NSString-UrlEncode: 884ff989b77aeec0fe25474edc32ad7e31ffc5ff
   ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
   Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
   RKSwipeBetweenViewControllers: a0697cf3acfb523700815c01e911367c84c9240a
-  SCLAlertView-Objective-C: 7ff3bfcc569c52da13801652e67029e4611f04bc
+  RongCloudIMKit: 154c506e04000e5d63b1bb1fbe0b7256ef6e6a52
+  SCLAlertView-Objective-C: 257de4171414dbc32bc3bfdcb61093fc0906536c
   Slash: d98d6ff27ece4297d8d65fb49fc1ce4307a75f46
   TDSemiModal: c2fd3fe003fe0c575c14fbcf75950cf2e075d3a2
   THCalendarDatePicker: 6f2c3f78b52dc07f08398814664f3a089399208a

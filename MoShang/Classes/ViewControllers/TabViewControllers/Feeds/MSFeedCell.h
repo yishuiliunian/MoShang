@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MSFeedLayoutItem.h"
+
+@class MSFeedCell;
+@protocol MSFeedCellDelegate
+- (void) feedCell:(MSFeedCell*)cell didTapLiaoLiaoBtn:(MSFeed*)feed;
+@end
 @interface MSFeedCell : UITableViewCell
+@property (nonatomic, weak) NSObject<MSFeedCellDelegate>* delegate;
 @property (nonatomic, strong) MSFeed* feed;
+
 @end

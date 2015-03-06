@@ -17,6 +17,12 @@
 #import <DZImageCache.h>
 #import "MSGuideContentViewController.h"
 #import "MSAccountManager.h"
+#import <RCIM.h>
+#import "MSPosFeedDataController.h"
+#import <RCChatListViewController.h>
+
+#import "MSChatListViewController.h"
+#import <objc/runtime.h>
 @interface MSGlobalNavViewController () <MSMainViewControllerDelegate, MSGuideContentDelegate>
 @end
 
@@ -43,21 +49,54 @@
 - (void) loadApplicationMainVC
 {
     
+    typedef UIViewController* (^CreateViewController)();
+
+
+#define CreateControllerFromClass(cls) ^{ \
+    return (UIViewController*)[cls new]; \
+}
+
+
     UINavigationController* (^CreateNavigationWithParams)(NSString* title,
-                                                          Class cla,
+                                                          CreateViewController createBlock,
                                                           NSString* imageName,
                                                           NSString* selectedImageName)
-    = ^(NSString* title, Class cla, NSString* imageName, NSString* selectedImageName) {
-        UIViewController* controller = [[cla alloc] init];
+    = ^(NSString* title, CreateViewController createBlock, NSString* imageName, NSString* selectedImageName) {
+        UIViewController* controller = createBlock() ;
         UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController: controller];
         MSTabBarItem* tabItem = [[MSTabBarItem alloc] initWithTitle:title image:DZCachedImageByName(imageName) selectedImage:DZCachedImageByName(selectedImageName)];
         navVC.tabBarItem = tabItem;
+        controller.title = title;
         return navVC;
     };
-    NSArray* viewControllers = @[CreateNavigationWithParams(@"留言", [MSFeedsTableViewController class], @"tab_nearby", @"tab_nearby_click"),
-                                 CreateNavigationWithParams(@"领主", [MSMasterTableViewController class], @"tab_hotnew", @"tab_hotnew_click"),
-                                 CreateNavigationWithParams(@"消息", [MSMessagesTableViewController class], @"tab_message", @"tab_message_click"),
-                                 CreateNavigationWithParams(@"我", [MSMineViewController class], @"tab_mine", @"tab_mine_click")];
+    
+    RCChatListViewController* chat =  [[RCIM sharedRCIM] createConversationList:
+                                                        ^{
+                                                            
+                                                        }];
+    object_setClass(chat, [MSChatListViewController class]);
+    
+    NSArray* viewControllers = @[CreateNavigationWithParams(@"留言",
+                                                            ^{
+                                                                MSFeedsTableViewController* feedVC = [MSFeedsTableViewController new];
+                                                                feedVC.feedDataController = [MSPosFeedDataController new];
+                                                                return feedVC;
+                                                            },
+                                                            
+                                                            @"tab_nearby",
+                                                            @"tab_nearby_click"),
+                                 
+                                 
+                                 CreateNavigationWithParams(@"领主", CreateControllerFromClass(MSMasterTableViewController ), @"tab_hotnew", @"tab_hotnew_click"),
+                                 
+                                 
+                                 
+                                 CreateNavigationWithParams(@"消息",
+                                                            ^ {return chat; },
+                                                            @"tab_message",
+                                                            @"tab_message_click"),
+                                 
+                                 CreateNavigationWithParams(@"我", CreateControllerFromClass(MSMineViewController ), @"tab_mine", @"tab_mine_click")];
     
     
     

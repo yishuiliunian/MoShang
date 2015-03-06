@@ -20,7 +20,7 @@ FOUNDATION_EXTERN BOOL IS_MSColorString(NSString* str);
 #define MSGenerateRandomUUID MSGenRandomUUID()
 FOUNDATION_EXTERN NSString* MSGenRandomUUID();
 
-
+FOUNDATION_EXTERN NSString* MSCurrentTimeStapmStr();
 @interface MSGlobal : NSObject
 
 @end

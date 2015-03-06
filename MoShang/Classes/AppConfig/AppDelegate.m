@@ -21,6 +21,7 @@
 #import "MSLoginViewController.h"
 #import "MSLayoutEngine.h"
 #import "AppConfig.h"
+#import <RCIM.h>
 @interface AppDelegate ()
 
 @end
@@ -30,11 +31,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    
+    
     MSDefaultLayoutEngine;
     [AppDefaultConfig setup];
     [MSLog setup];
-    [[MSDebugCenter shareCenter] globalTest];
     [MagicalRecord setupCoreDataStack];
+    
+    
+#ifdef __IPHONE_8_0
+    // 在 iOS 8 下注册苹果推送，申请推送权限。
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
+                                                                                         |UIUserNotificationTypeSound
+                                                                                         |UIUserNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+#else
+    // 注册苹果推送，申请推送权限。
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+#endif
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
    
@@ -69,6 +85,30 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
         [MagicalRecord cleanUp];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#ifdef __IPHONE_8_0
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    // Register to receive notifications.
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+{
+    // Handle the actions.
+    if ([identifier isEqualToString:@"declineAction"]){
+    }
+    else if ([identifier isEqualToString:@"answerAction"]){
+    }
+}
+#endif
+
+// 获取苹果推送权限成功。
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // 设置 deviceToken。
+    [[RCIM sharedRCIM] setDeviceToken:deviceToken];
 }
 
 @end

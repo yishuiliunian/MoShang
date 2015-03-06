@@ -9,14 +9,19 @@
 #import "MSMineViewController.h"
 #import "MSMineTopView.h"
 #import "MSAvarterCollectionViewController.h"
-#import <RKSwipeBetweenViewControllers.h>
 #import "MSMyCardViewController.h"
-#import "MSMyPostViewController.h"
+#import "MSFeedsTableViewController.h"
 #import <DZGeometryTools.h>
-@interface MSMineViewController ()
+#import "DZSwipeViewController.h"
+#import <DZImageCache.h>
+#import "MSUserInfoReq.h"
+#import "MSAccountManager.h"
+#import "MSUserFeedDataController.h"
+
+@interface MSMineViewController () <MSRequestUIDelegate>
 {
     MSAvarterCollectionViewController* _avarterVC;
-    RKSwipeBetweenViewControllers* _swipeVC;
+    DZSwipeViewController* _swipeVC;
 }
 @end
 
@@ -43,12 +48,19 @@
 - (void) initDetailViewControllers
 {
     MSMyCardViewController* cardVC = [MSMyCardViewController new];
-    MSMyPostViewController* postVC = [MSMyPostViewController new];
+    cardVC.swipeTitle = @"资料";
+    cardVC.swipeImage = DZCachedImageByName(@"mine_jilu.png");
+    MSFeedsTableViewController* postVC = [MSFeedsTableViewController new];
     
-    UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    MSUserFeedDataController* userFeedControl = [MSUserFeedDataController new];
+    userFeedControl.uid = @"0";
+    postVC.feedDataController = userFeedControl;
+    postVC.swipeTitle = @"记录";
+    postVC.swipeImage = DZCachedImageByName(@"mine_infos.png");
+    
+    
 
-    RKSwipeBetweenViewControllers* swipeVC = [[RKSwipeBetweenViewControllers alloc] initWithRootViewController:pageController];
-    [swipeVC.viewControllerArray addObjectsFromArray:@[cardVC, postVC]];
+    DZSwipeViewController* swipeVC = [[DZSwipeViewController alloc] initWithViewControllers:@[cardVC, postVC]];
     
     [self ms_addChildViewController:swipeVC];
     
@@ -56,11 +68,31 @@
     
     
 }
+
+- (void) reloadMyUserInfos
+{
+    MSUserInfoReq* infoReq = [MSUserInfoReq new];
+    infoReq.uid = [MSCurrentAccount accountID];
+    infoReq.uidelegate = self;
+    [MSDefaultSyncCenter performRequest:infoReq];
+}
+
+- (void) request:(MSRequest *)request onError:(NSError *)error
+{
+    
+}
+
+- (void) request:(MSRequest *)request onSucced:(id)object
+{
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
     [self initUIControls];
+    [self initDetailViewControllers];
     
+    [self  reloadMyUserInfos];
     // Do any additional setup after loading the view.
 }
 
@@ -74,8 +106,8 @@
 - (void) viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
-    _avarterVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame)/4 + 30);
-    _swipeVC.view.frame = CGRectMake(0, CGRectGetMaxY(_avarterVC.view.frame), CGRectGetViewControllerWidth, CGRectGetViewControllerHeight - CGRectGetMaxY(_avarterVC.view.frame));
+    _avarterVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100);
+    _swipeVC.view.frame = CGRectMake(0, CGRectGetMaxY(_avarterVC.view.frame), CGRectGetViewControllerWidth, CGRectGetViewControllerHeight - CGRectGetMaxY(_avarterVC.view.frame) - 44);
 }
 /*
 #pragma mark - Navigation
