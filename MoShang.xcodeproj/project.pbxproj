@@ -43,6 +43,10 @@
 		6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4621A7F75BA0066C7FC /* MCRecord.m */; };
 		6545C4661A7F76200066C7FC /* MCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4651A7F76200066C7FC /* MCSession.m */; };
 		6545C4691A7F766C0066C7FC /* MCSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545C4681A7F766C0066C7FC /* MCSessionManager.m */; };
+		65549A611AA99AB0001DA1CA /* MSCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A601AA99AB0001DA1CA /* MSCommentsViewController.m */; };
+		65549A641AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A631AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m */; };
+		65549A671AA99D3E001DA1CA /* MSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A661AA99D3E001DA1CA /* MSComment.m */; };
+		65549A6A1AA99D57001DA1CA /* MSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A691AA99D57001DA1CA /* MSCommentCell.m */; };
 		655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */; };
 		655E3BA11A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */; };
 		655E3BA21A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */; };
@@ -117,8 +121,8 @@
 		65D49A1F1AA98CDB00791A6C /* MSFeedFuctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D49A1E1AA98CDB00791A6C /* MSFeedFuctionView.m */; };
 		65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460A1A8A100B00CF1536 /* MSChinaMap.m */; };
 		65DA460E1A8A103600CF1536 /* MSProviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA460D1A8A103600CF1536 /* MSProviceView.m */; };
-		65DA46321A8AF42A00CF1536 /* default_avater_lady.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46301A8AF42A00CF1536 /* default_avater_lady.png */; };
-		65DA46331A8AF42A00CF1536 /* default_avater_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46311A8AF42A00CF1536 /* default_avater_man.png */; };
+		65DA46321A8AF42A00CF1536 /* default_avater_lady@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46301A8AF42A00CF1536 /* default_avater_lady@2x.png */; };
+		65DA46331A8AF42A00CF1536 /* default_avater_man@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46311A8AF42A00CF1536 /* default_avater_man@2x.png */; };
 		65DA46551A8AFA5900CF1536 /* 上海.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46351A8AFA5900CF1536 /* 上海.png */; };
 		65DA46561A8AFA5900CF1536 /* 云南.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46361A8AFA5900CF1536 /* 云南.png */; };
 		65DA46571A8AFA5900CF1536 /* 内蒙古.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DA46371A8AFA5900CF1536 /* 内蒙古.png */; };
@@ -251,6 +255,14 @@
 		6545C4651A7F76200066C7FC /* MCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSession.m; sourceTree = "<group>"; };
 		6545C4671A7F766C0066C7FC /* MCSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSessionManager.h; sourceTree = "<group>"; };
 		6545C4681A7F766C0066C7FC /* MCSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSessionManager.m; sourceTree = "<group>"; };
+		65549A5F1AA99AB0001DA1CA /* MSCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommentsViewController.h; sourceTree = "<group>"; };
+		65549A601AA99AB0001DA1CA /* MSCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCommentsViewController.m; sourceTree = "<group>"; };
+		65549A621AA99B63001DA1CA /* MSGetSingleFeedTalksReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGetSingleFeedTalksReq.h; sourceTree = "<group>"; };
+		65549A631AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGetSingleFeedTalksReq.m; sourceTree = "<group>"; };
+		65549A651AA99D3E001DA1CA /* MSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSComment.h; sourceTree = "<group>"; };
+		65549A661AA99D3E001DA1CA /* MSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSComment.m; sourceTree = "<group>"; };
+		65549A681AA99D57001DA1CA /* MSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommentCell.h; sourceTree = "<group>"; };
+		65549A691AA99D57001DA1CA /* MSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCommentCell.m; sourceTree = "<group>"; };
 		655E3B8B1A8C904300C79B43 /* QQSurroundLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSurroundLineTextField.h; sourceTree = "<group>"; };
 		655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSurroundLineTextField.m; sourceTree = "<group>"; };
 		655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_big_button_focus_nor@2x.png"; sourceTree = "<group>"; };
@@ -394,8 +406,8 @@
 		65DA460A1A8A100B00CF1536 /* MSChinaMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSChinaMap.m; sourceTree = "<group>"; };
 		65DA460C1A8A103600CF1536 /* MSProviceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSProviceView.h; sourceTree = "<group>"; };
 		65DA460D1A8A103600CF1536 /* MSProviceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSProviceView.m; sourceTree = "<group>"; };
-		65DA46301A8AF42A00CF1536 /* default_avater_lady.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_avater_lady.png; sourceTree = "<group>"; };
-		65DA46311A8AF42A00CF1536 /* default_avater_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_avater_man.png; sourceTree = "<group>"; };
+		65DA46301A8AF42A00CF1536 /* default_avater_lady@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_avater_lady@2x.png"; sourceTree = "<group>"; };
+		65DA46311A8AF42A00CF1536 /* default_avater_man@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_avater_man@2x.png"; sourceTree = "<group>"; };
 		65DA46351A8AFA5900CF1536 /* 上海.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上海.png"; sourceTree = "<group>"; };
 		65DA46361A8AFA5900CF1536 /* 云南.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "云南.png"; sourceTree = "<group>"; };
 		65DA46371A8AFA5900CF1536 /* 内蒙古.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "内蒙古.png"; sourceTree = "<group>"; };
@@ -533,6 +545,7 @@
 		650DC24C1A72322A000D000F /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
+				65549A5E1AA99A97001DA1CA /* Comments */,
 				65D49A0C1AA97C0B00791A6C /* FeedDetail */,
 				65D499FD1AA963C200791A6C /* FeedControls */,
 				650DC2501A723240000D000F /* MSFeedsTableViewController.h */,
@@ -626,6 +639,8 @@
 				656DB55D1A89E8D2008AE224 /* MSReportPosReq.m */,
 				656DB55F1A89E941008AE224 /* MSGetFeedByUidReq.h */,
 				656DB5601A89E941008AE224 /* MSGetFeedByUidReq.m */,
+				65549A621AA99B63001DA1CA /* MSGetSingleFeedTalksReq.h */,
+				65549A631AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -703,6 +718,17 @@
 			name = CModel;
 			sourceTree = "<group>";
 		};
+		65549A5E1AA99A97001DA1CA /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				65549A5F1AA99AB0001DA1CA /* MSCommentsViewController.h */,
+				65549A601AA99AB0001DA1CA /* MSCommentsViewController.m */,
+				65549A681AA99D57001DA1CA /* MSCommentCell.h */,
+				65549A691AA99D57001DA1CA /* MSCommentCell.m */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
 		6563965C1A821F0600E61638 /* author */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,8 +754,8 @@
 			isa = PBXGroup;
 			children = (
 				65DA46341A8AFA5900CF1536 /* province */,
-				65DA46301A8AF42A00CF1536 /* default_avater_lady.png */,
-				65DA46311A8AF42A00CF1536 /* default_avater_man.png */,
+				65DA46301A8AF42A00CF1536 /* default_avater_lady@2x.png */,
+				65DA46311A8AF42A00CF1536 /* default_avater_man@2x.png */,
 				650303881A78E7F400F30A2D /* liaoliao_normal@2x.png */,
 				650303A21A79113B00F30A2D /* avatar_corner@2x.png */,
 				650303891A78E7F400F30A2D /* liaoliao_click@2x.png */,
@@ -1117,6 +1143,8 @@
 				658221391A787E81006B599D /* MSFeed.m */,
 				656DB54D1A89AC2F008AE224 /* MSUserInfo.h */,
 				656DB54E1A89AC2F008AE224 /* MSUserInfo.m */,
+				65549A651AA99D3E001DA1CA /* MSComment.h */,
+				65549A661AA99D3E001DA1CA /* MSComment.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1314,7 +1342,7 @@
 				65FD5B581A721B4F007239B9 /* LaunchScreen.xib in Resources */,
 				6570FC481A78B94E000021C7 /* tab_hotnew_click@2x.png in Resources */,
 				6503038C1A78E7F400F30A2D /* liaoliao_normal@2x.png in Resources */,
-				65DA46331A8AF42A00CF1536 /* default_avater_man.png in Resources */,
+				65DA46331A8AF42A00CF1536 /* default_avater_man@2x.png in Resources */,
 				655E3BA11A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png in Resources */,
 				65DA46601A8AFA5900CF1536 /* 山西.png in Resources */,
 				6503038E1A78E7F500F30A2D /* zan_normal@2x.png in Resources */,
@@ -1327,7 +1355,7 @@
 				65F4F2C91AA88B0B00DD82BD /* mine_jilu_clicked@2x.png in Resources */,
 				65DA46721A8AFA5900CF1536 /* 陕西.png in Resources */,
 				6503038D1A78E7F500F30A2D /* liaoliao_click@2x.png in Resources */,
-				65DA46321A8AF42A00CF1536 /* default_avater_lady.png in Resources */,
+				65DA46321A8AF42A00CF1536 /* default_avater_lady@2x.png in Resources */,
 				65DA46691A8AFA5900CF1536 /* 海南.png in Resources */,
 				65DA466E1A8AFA5900CF1536 /* 西藏.png in Resources */,
 				65DA465A1A8AFA5900CF1536 /* 吉林.png in Resources */,
@@ -1434,6 +1462,7 @@
 				659F248B1AA5FB6A0080096B /* MSOssManager.m in Sources */,
 				65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */,
 				658221311A787D11006B599D /* MSTextLayoutItem.m in Sources */,
+				65549A611AA99AB0001DA1CA /* MSCommentsViewController.m in Sources */,
 				652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */,
 				658221161A77BCFB006B599D /* MSLineHorizontalLayout.m in Sources */,
 				65D49A1F1AA98CDB00791A6C /* MSFeedFuctionView.m in Sources */,
@@ -1469,6 +1498,7 @@
 				65F4F2C01AA888F300DD82BD /* UIViewController+DZSwipeViewController.m in Sources */,
 				658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */,
 				659F24731AA5E9460080096B /* MSAddAvarterCell.m in Sources */,
+				65549A641AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m in Sources */,
 				656396551A82161E00E61638 /* MSRequest.m in Sources */,
 				656DB5491A89A72E008AE224 /* MSSetLikeReq.m in Sources */,
 				6503039B1A79049600F30A2D /* NSDate+Read.m in Sources */,
@@ -1477,6 +1507,7 @@
 				656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */,
 				65D49A1C1AA97CF700791A6C /* MSBadgeItem.m in Sources */,
 				65D499FC1AA891A300791A6C /* MSCardItemCell.m in Sources */,
+				65549A671AA99D3E001DA1CA /* MSComment.m in Sources */,
 				650DC2461A722C52000D000F /* MSTabBarItem.m in Sources */,
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
 				655E3BA51A8DD74500C79B43 /* UIButton+Custom.m in Sources */,
@@ -1517,6 +1548,7 @@
 				6582211D1A77C63F006B599D /* MSLayoutItem.m in Sources */,
 				65D49A0F1AA97C1A00791A6C /* MSFeedDetailViewController.m in Sources */,
 				65FD5B821A721BF8007239B9 /* RDVTabBar.m in Sources */,
+				65549A6A1AA99D57001DA1CA /* MSCommentCell.m in Sources */,
 				6598D94C1A90804E00813939 /* MSHoricalImagesVC.m in Sources */,
 				65F4F2BF1AA888F300DD82BD /* DZTabViewItem.m in Sources */,
 			);

@@ -11,5 +11,6 @@
 @interface MSAvarterCollectionViewController : UICollectionViewController
 @property (nonatomic, assign, readonly) BOOL isUploading;
 @property (nonatomic, strong, readonly) NSArray* avarters;
+@property (nonatomic, assign) BOOL canAddPhoto;
 - (instancetype) initWithAvarters:(NSArray*)avarters itemSize:(CGSize)size;
 @end

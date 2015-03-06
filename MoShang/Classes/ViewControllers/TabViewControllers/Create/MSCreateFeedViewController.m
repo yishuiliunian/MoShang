@@ -31,6 +31,7 @@
 {
     INIT_SUBVIEW(self.view, UITextView, _textView);
     _avarterViewController = [[MSAvarterCollectionViewController alloc] initWithAvarters:0 itemSize:CGSizeMake(100, 100)];
+    _avarterViewController.canAddPhoto = YES;
     [self ms_AddChildViewController:_avarterViewController];
     
 }

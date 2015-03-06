@@ -27,7 +27,7 @@
 @property (nonatomic, strong) NSString<Optional>* nick;
 @property (nonatomic, strong) NSString<Optional>* piclist;
 @property (nonatomic, strong) NSString<Optional>* pos;
-@property (nonatomic, assign) int recordid;
+@property (nonatomic, strong) NSString<Optional>*  recordid;
 @property (nonatomic, strong) NSString<Optional>* sign;
 @property (nonatomic, strong) NSString<Optional>* taglist;
 

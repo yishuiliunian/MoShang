@@ -49,6 +49,7 @@ int MS_IndexFromUploadKey(NSString*key) {
     }
     _avaters =[NSMutableArray new];
     _uploadKeys = [NSMutableSet new];
+    _canAddPhoto = NO;
     return self;
 }
 - (instancetype) initWithAvarters:(NSArray*)avarters itemSize:(CGSize)size
@@ -62,6 +63,11 @@ int MS_IndexFromUploadKey(NSString*key) {
     }
     [_avaters addObjectsFromArray:avarters];
     return self;
+}
+
+- (void) setCanAddPhoto:(BOOL)canAddPhoto
+{
+    _canAddPhoto = canAddPhoto && _avaters.count <= 5;
 }
 - (NSArray*) avarters
 {
@@ -83,7 +89,12 @@ int MS_IndexFromUploadKey(NSString*key) {
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return _avaters.count + 1;
+    if (_canAddPhoto) {
+        return _avaters.count + 1;
+    } else
+    {
+        return _avaters.count;
+    }
 }
 
 #define IS_TheAddPhotoRow(path) [self isTheAddPhotoRowIndexPath:path]

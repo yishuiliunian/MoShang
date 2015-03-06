@@ -10,6 +10,8 @@
 #import <DZSingletonFactory.h>
 #import <UIKit/UIKit.h>
 #import <HexColor.h>
+#import <UIImageView+Haneke.h>
+#import "MSGlobal.h"
 @implementation MSAppearenceManager
 + (MSAppearenceManager*) shareManager {
     return DZSingleForClass([MSAppearenceManager class]);
@@ -21,3 +23,17 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 @end
+
+
+
+void MS_Decorate_Label_NickName(UILabel* label) {
+    label.textAlignment = UITextLayoutDirectionLeft;
+    label.font = [UIFont boldSystemFontOfSize:15];
+    label.textColor = [UIColor blackColor];
+}
+
+void MS_Decorate_ImageView_Head(UIImageView* imageView) {
+    imageView.hnk_cacheFormat = MSFormatHeadLittle;
+    imageView.layer.masksToBounds = YES;
+}
+

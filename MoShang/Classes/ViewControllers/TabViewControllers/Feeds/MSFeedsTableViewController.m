@@ -118,6 +118,7 @@
  
     MSFeedDetailViewController* detailVC = [MSFeedDetailViewController new];
     detailVC.feed = feed;
+    detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

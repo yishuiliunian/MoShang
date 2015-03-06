@@ -10,6 +10,7 @@
 #import <FCUUID.h>
 BOOL IS_MSColorString(NSString* str) {
     return [str hasPrefix:@"#"];
+    
 }
 
 NSString* MSGenRandomUUID() {

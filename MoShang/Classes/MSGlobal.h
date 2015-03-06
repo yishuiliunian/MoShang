@@ -13,7 +13,11 @@
 #import "MSAlertPool.h"
 #import "MSTipsPool.h"
 #import <DZGeometryTools.h>
-
+#import "MSLayoutEngine.h"
+#import <Haneke.h>
+#import <UIImageView+Haneke.h>
+#import <DZImageCache.h>
+#import "MSAppearenceManager.h"
 #define NUM_TO_STRING(x) [@(x) stringValue]
 FOUNDATION_EXTERN BOOL IS_MSColorString(NSString* str);
 
@@ -24,3 +28,8 @@ FOUNDATION_EXTERN NSString* MSCurrentTimeStapmStr();
 @interface MSGlobal : NSObject
 
 @end
+
+//Images
+#define MSHeadFemale     DZCachedImageByName(@"default_avater_lady.png")
+#define MSHeadMale          DZCachedImageByName(@"default_avater_man.png")
+

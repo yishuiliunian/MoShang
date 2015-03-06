@@ -118,7 +118,7 @@
 - (void) likeIt
 {
     MSSetLikeReq* likeReq = [MSSetLikeReq new];
-    likeReq.feedid = NUM_TO_STRING(_feed.recordid);
+    likeReq.feedid = _feed.recordid;
     likeReq.bLike = YES;
     likeReq.uidelegate = self;
     [MSDefaultSyncCenter performRequest:likeReq];

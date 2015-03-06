@@ -24,6 +24,9 @@ FOUNDATION_EXTERN UIColor* MSDefaultBackgroundColor();
 CG_EXTERN CGFloat const MSDefaultCellSpace;
 CG_EXTERN CGFloat const MSDefaultCellHeightSpace;
 FOUNDATION_EXTERN HNKCacheFormat* HNKCreateCacheFormatWithSize(CGSize size, NSString* key);
+
+#define MSFormatHeadLittle HNKCreateCacheFormatWithSize(CGSizeMake(100, 100), @"HeadCell_Little")
+
 @interface MSLayoutEngine : NSObject
 + (MSLayoutEngine*) defaultEngine;
 @end

@@ -71,6 +71,8 @@ HNKCacheFormat* HNKCreateCacheFormatWithSize(CGSize size, NSString* key)  {
     return format;
 }
 
+
+
 UIColor* MSDefaultBackgroundColor() {
     static UIColor* color = nil;
     static dispatch_once_t onceToken;

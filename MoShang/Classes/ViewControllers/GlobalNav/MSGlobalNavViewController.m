@@ -67,6 +67,7 @@
         MSTabBarItem* tabItem = [[MSTabBarItem alloc] initWithTitle:title image:DZCachedImageByName(imageName) selectedImage:DZCachedImageByName(selectedImageName)];
         navVC.tabBarItem = tabItem;
         controller.title = title;
+        navVC.view.backgroundColor = [UIColor whiteColor];
         return navVC;
     };
     
