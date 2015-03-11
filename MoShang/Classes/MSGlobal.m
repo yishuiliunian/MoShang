@@ -32,6 +32,17 @@ NSString* MSCurrentTimeStapmStr()
     return [NSString stringWithFormat:@"%lld", MSCurrentTimeStamp()];
 }
 
+NSArray* MSPicturesListFromStr(NSString* str) {
+    NSArray* ps = [str componentsSeparatedByString:@";"];
+    NSMutableArray* pictures = [NSMutableArray new];
+    for (NSString* p  in ps) {
+        if ([p isEqualToString:@""]) {
+            continue;
+        }
+        [pictures addObject:p];
+    }
+    return pictures;
+}
 
 @implementation MSGlobal
 

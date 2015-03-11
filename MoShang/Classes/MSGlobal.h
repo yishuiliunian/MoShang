@@ -25,6 +25,8 @@ FOUNDATION_EXTERN BOOL IS_MSColorString(NSString* str);
 FOUNDATION_EXTERN NSString* MSGenRandomUUID();
 
 FOUNDATION_EXTERN NSString* MSCurrentTimeStapmStr();
+
+FOUNDATION_EXTERN NSArray* MSPicturesListFromStr(NSString* str);
 @interface MSGlobal : NSObject
 
 @end

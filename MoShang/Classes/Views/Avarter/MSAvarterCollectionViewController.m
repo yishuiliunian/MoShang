@@ -64,7 +64,11 @@ int MS_IndexFromUploadKey(NSString*key) {
     [_avaters addObjectsFromArray:avarters];
     return self;
 }
-
+- (void) setPhotos:(NSArray*)array
+{
+    _avaters = [array mutableCopy];
+    [self.collectionView reloadData];
+}
 - (void) setCanAddPhoto:(BOOL)canAddPhoto
 {
     _canAddPhoto = canAddPhoto && _avaters.count <= 5;

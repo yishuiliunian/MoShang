@@ -61,13 +61,24 @@
     _commentCountLabel = [UILabel new];
     [self.view addSubview:_commentCountLabel];
     
+    
+    [self loadFeed];
 }
+
 - (void) setFeed:(MSFeed *)feed
 {
     if (_feed != feed) {
         _feed = feed;
-        _commentCountLabel.text = @"有14个人回应";
+        [self loadFeed];
     }
+}
+
+- (void) loadFeed
+{
+    _commentCountLabel.text = @"有14个人回应";
+    _detailTopView.nickLabel.text = _feed.nick;
+    _detailTopView.contentLabel.text = _feed.content;
+    [_detailTopView.photosViewController setPhotos:MSPicturesListFromStr(_feed.piclist)];
 }
 - (void)viewWillLayoutSubviews
 {

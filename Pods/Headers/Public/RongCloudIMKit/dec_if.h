@@ -1,1 +1,1 @@
-../../../RongCloudIMKit/iOS_IMKit_v_1_3_4/Headers/dec_if.h
+../../../RongCloudIMKit/iOS_IMKit/Headers/dec_if.h

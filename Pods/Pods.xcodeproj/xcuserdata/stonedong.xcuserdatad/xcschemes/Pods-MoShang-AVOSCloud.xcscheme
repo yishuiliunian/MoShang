@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "999508B1D38EBAEA7B479485"
+               BlueprintIdentifier = "62C7F6CD97B4708F6C682E38"
                BuildableName = "libPods-MoShang-AVOSCloud.a"
                BlueprintName = "Pods-MoShang-AVOSCloud"
                ReferencedContainer = "container:Pods.xcodeproj">

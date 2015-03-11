@@ -1,1 +1,1 @@
-../../../RongCloudIMKit/iOS_IMKit_v_1_3_4/Headers/RCPreviewViewController.h
+../../../RongCloudIMKit/iOS_IMKit/Headers/RCPreviewViewController.h

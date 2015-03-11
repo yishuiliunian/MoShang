@@ -13,7 +13,7 @@
 
 
  CGFloat const MSFeedHeadImageSizeWidth = 50;
-CGFloat const MSFeedMaxHeight = 140;
+CGFloat const MSFeedMaxHeight = 240;
 @interface MSFeedLayoutItem()
 
 
@@ -73,8 +73,9 @@ CGFloat const MSFeedMaxHeight = 140;
         
         height += HeightWithLayoutItem(_bottomLayoutItem);
         SetFrameWithOrigin(_bottomLayoutItem, CGPointMake(CGRectGetMinX(_topLayoutItem.frame), CGRectGetMaxY(_detailTextLayout.frame) - _detailTextLayout.egdeInsets.bottom));
-        
-        _layoutSize = CGSizeMake(_maxWidth, height);
+    
+    height += 100;
+    _layoutSize = CGSizeMake(_maxWidth, height);
     
     _backgroundLayoutItem.frame = CGRectMake(self.egdeInsets.left, self.egdeInsets.top, _contentWidth, height - self.egdeInsets.top - self.egdeInsets.bottom);
 }

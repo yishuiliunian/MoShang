@@ -13,4 +13,5 @@
 @property (nonatomic, strong, readonly) NSArray* avarters;
 @property (nonatomic, assign) BOOL canAddPhoto;
 - (instancetype) initWithAvarters:(NSArray*)avarters itemSize:(CGSize)size;
+- (void) setPhotos:(NSArray*)array;
 @end

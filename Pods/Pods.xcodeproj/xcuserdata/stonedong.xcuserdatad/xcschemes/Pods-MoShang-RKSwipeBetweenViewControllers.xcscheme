@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B4111CE9A1E38B2E95DA5DE"
+               BlueprintIdentifier = "3D248D875BD9A72927207E49"
                BuildableName = "libPods-MoShang-RKSwipeBetweenViewControllers.a"
                BlueprintName = "Pods-MoShang-RKSwipeBetweenViewControllers"
                ReferencedContainer = "container:Pods.xcodeproj">

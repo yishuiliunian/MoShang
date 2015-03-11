@@ -1,1 +1,1 @@
-../../../RongCloudIMKit/iOS_IMKit_v_1_3_4/Headers/RCImageMessage.h
+../../../RongCloudIMKit/iOS_IMKit/Headers/RCImageMessage.h

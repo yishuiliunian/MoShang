@@ -127,7 +127,8 @@
     RCChatViewController *chatViewController = [[RCIM sharedRCIM]createPrivateChat:@"1" title:@"自问自答" completion:^(){
         // 创建 ViewController 后，调用的 Block，可以用来实现自定义行为。
     }];
-    
+ 
+    chatViewController.hidesBottomBarWhenPushed = YES;
     // 把单聊视图控制器添加到导航栈。
     chatViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatViewController animated:YES];

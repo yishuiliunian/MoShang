@@ -31,4 +31,7 @@
 @property (nonatomic, strong) NSString<Optional>* sign;
 @property (nonatomic, strong) NSString<Optional>* taglist;
 
+
+@property (nonatomic, strong, readonly) NSArray* pickListArray;
+
 @end

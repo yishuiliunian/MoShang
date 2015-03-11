@@ -1,1 +1,1 @@
-../../../RongCloudIMKit/iOS_IMKit_v_1_3_4/Headers/RCLocationViewController.h
+../../../RongCloudIMKit/iOS_IMKit/Headers/RCLocationViewController.h

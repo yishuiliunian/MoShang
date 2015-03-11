@@ -65,7 +65,7 @@ install_resource()
                     install_resource "JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesLoadEarlierHeaderView.xib"
                     install_resource "JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesToolbarContentView.xib"
                     install_resource "JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesTypingIndicatorFooterView.xib"
-                    install_resource "RongCloudIMKit/iOS_IMKit_v_1_3_4/RongCloud.bundle"
+                    install_resource "RongCloudIMKit/iOS_IMKit/RongCloud.bundle"
                     install_resource "TDSemiModal/Classes/TDDatePickerController.xib"
                     install_resource "THCalendarDatePicker/THCalendarDatePicker/THDateDay.xib"
                     install_resource "THCalendarDatePicker/THCalendarDatePicker/THDatePickerViewController.xib"

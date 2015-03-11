@@ -20,7 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - AVOSCloud (2.6.10.2)
+  - AVOSCloud (2.6.11)
   - CBStoreHouseRefreshControl (1.0)
   - CocoaLumberjack (1.9.2):
     - CocoaLumberjack/Extensions (= 1.9.2)
@@ -66,7 +66,7 @@ PODS:
   - Realm/Headers (0.90.6)
   - RKDropdownAlert (0.1.1)
   - RKSwipeBetweenViewControllers (0.1.3)
-  - RongCloudIMKit (1.3.4)
+  - RongCloudIMKit (1.4.1.1)
   - SCLAlertView-Objective-C (0.5.6)
   - Slash (0.1.2):
     - Slash/arc (= 0.1.2)
@@ -117,7 +117,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  AVOSCloud: 903429163bce9feabb4473ab07ea30ed47ba5db1
+  AVOSCloud: e2fc2896944edf90f83fb161c3d73e5f55edcbef
   CBStoreHouseRefreshControl: 3c67731fe57aff3ccd2a151c9d13a6f2aed8a11e
   CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
   CocoaSecurity: 7ce1b967863d4e96dcffdbad17671117900e6c6e
@@ -146,7 +146,7 @@ SPEC CHECKSUMS:
   Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
   RKSwipeBetweenViewControllers: a0697cf3acfb523700815c01e911367c84c9240a
-  RongCloudIMKit: 154c506e04000e5d63b1bb1fbe0b7256ef6e6a52
+  RongCloudIMKit: 9f73ec4aba9bff5fb8185ea6996e94e1e10e40b2
   SCLAlertView-Objective-C: 257de4171414dbc32bc3bfdcb61093fc0906536c
   Slash: d98d6ff27ece4297d8d65fb49fc1ce4307a75f46
   TDSemiModal: c2fd3fe003fe0c575c14fbcf75950cf2e075d3a2
