@@ -44,37 +44,39 @@ CGFloat const MSFeedMaxHeight = 240;
 
 - (void) decodeLayoutWithFeed:(MSFeed *)feed
 {
+    CGFloat height = 0;
+    
+    CGFloat(^HeightWithLayoutItem)(MSLayoutItem* item) = ^(MSLayoutItem* item) {
         CGFloat height = 0;
-        
-        CGFloat(^HeightWithLayoutItem)(MSLayoutItem* item) = ^(MSLayoutItem* item) {
-            CGFloat height = 0;
-            height -= item.egdeInsets.top;
-            height -= item.egdeInsets.bottom;
-            height += item.layoutSize.height;
-            return height;
-        };
+        height -= item.egdeInsets.top;
+        height -= item.egdeInsets.bottom;
+        height += item.layoutSize.height;
+        return height;
+    };
     
     CGFloat innerContent = _contentWidth + _topLayoutItem.egdeInsets.top + _topLayoutItem.egdeInsets.bottom;
     
-        void (^SetFrameWithOrigin)(MSLayoutItem* item,  CGPoint point) = ^(MSLayoutItem* item,CGPoint point) {
-            item.frame = CGRectMake(point.x, point.y , innerContent, item.layoutSize.height);
-        };
-        
-        height += HeightWithLayoutItem(_topLayoutItem);
+    void (^SetFrameWithOrigin)(MSLayoutItem* item,  CGPoint point) = ^(MSLayoutItem* item,CGPoint point) {
+        item.frame = CGRectMake(point.x, point.y , innerContent, item.layoutSize.height);
+    };
+    
+    height += HeightWithLayoutItem(_topLayoutItem);
     
     CGPoint startPoint = CGPointZero;
     startPoint.x = -_topLayoutItem.egdeInsets.left + self.egdeInsets.left;
     startPoint.y = -_topLayoutItem.egdeInsets.top + self.egdeInsets.top;
-        SetFrameWithOrigin(_topLayoutItem, startPoint);
-        
-        _detailTextLayout.text = feed.content;
-        height += HeightWithLayoutItem(_detailTextLayout);
-        SetFrameWithOrigin(_detailTextLayout, CGPointMake(CGRectGetMinX(_topLayoutItem.frame), CGRectGetMaxY(_topLayoutItem.frame) - _topLayoutItem.egdeInsets.bottom));
-        
-        height += HeightWithLayoutItem(_bottomLayoutItem);
-        SetFrameWithOrigin(_bottomLayoutItem, CGPointMake(CGRectGetMinX(_topLayoutItem.frame), CGRectGetMaxY(_detailTextLayout.frame) - _detailTextLayout.egdeInsets.bottom));
+    SetFrameWithOrigin(_topLayoutItem, startPoint);
     
-    height += 100;
+    _detailTextLayout.text = feed.content;
+    
+    CGFloat additionHeight = 100;
+    height += additionHeight;
+    height += HeightWithLayoutItem(_detailTextLayout);
+    SetFrameWithOrigin(_detailTextLayout, CGPointMake(CGRectGetMinX(_topLayoutItem.frame), CGRectGetMaxY(_topLayoutItem.frame) + additionHeight - _topLayoutItem.egdeInsets.bottom));
+    
+    height += HeightWithLayoutItem(_bottomLayoutItem);
+    SetFrameWithOrigin(_bottomLayoutItem, CGPointMake(CGRectGetMinX(_topLayoutItem.frame), CGRectGetMaxY(_detailTextLayout.frame) - _detailTextLayout.egdeInsets.bottom));
+    
     _layoutSize = CGSizeMake(_maxWidth, height);
     
     _backgroundLayoutItem.frame = CGRectMake(self.egdeInsets.left, self.egdeInsets.top, _contentWidth, height - self.egdeInsets.top - self.egdeInsets.bottom);

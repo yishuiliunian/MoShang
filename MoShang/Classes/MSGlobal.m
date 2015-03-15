@@ -8,6 +8,8 @@
 
 #import "MSGlobal.h"
 #import <FCUUID.h>
+#import <Haneke.h>
+#import <UIImageView+Haneke.h>
 BOOL IS_MSColorString(NSString* str) {
     return [str hasPrefix:@"#"];
     
@@ -42,8 +44,19 @@ NSArray* MSPicturesListFromStr(NSString* str) {
         [pictures addObject:p];
     }
     return pictures;
-    
+}
 
+
+void MSImageViewLoadContent(UIImageView* imageView, NSString* url, NSString* placeHolderName) {
+    [imageView hnk_setImageFromURL:[NSURL URLWithString:url] placeholder:DZCachedImageByName(placeHolderName)];
+}
+
+void MSLoadHeadBoy(UIImageView* imageView, NSString* url) {
+    MSImageViewLoadContent(imageView, url, @"default_avater_man");
+}
+
+void MSLoadHeadGirl(UIImageView* imageView, NSString* url) {
+    MSImageViewLoadContent(imageView, url, @"default_avater_lady");
 }
 
 @implementation MSGlobal

@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoShang/Classes/ViewControllers/TabViewControllers/Feeds/MSFeedCell.m"
-            timestampString = "447319743.191019"
+            timestampString = "448090788.532699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-likeIt"
             landmarkType = "5">
          </BreakpointContent>
@@ -510,6 +510,22 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "-onSuccess:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoShang/Classes/ViewControllers/TabViewControllers/Feeds/FeedDetail/MSFeedDetailView.m"
+            timestampString = "448089512.330042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-layoutSubviews"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

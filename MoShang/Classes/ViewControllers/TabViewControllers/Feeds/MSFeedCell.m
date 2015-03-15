@@ -93,7 +93,6 @@
     _detailTextBackgroudView.alpha = 0.5;
     //
 
-    _headImageView.image = DZCachedImageByName(@"default_avater_man.png");
     
     INIT_SUBVIEW(self.contentView, MSFeedFuctionView, _functionView);
     [_functionView.pinglunButton addTarget:self action:@selector(likeIt) forControlEvents:UIControlEventTouchUpInside];
@@ -146,13 +145,16 @@
     if (_feed != feed) {
         _feed = feed;
         _nickNameLabel.text = feed.nick;
+#ifdef DEBUG
+        _nickNameLabel.text = @"我的小伙伴";
+#endif
         _detailFeedLabel.text = feed.content;
         _detailFeedLabel.font = feed.layoutItem.detailTextLayout.font;
-        [_headImageView hnk_setImageFromURL:[NSURL URLWithString:feed.head]];
+        MSLoadHeadBoy(_headImageView, feed.head);
         if (IS_MSColorString(feed.bg)) {
-            _headImageView.backgroundColor = [UIColor colorWithHexString:feed.bg];
+            _backgroudImageView.backgroundColor = [UIColor colorWithHexString:feed.bg];
         } else {
-            [_backgroudImageView hnk_setImageFromURL:[NSURL URLWithString:feed.bg]];
+            [_backgroudImageView hnk_setImageFromURL:[NSURL URLWithString:feed.bg] placeholder:nil];
         }
         _functionView.timeLabel.text = @"腾讯大厦";
         [_functionView.pinglunButton setTitle:[@(_feed.n_likecount) stringValue] forState:UIControlStateNormal];

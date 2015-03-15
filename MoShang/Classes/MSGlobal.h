@@ -29,6 +29,12 @@ FOUNDATION_EXTERN NSString* MSGenRandomUUID();
 FOUNDATION_EXTERN NSString* MSCurrentTimeStapmStr();
 
 FOUNDATION_EXTERN NSArray* MSPicturesListFromStr(NSString* str);
+
+
+
+FOUNDATION_EXTERN void MSImageViewLoadContent(UIImageView* imageView, NSString* url, NSString* placeHolderName) ;
+FOUNDATION_EXTERN void MSLoadHeadBoy(UIImageView* imageView, NSString* url) ;
+FOUNDATION_EXTERN void MSLoadHeadGirl(UIImageView* imageView, NSString* url);
 @interface MSGlobal : NSObject
 
 @end

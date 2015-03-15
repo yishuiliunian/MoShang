@@ -30,6 +30,7 @@
     [self.view addSubview:_detailTopView];
     
     [self dz_addChildViewController:_detailTopView.photosViewController];
+    [_detailTopView addSubview:_detailTopView.photosViewController.view];
     
     _detailTopView.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = MSDefaultBackgroundColor();

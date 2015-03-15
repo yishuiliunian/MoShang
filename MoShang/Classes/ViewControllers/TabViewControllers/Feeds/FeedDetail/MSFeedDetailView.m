@@ -58,8 +58,8 @@
     CGSize size = [_contentLabel.text sizeWithFont:_contentLabel.font constrainedToSize:CGSizeMake(maxWidth, 100000) lineBreakMode:NSLineBreakByClipping];
     _contentLabel.frame = CGRectMake(space, CGRectGetMaxY(_avarterImageView.frame) + itemSpace, maxWidth, size.height);
     
-    _photosViewController.collectionView.frame = CGRectMake(space, CGRectGetMaxY(_contentLabel.frame)+itemSpace, maxWidth, 100);
-    _functionView.frame = CGRectMake(space, CGRectGetMaxY(_photosViewController.collectionView.frame), maxWidth, 30);
+    _photosViewController.view.frame = CGRectMake(space, CGRectGetMaxY(_contentLabel.frame)+itemSpace, maxWidth, 100);
+    _functionView.frame = CGRectMake(space, CGRectGetMaxY(_photosViewController.view.frame), maxWidth, 30);
 }
 
 - (CGFloat) estamitHeight
