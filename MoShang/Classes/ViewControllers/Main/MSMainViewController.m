@@ -27,6 +27,7 @@ DEFINE_PROPERTY_ASSIGN_INT16(insertIndex);
     [super viewDidLoad];
     INIT_SUBVIEW(self.tabBar, MSCenterAddButton, _centerButton);
     
+
     [_centerButton addTarget:self action:@selector(didTapCenterButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -66,7 +67,6 @@ DEFINE_PROPERTY_ASSIGN_INT16(insertIndex);
     _centerButton.frame = CGRectMake(barWidth*_insertIndex, CGRectGetHeight(self.tabBar.frame) - barHeight , barWidth, barHeight );
     [self.tabBar bringSubviewToFront:_centerButton];
     [_centerButton setImage:DZCachedImageByName(@"tab_upload_feed") forState:UIControlStateNormal];
-    
 }
 
 

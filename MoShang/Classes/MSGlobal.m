@@ -59,6 +59,17 @@ void MSLoadHeadGirl(UIImageView* imageView, NSString* url) {
     MSImageViewLoadContent(imageView, url, @"default_avater_lady");
 }
 
+NSMutableArray* AllocNotRetainedMutableArray() {
+    CFMutableArrayRef setRef = NULL;
+    CFArrayCallBacks notRetainedCallbacks = kCFTypeArrayCallBacks;
+    notRetainedCallbacks.retain = NULL;
+    notRetainedCallbacks.release = NULL;
+    setRef = CFArrayCreateMutable(kCFAllocatorDefault,
+                                  0,
+                                  &notRetainedCallbacks);
+    return (__bridge NSMutableArray *)setRef;
+}
+
 @implementation MSGlobal
 
 @end

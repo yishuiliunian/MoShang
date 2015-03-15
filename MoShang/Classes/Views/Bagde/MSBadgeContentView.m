@@ -23,6 +23,7 @@
         return self;
     }
     _items = items;
+
     return self;
 }
 - (instancetype) initWithFrame:(CGRect)frame
@@ -32,6 +33,7 @@
         return self;
     }
     _multiLines = YES;
+    _font = [UIFont systemFontOfSize:13];
     return self;
 }
 - (void) setItems:(NSArray *)items
@@ -66,6 +68,7 @@
     }
     
     for (MSBadgeItem* item  in _items) {
+        item.font = _font;
         if (startX + item.badgeWidth + 5 > CGRectGetWidth(self.frame)) {
             startY = startY + badgeHeight;
             startX = initStartX;
@@ -74,9 +77,9 @@
             }
         }
         LKBadgeView* badgeView = [[LKBadgeView alloc] initWithFrame:CGRectMake(startX, startY, item.badgeWidth , badgeHeight)];
+        badgeView.font = _font;
         badgeView.horizontalAlignment = LKBadgeViewHorizontalAlignmentCenter;
         badgeView.text = item.text;
-        item.font = badgeView.font;
         badgeView.textColor = [UIColor whiteColor];
         badgeView.badgeColor = [UIColor orangeColor];
         

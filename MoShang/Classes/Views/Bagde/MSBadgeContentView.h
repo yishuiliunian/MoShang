@@ -11,5 +11,6 @@
 @interface MSBadgeContentView : UIView
 @property (nonatomic, strong) NSArray* items;
 @property (nonatomic, assign) BOOL multiLines;
+@property (nonatomic, strong) UIFont* font;
 - (instancetype) initWithItems:(NSArray*)items;
 @end

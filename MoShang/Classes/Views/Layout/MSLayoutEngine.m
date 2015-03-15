@@ -64,10 +64,12 @@ HNKCacheFormat* HNKCreateCacheFormatWithSize(CGSize size, NSString* key)  {
         format.size = size;
         format.scaleMode = HNKScaleModeAspectFill;
         format.compressionQuality = 0.5;
-        format.diskCapacity = 10*1024*1024;
+        format.diskCapacity = 300*1024*1024;
         format.preloadPolicy = HNKPreloadPolicyLastSession;
         [[HNKCache sharedCache] registerFormat:format];
     }
+    
+
     return format;
 }
 
@@ -80,4 +82,14 @@ UIColor* MSDefaultBackgroundColor() {
         color = [UIColor colorWithHexString:@"f1f1f1"];
     });
     return color;
+}
+
+CGFloat MSFeedCellWidth()
+{
+   return  MSScrrenWidth() - 20;
+}
+
+CGFloat MSFeedCellMaxHeight()
+{
+    return 300;
 }

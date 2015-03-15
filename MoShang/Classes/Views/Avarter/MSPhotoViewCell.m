@@ -25,7 +25,7 @@ DEFINE_PROPERTY_STRONG_UIImageView(avarterTipsImageView);
     INIT_SUBVIEW_UIImageView(self.contentView, _avarterTipsImageView);
     _avarterTipsImageView.image = DZCachedImageByName(@"avatar_corner");
     self.contentView.clipsToBounds = YES;
-    HNKCacheFormat* format = HNKCreateCacheFormatWithSize(CGSizeMake(100, 100), @"kkkkkkkk");
+    HNKCacheFormat* format = MSFormatPhotoLittle;
     _photoImageView.hnk_cacheFormat = format;
     return self;
 }

@@ -14,12 +14,16 @@
 #import "MSPostFeedReq.h"
 #import "MSAlertPool.h"
 #import "MSLocationManager.h"
-@interface MSCreateFeedViewController () <MSRequestUIDelegate>
+@interface MSCreateFeedViewController () <MSRequestUIDelegate, MSUploadImageDelegate>
 @property (nonatomic, strong) MSAvarterCollectionViewController* avarterViewController;
 @property (nonatomic, strong) UITextView* textView;
 @end
 
 @implementation MSCreateFeedViewController
+- (void) dealloc
+{
+    [_avarterViewController.uploadImageManager removeUploadImageObserver:self];
+}
 - (void) ms_AddChildViewController:(UIViewController*)viewController
 {
     [viewController willMoveToParentViewController:self];
@@ -34,6 +38,27 @@
     _avarterViewController.canAddPhoto = YES;
     [self ms_AddChildViewController:_avarterViewController];
     
+    [_avarterViewController.uploadImageManager addUploadImageObserver:self];
+}
+
+- (void) setPostEnable:(BOOL)enable
+{
+    self.navigationItem.rightBarButtonItem.enabled = enable;
+}
+
+- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImage:(NSString *)key faild:(NSError *)error
+{
+    [self setPostEnable:!manager.isUploading];
+}
+
+- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImageSucceed:(NSString *)key url:(NSString *)url
+{
+    [self setPostEnable:!manager.isUploading];
+}
+
+- (void) uploadImageManger:(MSUploadImageManager *)manager beginUploadImage:(NSString *)key
+{
+    [self setPostEnable:NO];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,6 +67,8 @@
     [self loadRightBarItemWithTitle:@"发表" action:@selector(postFeed)];
     self.title = @"发表留言";
     // Do any additional setup after loading the view.
+    
+    [self setPostEnable:YES];
 }
 
 - (void) dismissNavigationController
@@ -67,7 +94,8 @@
 - (void) postFeed
 {
     NSString* picList = [NSString new];
-    for (NSString* a in self.avarterViewController.avarters) {
+    NSArray* images = self.avarterViewController.avarters;
+    for (NSString* a in images) {
        picList =  [picList stringByAppendingFormat:@"%@;", a];
     }
     MSPostFeedReq* postReq = [MSPostFeedReq new];

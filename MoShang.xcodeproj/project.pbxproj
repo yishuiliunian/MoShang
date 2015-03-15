@@ -47,6 +47,7 @@
 		65549A641AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A631AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m */; };
 		65549A671AA99D3E001DA1CA /* MSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A661AA99D3E001DA1CA /* MSComment.m */; };
 		65549A6A1AA99D57001DA1CA /* MSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A691AA99D57001DA1CA /* MSCommentCell.m */; };
+		655B58961AB556CE00F16540 /* MSUploadImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58951AB556CE00F16540 /* MSUploadImageManager.m */; };
 		655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */; };
 		655E3BA11A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */; };
 		655E3BA21A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */; };
@@ -266,6 +267,8 @@
 		65549A661AA99D3E001DA1CA /* MSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSComment.m; sourceTree = "<group>"; };
 		65549A681AA99D57001DA1CA /* MSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommentCell.h; sourceTree = "<group>"; };
 		65549A691AA99D57001DA1CA /* MSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCommentCell.m; sourceTree = "<group>"; };
+		655B58941AB556CE00F16540 /* MSUploadImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUploadImageManager.h; sourceTree = "<group>"; };
+		655B58951AB556CE00F16540 /* MSUploadImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUploadImageManager.m; sourceTree = "<group>"; };
 		655E3B8B1A8C904300C79B43 /* QQSurroundLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSurroundLineTextField.h; sourceTree = "<group>"; };
 		655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSurroundLineTextField.m; sourceTree = "<group>"; };
 		655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_big_button_focus_nor@2x.png"; sourceTree = "<group>"; };
@@ -744,6 +747,15 @@
 			path = Comments;
 			sourceTree = "<group>";
 		};
+		655B58931AB556BA00F16540 /* UploadImages */ = {
+			isa = PBXGroup;
+			children = (
+				655B58941AB556CE00F16540 /* MSUploadImageManager.h */,
+				655B58951AB556CE00F16540 /* MSUploadImageManager.m */,
+			);
+			path = UploadImages;
+			sourceTree = "<group>";
+		};
 		6563965C1A821F0600E61638 /* author */ = {
 			isa = PBXGroup;
 			children = (
@@ -1167,6 +1179,7 @@
 		65FD5B731A721BF8007239B9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				655B58931AB556BA00F16540 /* UploadImages */,
 				659F24881AA5FB430080096B /* OSS */,
 				652982AD1A85DA7B00322E8B /* protocols */,
 				6529829B1A85B7BB00322E8B /* operation */,
@@ -1463,6 +1476,7 @@
 				65DA46C81A8C8CAA00CF1536 /* MSLoginViewController.m in Sources */,
 				652982B01A85DA9800322E8B /* MSSingleFeedReq.m in Sources */,
 				659F24A31AA6F5C80080096B /* UIViewController+Custom.m in Sources */,
+				655B58961AB556CE00F16540 /* MSUploadImageManager.m in Sources */,
 				650DC25E1A723275000D000F /* MSCreateFeedViewController.m in Sources */,
 				650303A11A790DF400F30A2D /* MSMineTopView.m in Sources */,
 				65FD5B8D1A721DE0007239B9 /* MSGlobalNavViewController.m in Sources */,

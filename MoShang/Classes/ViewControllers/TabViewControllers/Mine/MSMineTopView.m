@@ -35,7 +35,7 @@ DEFINE_PROPERTY_STRONG(LKBadgeView*, ageBadgeView);
     INIT_SELF_SUBVIEW(LKBadgeView, _ageBadgeView);
     _avartIntroImageView.image = DZCachedImageByName(@"avatar_corner");
     
-    HNKCacheFormat* format = HNKCreateCacheFormatWithSize(CGSizeMake(100, 100), @"kkkkkkkk");
+    HNKCacheFormat* format =  MSFormatPhotoLittle;
     _imageView1.hnk_cacheFormat = _imageView2.hnk_cacheFormat = _imageView3.hnk_cacheFormat = _imageView4.hnk_cacheFormat = format;
 #define SetImageMasktToBounds(x) _imageView##x.layer.masksToBounds = YES;
     SetImageMasktToBounds(1);

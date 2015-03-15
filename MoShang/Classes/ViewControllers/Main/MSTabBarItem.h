@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MSTabBarItem : UITabBarItem
-
+@property (nonatomic, assign) int unreadCount;
 @end

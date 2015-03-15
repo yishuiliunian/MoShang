@@ -14,32 +14,26 @@
 #import "MSAddAvarterCell.h"
 #import <JTSImageViewController.h>
 #import "MSOssManager.h"
+#import "MSGlobal.h"
 
 DEFINE_NSString(AddPhotoCellIdentifier)
 DEFINE_NSString(NomarlPhotoCellIdentifer)
 
-DEFINE_NSString(UploadKeyPrefix)
-NSString* MS_UploadKey(NSUInteger index)
-{
-    return [NSString stringWithFormat:@"%@%lu", kDZUploadKeyPrefix, (unsigned long)index];
-}
+const int kMaxUploadImageCount = 5;
 
-int MS_IndexFromUploadKey(NSString*key) {
-    NSString* index = [key stringByReplacingOccurrencesOfString:kDZUploadKeyPrefix withString:@""];
-    return [index intValue];
-}
-
-@interface MSAvarterCollectionViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MSOssUploadObserver>
+@interface MSAvarterCollectionViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MSUploadImageDelegate>
 {
-    NSMutableArray* _avaters;
+    NSMutableDictionary* _avaterInfos;
     NSMutableSet* _uploadKeys;
+    
+    NSMutableArray* _allAvaterKeys;
 }
 @end
 
 @implementation MSAvarterCollectionViewController
+@synthesize canAddPhoto = _canAddPhoto;
 - (void) dealloc
 {
-    [MSShareOssManager removeUploadImageObserver:self];
 }
 - (instancetype) initWithCollectionViewLayout:(UICollectionViewLayout *)layout
 {
@@ -47,7 +41,7 @@ int MS_IndexFromUploadKey(NSString*key) {
     if (!self) {
         return self;
     }
-    _avaters =[NSMutableArray new];
+    _avaterInfos =[NSMutableDictionary new];
     _uploadKeys = [NSMutableSet new];
     _canAddPhoto = NO;
     return self;
@@ -61,21 +55,42 @@ int MS_IndexFromUploadKey(NSString*key) {
     if (!self) {
         return self;
     }
-    [_avaters addObjectsFromArray:avarters];
+    
+    [self loadArrays:avarters];
     return self;
+}
+- (void)  loadArrays:(NSArray*)array
+{
+    NSMutableDictionary* dic = [NSMutableDictionary dictionary];
+    for (id object in array) {
+        if ([object isKindOfClass:[NSString class]]) {
+            [dic setObject:object forKey:object];
+        }else if ([object isKindOfClass:[UIImage class]]) {
+            [dic setObject:object forKey:MSGenRandomUUID()];
+        }
+    }
+    _avaterInfos = dic;
+    _allAvaterKeys = [dic.allKeys mutableCopy];
 }
 - (void) setPhotos:(NSArray*)array
 {
-    _avaters = [array mutableCopy];
+    [self loadArrays:array];
     [self.collectionView reloadData];
 }
 - (void) setCanAddPhoto:(BOOL)canAddPhoto
 {
-    _canAddPhoto = canAddPhoto && _avaters.count <= 5;
+    _canAddPhoto = canAddPhoto;
 }
+
+- (BOOL) canAddPhoto
+{
+   return  _canAddPhoto && _allAvaterKeys.count <= kMaxUploadImageCount;
+
+}
+
 - (NSArray*) avarters
 {
-    return [_avaters copy];
+    return _allAvaterKeys;
 }
 - (void) viewDidLoad
 {
@@ -84,6 +99,9 @@ int MS_IndexFromUploadKey(NSString*key) {
     [self.collectionView registerClass:[MSPhotoViewCell class] forCellWithReuseIdentifier:kDZNomarlPhotoCellIdentifer];
     [self.collectionView reloadData];
     self.collectionView.backgroundColor = [UIColor clearColor];
+    
+    _uploadImageManager= [MSUploadImageManager new];
+    _uploadImageManager.delegate = self;
 }
 
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -93,18 +111,18 @@ int MS_IndexFromUploadKey(NSString*key) {
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if (_canAddPhoto) {
-        return _avaters.count + 1;
+    if ([self canAddPhoto]) {
+        return _allAvaterKeys.count + 1;
     } else
     {
-        return _avaters.count;
+        return _allAvaterKeys.count;
     }
 }
 
 #define IS_TheAddPhotoRow(path) [self isTheAddPhotoRowIndexPath:path]
 - (BOOL) isTheAddPhotoRowIndexPath:(NSIndexPath*)path
 {
-    return path.row == _avaters.count;
+    return path.row == _allAvaterKeys.count;
 }
 - (UICollectionViewCell*) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -117,7 +135,7 @@ int MS_IndexFromUploadKey(NSString*key) {
         MSPhotoViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kDZNomarlPhotoCellIdentifer forIndexPath:indexPath];
         cell.isFirst = (indexPath.row == 0);
         cell.backgroundColor = [UIColor redColor];
-        id object = [_avaters objectAtIndex:indexPath.row];
+        id object = _avaterInfos[[_allAvaterKeys objectAtIndex:indexPath.row]];
         if ([object isKindOfClass:[NSString class]]) {
             [cell.photoImageView hnk_setImageFromURL:[NSURL URLWithString:object]];
         } else if ([object isKindOfClass:[UIImage class]]) {
@@ -137,7 +155,7 @@ int MS_IndexFromUploadKey(NSString*key) {
         JTSImageInfo* info = [[JTSImageInfo alloc] init];
         info.referenceRect = cell.frame;
         info.referenceView = cell.superview;
-        id ob = _avaters[indexPath.row];
+        id ob = _avaterInfos[_allAvaterKeys[indexPath.row]];
         if ([ob isKindOfClass:[NSString class]]) {
             info.imageURL = [NSURL URLWithString:ob];
         } else {
@@ -178,37 +196,32 @@ INIT_DZ_EXTERN_STRING(DZSelectImageFromScroll, 相册)
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage* image = info[UIImagePickerControllerOriginalImage];
-    [_avaters addObject:image];
-    [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:[_avaters indexOfObject:image] inSection:0]]];
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    
-    [MSShareOssManager addUploadImageObserver:self];
-    NSString* key = MS_UploadKey([_avaters indexOfObject:image]);
-    [[MSOssManager shareManager] uploadImage:image key:key];
-    [_uploadKeys addObject:key];
-    
-}
-- (void) uploadImageWithKey:(NSString *)key faild:(NSError *)error
-{
-    [MSShareOssManager removeUploadImageObserver:self];
-    if ([_uploadKeys containsObject:key]) {
-        [_uploadKeys removeObject:key];
+    NSString* key = MSGenRandomUUID();
+    [_avaterInfos setObject:image forKey:key];
+    [_allAvaterKeys addObject:key];
+    if (_allAvaterKeys.count < kMaxUploadImageCount) {
+        [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:[_allAvaterKeys indexOfObject:key] inSection:0]]];
+    } else {
+        [self.collectionView reloadData];
     }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    [_uploadImageManager uploadImage:image key:key];
 }
 
-- (void) uploadImageWithKeySucceed:(NSString *)key url:(NSString *)url
-{
-    [MSShareOssManager removeUploadImageObserver:self];
-    
-    if ([_uploadKeys containsObject:key]) {
-        [_uploadKeys removeObject:key];
-        int index = MS_IndexFromUploadKey(key);
-        [_avaters replaceObjectAtIndex:index withObject:url];
-    }
-}
+
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImageSucceed:(NSString *)key url:(NSString *)url
+{
+    [_avaterInfos setObject:url forKey:url];
+    [_allAvaterKeys replaceObjectAtIndex:[_allAvaterKeys indexOfObject:key] withObject:url];
+}
+
+- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImage:(NSString *)key faild:(NSError *)error
+{
+    
 }
 @end

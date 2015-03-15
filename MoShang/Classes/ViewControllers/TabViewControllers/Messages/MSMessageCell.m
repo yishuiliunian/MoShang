@@ -23,7 +23,7 @@
     INIT_SUBVIEW(self.contentView, UILabel, _lastTextLabel);
     INIT_SUBVIEW(self.contentView, UILabel, _lastTimeLabel);
     INIT_SUBVIEW(self.contentView, UILabel, _nickNameLabel);
-    _avarterImageView.hnk_cacheFormat = HNKCreateCacheFormatWithSize(CGSizeMake(44, 44), @"message_varatr");
+    _avarterImageView.hnk_cacheFormat = MSFormatHeadLittle;
     _avarterImageView.layer.masksToBounds = YES;
     return self;
 }

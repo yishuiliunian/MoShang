@@ -7,7 +7,22 @@
 //
 
 #import "MSTabBarItem.h"
+#import <LKBadgeView.h>
+@interface MSTabBarItem()
 
+@end
 @implementation MSTabBarItem
 
+- (instancetype) initWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage
+{
+    self = [super initWithTitle:title image:image selectedImage:selectedImage];
+    if (!self) {
+        return self;
+    }
+    return self;
+}
+- (void) setUnreadCount:(int)unreadCount
+{
+    _unreadCount = unreadCount;
+}
 @end

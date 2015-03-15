@@ -13,16 +13,7 @@
 #import "MSGlobal.h"
 
 
-NSMutableArray* AllocNotRetainedMutableArray() {
-    CFMutableArrayRef setRef = NULL;
-    CFArrayCallBacks notRetainedCallbacks = kCFTypeArrayCallBacks;
-    notRetainedCallbacks.retain = NULL;
-    notRetainedCallbacks.release = NULL;
-    setRef = CFArrayCreateMutable(kCFAllocatorDefault,
-                                0,
-                                &notRetainedCallbacks);
-    return (__bridge NSMutableArray *)setRef;
-}
+
 
 
 
@@ -79,7 +70,7 @@ NSString* const kDZOssScretKey = @"ZJQXjHz90Ez9cOPQjRzC8hFoh9nNLW";
 
 
 - (void) uploadImage:(UIImage*) image key:(NSString *)key {
-    NSData* data = UIImageJPEGRepresentation(image, 0.1);
+    NSData* data = UIImageJPEGRepresentation(image, 0.6);
     NSString* urlKey = MSGenerateRandomUUID;
     OSSData* ossData = [[OSSData alloc] initWithBucket:self.picturesBucket withKey:urlKey];
     [ossData setData:data withType:@"jpeg"];
@@ -90,7 +81,7 @@ NSString* const kDZOssScretKey = @"ZJQXjHz90Ez9cOPQjRzC8hFoh9nNLW";
         NSString* u = [weakData getResourceURL:kDZOssAceessKey andExpire:100000000000];
         for (id<MSOssUploadObserver> ob in _delegateArray) {
             if (y) {
-                [ob  uploadImageWithKeySucceed:key url:u];
+                [ob  uploadImageSucceed:image withKey:key url:u];
             } else {
                 [ob uploadImageWithKey:key faild:error];
             }

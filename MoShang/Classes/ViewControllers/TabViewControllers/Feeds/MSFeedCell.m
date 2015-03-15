@@ -20,6 +20,7 @@
 #import "MSSyncCenter.h"
 #import "MSTipsPool.h"
 #import "MSFeedFuctionView.h"
+#import "MSBadgeContentView.h"
 @interface MSFeedCell() <MSRequestUIDelegate>
 @property (nonatomic, strong) UIImageView* headImageView;
 @property (nonatomic, strong) UIImageView* backgroudImageView;
@@ -28,6 +29,7 @@
 @property (nonatomic, strong) UIView* functionsBackgroundView;
 @property (nonatomic, strong) UIView* detailTextBackgroudView;
 @property (nonatomic, strong) MSFeedFuctionView* functionView;
+@property (nonatomic, strong) MSBadgeContentView* badgeContentView;
 @end
 @implementation MSFeedCell
 
@@ -45,6 +47,7 @@
     INIT_SUBVIEW(self.contentView, UILabel, _nickNameLabel);
     INIT_SUBVIEW(self.contentView, UILabel, _detailFeedLabel);
     INIT_SUBVIEW(_backgroudImageView, UIView, _functionsBackgroundView);
+    INIT_SUBVIEW(self.contentView, MSBadgeContentView, _badgeContentView);
 
     _functionsBackgroundView.backgroundColor = [UIColor whiteColor];
     _detailFeedLabel.numberOfLines = 0;
@@ -56,33 +59,14 @@
     _backgroudImageView.layer.masksToBounds = YES;
     //
     
-    HNKCacheFormat *format = [HNKCache sharedCache].formats[@"cellHead"];
-    if (!format) {
-        format  = [[HNKCacheFormat alloc] initWithName:@"cellHead"];
-        format.size = CGSizeMake(MSFeedHeadImageSizeWidth, MSFeedHeadImageSizeWidth);
-        format.scaleMode = HNKScaleModeAspectFill;
-        format.compressionQuality = 0.5;
-        format.diskCapacity = 10*1024*1024;
-        format.preloadPolicy = HNKPreloadPolicyLastSession;
-        [[HNKCache sharedCache] registerFormat:format];
-    }
+    HNKCacheFormat *format = MSFormatHeadLittle;
     _headImageView.hnk_cacheFormat = format;
     _headImageView.layer.cornerRadius = MSFeedHeadImageSizeWidth/2;
     _headImageView.layer.masksToBounds = YES;
     
     //
-    
-    HNKCacheFormat* backgroundFormat = [HNKCache sharedCache].formats[@"backgourd_feed"];
-    if (!backgroundFormat) {
-        backgroundFormat  = [[HNKCacheFormat alloc] initWithName:@"backgourd_feed"];
-        backgroundFormat.size = CGSizeMake(MSFeedHeadImageSizeWidth, MSFeedHeadImageSizeWidth);
-        backgroundFormat.scaleMode = HNKScaleModeAspectFill;
-        backgroundFormat.compressionQuality = 0.5;
-        backgroundFormat.diskCapacity = 100*1024*1024;
-        backgroundFormat.preloadPolicy = HNKPreloadPolicyLastSession;
-        [[HNKCache sharedCache] registerFormat:backgroundFormat];
-    }
-    _backgroudImageView.hnk_cacheFormat = backgroundFormat;
+
+    _backgroudImageView.hnk_cacheFormat = MSFormatFeedBackground;
     
     //
     _nickNameLabel.textColor = [UIColor whiteColor];
@@ -158,6 +142,13 @@
         }
         _functionView.timeLabel.text = @"腾讯大厦";
         [_functionView.pinglunButton setTitle:[@(_feed.n_likecount) stringValue] forState:UIControlStateNormal];
+        
+        NSArray* textItems = @[@"nv女",@"骑行控"];
+        NSMutableArray* items = [NSMutableArray new];
+        for (NSString*  s in textItems) {
+            [items addObject:MSBadgeItemWithText(s)];
+        }
+        _badgeContentView.items = items;
     }
 }
 
@@ -169,7 +160,8 @@
     headFrame.origin = _feed.layoutItem.topLayoutItem.frame.origin;
     headFrame.size.width = headFrame.size.height = CGRectGetHeight(_feed.layoutItem.topLayoutItem.frame);
     _headImageView.frame = headFrame;
-    _nickNameLabel.frame = CGRectMake(CGRectGetMaxX(_headImageView.frame), CGRectGetMinY(_headImageView.frame), _feed.layoutItem.contentWidth - CGRectGetMaxX(_headImageView.frame), 20);
+    _nickNameLabel.frame = CGRectMake(CGRectGetMaxX(_headImageView.frame), CGRectGetMinY(_headImageView.frame), _feed.layoutItem.contentWidth - CGRectGetMaxX(_headImageView.frame), CGRectGetHeight(_feed.layoutItem.topLayoutItem.frame)/2);
+    _badgeContentView.frame = CGRectMake(CGRectGetMinX(_nickNameLabel.frame), CGRectGetMaxY(_nickNameLabel.frame), CGRectGetWidth(_nickNameLabel.frame), CGRectGetHeight(_feed.layoutItem.topLayoutItem.frame)/2);
     _detailFeedLabel.frame = _feed.layoutItem.detailTextLayout.frame;
     
     _functionsBackgroundView.frame = CGRectMake(0, CGRectGetHeight(_backgroudImageView.frame) - CGRectGetHeight(_feed.layoutItem.bottomLayoutItem.frame), CGRectGetWidth(_backgroudImageView.frame), CGRectGetHeight(_feed.layoutItem.bottomLayoutItem.frame));

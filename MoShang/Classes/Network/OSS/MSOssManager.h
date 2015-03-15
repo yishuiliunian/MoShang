@@ -14,7 +14,7 @@ extern NSString* const kDZOssScretKey;
 @class OSSData;
 @protocol MSOssUploadObserver <NSObject>
 
-- (void) uploadImageWithKeySucceed:(NSString*)key url:(NSString*)url;
+- (void) uploadImageSucceed:(UIImage*)image withKey:(NSString*)key url:(NSString*)url;
 - (void) uploadImageWithKey:(NSString *)key faild:(NSError*)error;
 
 @end
