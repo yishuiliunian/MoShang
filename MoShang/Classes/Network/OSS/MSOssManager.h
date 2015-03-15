@@ -16,7 +16,8 @@ extern NSString* const kDZOssScretKey;
 
 - (void) uploadImageSucceed:(UIImage*)image withKey:(NSString*)key url:(NSString*)url;
 - (void) uploadImageWithKey:(NSString *)key faild:(NSError*)error;
-
+@optional
+- (void) uploadImageWithKey:(NSString *)key process:(float)process;
 @end
 
 #define MSShareOssManager [MSOssManager shareManager]

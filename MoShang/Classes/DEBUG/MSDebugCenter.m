@@ -16,7 +16,8 @@
 #import "MSOssManager.h"
 #import <DZImageCache.h>
 #import "MSSingleFeedReq.h"
-
+#import "MSAccountManager.h"
+#import <PonyDebugger.h>
 @interface MSDebugCenter () <MSRequestUIDelegate>
 
 @end
@@ -24,6 +25,20 @@
 + (MSDebugCenter*) shareCenter
 {
     return DZSingleForClass([MSDebugCenter class]);
+}
+
+- (instancetype) init
+{
+    self = [super init];
+    if (!self) {
+        return self;
+    }
+    PDDebugger *debugger = [PDDebugger defaultInstance];
+    [[PDDebugger defaultInstance] connectToURL:[NSURL URLWithString:@"ws://192.168.1.100:9000/device"]];
+    [debugger enableRemoteLogging];
+    [debugger enableNetworkTrafficDebugging];
+    [debugger enableViewHierarchyDebugging];
+    return self;
 }
 
 - (void) globalTest
@@ -34,6 +49,7 @@
     infoReq.uidelegate = self;
     
     [MSDefaultSyncCenter performRequest:infoReq];
+    
 }
 
 - (void) request:(MSRequest *)request onSucced:(id)object

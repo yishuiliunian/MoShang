@@ -13,9 +13,10 @@
 
 - (void) uploadImageManger:(MSUploadImageManager*)manager uploadImage:(NSString*)key faild:(NSError*)error;
 - (void) uploadImageManger:(MSUploadImageManager*)manager uploadImageSucceed:(NSString*)key url:(NSString*)url;
-
+@optional
 - (void) uploadImageManger:(MSUploadImageManager *)manager beginUploadImage:(NSString *)key;
-
+- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImage:(NSString*)key process:(float)process;
+- (void) uploadImageManger:(MSUploadImageManager *)manager totalProcess:(float)process;
 @end
 @interface MSUploadImageManager : NSObject
 @property (nonatomic, weak) id<MSUploadImageDelegate> delegate;

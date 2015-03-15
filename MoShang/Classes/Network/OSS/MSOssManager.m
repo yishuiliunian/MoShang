@@ -88,6 +88,12 @@ NSString* const kDZOssScretKey = @"ZJQXjHz90Ez9cOPQjRzC8hFoh9nNLW";
         }
         
     } withProgressCallback:^(float x) {
+        
+        for (id<MSOssUploadObserver> pb in _delegateArray) {
+            if ([pb respondsToSelector:@selector(uploadImageWithKey:process:)]) {
+                [pb uploadImageWithKey:key process:x];
+            }
+        }
         NSLog(@"upload process %f",x);
     }];
 }

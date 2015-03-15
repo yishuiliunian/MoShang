@@ -18,7 +18,7 @@
 {
     SendSuperFunctionWithError(loadParamters);
     NSDictionary* dic = [self.userInfo toDictionary];
-    NSArray* allKeys = dic.allValues;
+    NSArray* allKeys = dic.allKeys;
     for (NSString* key in allKeys) {
         [self addParamter:dic[key] forKey:key];
     }

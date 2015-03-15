@@ -34,7 +34,9 @@ target 'MoShang' do
   pod 'NSString-UrlEncode'
   pod 'RongCloudIMKit'
   pod 'CBStoreHouseRefreshControl'
-
+  pod 'RSKImageCropper'
+  pod 'PonyDebugger', '~> 0.4.0'
+  pod 'MRProgress'
 end
 
 target 'MoShangTests' do

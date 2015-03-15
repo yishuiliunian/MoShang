@@ -27,6 +27,8 @@ int MS_IndexFromUploadKey(NSString*key) {
 {
     NSMutableArray* _uploadKeys;
     NSMutableArray* _delegateArray;
+    
+    NSMutableDictionary* _uploadProcessMap;
 }
 @end
 @implementation MSUploadImageManager
@@ -44,6 +46,7 @@ int MS_IndexFromUploadKey(NSString*key) {
     }
     _uploadKeys = [NSMutableArray new];
     _delegateArray = AllocNotRetainedMutableArray();
+    _uploadProcessMap = [NSMutableDictionary new];
     [MSShareOssManager addUploadImageObserver:self];
     return self;
 }
@@ -60,20 +63,19 @@ int MS_IndexFromUploadKey(NSString*key) {
     [_delegateArray removeObject:observer];
 }
 
-- (void) uploadImage:(UIImage*)image key:(NSString*)inKey
+- (void) uploadImage:(UIImage*)image key:(NSString*)key
 {
-    NSString* key = MS_UploadKey(inKey);
     [_uploadKeys addObject:key];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
        [[MSOssManager shareManager] uploadImage:image key:key];
         dispatch_async(dispatch_get_main_queue(), ^{
             for (id<MSUploadImageDelegate> ob in _delegateArray) {
                 if ([ob respondsToSelector:@selector(uploadImageManger:beginUploadImage:)]) {
-                    [ob uploadImageManger:self beginUploadImage:inKey];
+                    [ob uploadImageManger:self beginUploadImage:key];
                 }
             }
             if ([self.delegate respondsToSelector:@selector(uploadImageManger:beginUploadImage:)]) {
-                [self.delegate uploadImageManger:self beginUploadImage:inKey];
+                [self.delegate uploadImageManger:self beginUploadImage:key];
             }
         });
     });
@@ -84,14 +86,15 @@ int MS_IndexFromUploadKey(NSString*key) {
     if ([_uploadKeys containsObject:key]) {
         [_uploadKeys removeObject:key];
         dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self.delegate respondsToSelector:@selector(uploadImageManger:uploadImage:faild:)]) {
+                [self.delegate uploadImageManger:self uploadImage:key faild:error];
+            }
             for (id<MSUploadImageDelegate> ob in _delegateArray) {
                 if ([ob respondsToSelector:@selector(uploadImageManger:uploadImage:faild:)]) {
                     [ob uploadImageManger:self uploadImage:key faild:error];
                 }
             }
-            if ([self.delegate respondsToSelector:@selector(uploadImageManger:uploadImage:faild:)]) {
-                [self.delegate uploadImageManger:self uploadImage:key faild:error];
-            }
+
         });
 
     }
@@ -103,23 +106,70 @@ int MS_IndexFromUploadKey(NSString*key) {
     [[HNKCache sharedCache] setImage:image forKey:url formatName:MSFormatPhotoLittle.name];
     if ([_uploadKeys containsObject:key]) {
         [_uploadKeys removeObject:key];
-        
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSString* outKey = [key substringFromIndex:kDZUploadKeyPrefix.length];
+            if ([self.delegate respondsToSelector:@selector(uploadImageManger:uploadImageSucceed:url:)]) {
+                [self.delegate uploadImageManger:self uploadImageSucceed:key url:url];
+            }
             for (id<MSUploadImageDelegate> ob in _delegateArray) {
                 if ([ob respondsToSelector:@selector(uploadImageManger:uploadImageSucceed:url:)]) {
-                    [ob uploadImageManger:self uploadImageSucceed:outKey url:url];
+                    [ob uploadImageManger:self uploadImageSucceed:key url:url];
                 }
             }
-            if ([self.delegate respondsToSelector:@selector(uploadImageManger:uploadImageSucceed:url:)]) {
-                [self.delegate uploadImageManger:self uploadImageSucceed:outKey url:url];
-            }
+
         });
 
     }
 }
 
+- (void) uploadImageWithKey:(NSString *)key process:(float)process
+{
+    [self setUploadImage:key process:process];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (id<MSUploadImageDelegate> ob in _delegateArray) {
+            if ([ob respondsToSelector:@selector(uploadImageManger:uploadImage:process:)]) {
+                [ob uploadImageManger:self uploadImage:key process:process];
+            }
+            if ([ob respondsToSelector:@selector(uploadImageManger:totalProcess:)]) {
+                [ob uploadImageManger:self totalProcess:[self totalProcess]];
+            }
+        }
+        if ([self.delegate respondsToSelector:@selector(uploadImageManger:uploadImage:process:)]) {
+            [self.delegate uploadImageManger:self uploadImage:key process:process];
+        }
+        if ([self.delegate respondsToSelector:@selector(uploadImageManger:totalProcess:)]) {
+            [self.delegate uploadImageManger:self totalProcess:[self totalProcess]];
+        }
+    });
+}
 
+- (float) processForKey:(NSString*)key
+{
+    return [_uploadProcessMap[key] floatValue];
+}
+
+- (void) setUploadImage:(NSString*)key process:(float)process
+{
+    if (key) {
+        _uploadProcessMap[key] = @(process);
+    }
+}
+
+- (void) removeUploadProcess:(NSString*)key
+{
+    return [_uploadProcessMap removeObjectForKey:key];
+}
+
+- (float) totalProcess
+{
+    if (_uploadKeys.count == 0) {
+        return 1.0;
+    }
+    float sum = 0;
+    for (NSString* key  in _uploadKeys) {
+        sum += [self processForKey:key];
+    }
+    return sum/_uploadKeys.count;
+}
 - (NSInteger) uploadingCount
 {
     return [_uploadKeys count];

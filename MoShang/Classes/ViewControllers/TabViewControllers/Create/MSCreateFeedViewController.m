@@ -14,15 +14,18 @@
 #import "MSPostFeedReq.h"
 #import "MSAlertPool.h"
 #import "MSLocationManager.h"
+#import <MRProgress.h>
+#import "MSCreateFeedProcess.h"
+#import "MSUILogicManager.h"
 @interface MSCreateFeedViewController () <MSRequestUIDelegate, MSUploadImageDelegate>
 @property (nonatomic, strong) MSAvarterCollectionViewController* avarterViewController;
 @property (nonatomic, strong) UITextView* textView;
+@property (nonatomic, strong) MSCreateFeedProcess* createProcessLogic;
 @end
 
 @implementation MSCreateFeedViewController
 - (void) dealloc
 {
-    [_avarterViewController.uploadImageManager removeUploadImageObserver:self];
 }
 - (void) ms_AddChildViewController:(UIViewController*)viewController
 {
@@ -38,27 +41,15 @@
     _avarterViewController.canAddPhoto = YES;
     [self ms_AddChildViewController:_avarterViewController];
     
-    [_avarterViewController.uploadImageManager addUploadImageObserver:self];
 }
 
-- (void) setPostEnable:(BOOL)enable
-{
-    self.navigationItem.rightBarButtonItem.enabled = enable;
-}
 
-- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImage:(NSString *)key faild:(NSError *)error
-{
-    [self setPostEnable:!manager.isUploading];
-}
 
-- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImageSucceed:(NSString *)key url:(NSString *)url
-{
-    [self setPostEnable:!manager.isUploading];
-}
 
-- (void) uploadImageManger:(MSUploadImageManager *)manager beginUploadImage:(NSString *)key
+- (void) uploadImageManger:(MSUploadImageManager *)manager totalProcess:(float)process
 {
-    [self setPostEnable:NO];
+   MRNavigationBarProgressView* progressView =  [MRNavigationBarProgressView progressViewForNavigationController:self.navigationController];
+    [progressView setProgress:process animated:YES];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,8 +58,8 @@
     [self loadRightBarItemWithTitle:@"发表" action:@selector(postFeed)];
     self.title = @"发表留言";
     // Do any additional setup after loading the view.
-    
-    [self setPostEnable:YES];
+    _createProcessLogic = [MSCreateFeedProcess new];
+    [[MSUILogicManager shareManager] addLogicProcess:_createProcessLogic];
 }
 
 - (void) dismissNavigationController
@@ -93,31 +84,18 @@
 
 - (void) postFeed
 {
-    NSString* picList = [NSString new];
-    NSArray* images = self.avarterViewController.avarters;
-    for (NSString* a in images) {
-       picList =  [picList stringByAppendingFormat:@"%@;", a];
-    }
-    MSPostFeedReq* postReq = [MSPostFeedReq new];
-    postReq.content = _textView.text;
-    postReq.piclist = picList;
-    postReq.backgroundColor = @"#333333";
-    postReq.position = [MSLocationManager shareManager].currentLocation.serverEncodeString;
-    postReq.uidelegate = self;
-    [MSDefaultSyncCenter performRequest:postReq];
+    NSError* error;
     
-    MSAlertShowLoading(@"发表中....")
-}
-
-- (void) request:(MSRequest *)request onError:(NSError *)error
-{
-    MSAlertHideLoading
-    [MSDefaultTipsPool showError:error];
-}
-
-- (void) request:(MSRequest *)request onSucced:(id)object
-{
-    MSAlertHideLoading
+    if(![_createProcessLogic setContent:_textView.text error:&error])
+    {
+        [MSDefaultTipsPool showError:error];
+        return;
+    }
+    _createProcessLogic.backgroundColor = @"#232323";
+    _createProcessLogic.photoManager = _avarterViewController.photoManager;
+    _createProcessLogic.contentReady = YES;
+    [_createProcessLogic post];
     [self dismissNavigationController];
 }
+
 @end

@@ -45,10 +45,34 @@
     [self.view addSubview:_scrollView];
     _scrollView.contentSize = self.view.bounds.size;
     
+    UITapGestureRecognizer* tapG = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleHideKeyboardTap:)];
+    tapG.numberOfTapsRequired = 1;
+    tapG.numberOfTouchesRequired = 1;
+    [self.scrollView addGestureRecognizer:tapG];
+    
     
     _headTitleLabel = [TTTAttributedLabel new];
     _headTitleLabel.numberOfLines = 0;
     _headTitleLabel.textAlignment = UITextAlignmentCenter;
     [self.scrollView addSubview:_headTitleLabel];
+}
+
+- (void) handleHideKeyboardTap:(UITapGestureRecognizer*)tapG
+{
+    if (tapG.state == UIGestureRecognizerStateRecognized) {
+        NSArray* subViews = self.scrollView.subviews;
+        CGPoint point = [tapG locationInView:self.scrollView];
+        for (UIView* v in subViews) {
+            if (CGRectContainsPoint(v.frame, point)) {
+                return;
+            }
+        }
+        
+        for (UIView* v in subViews) {
+            if ([v respondsToSelector:@selector(resignFirstResponder)]) {
+                [v resignFirstResponder];
+            }
+        }
+    }
 }
 @end

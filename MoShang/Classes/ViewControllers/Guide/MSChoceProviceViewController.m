@@ -55,26 +55,18 @@
 
 - (void) sendUserInfos
 {
-    self.guideContentViewController.userInfo.style= @"";
-    MSSetUserInfoReq* setUserInfoReq = [MSSetUserInfoReq new];
-    setUserInfoReq.userInfo = self.guideContentViewController.userInfo;
-    [MSDefaultSyncCenter performRequest:setUserInfoReq];
-    setUserInfoReq.uidelegate = self;
-    
+    self.guideContentViewController.editUserProcess.userInfo.style= @"";
     [MSDefaultAlertPool showLoadingWithMessage:@"正在提交您的信息...."];
+    [self.guideContentViewController.editUserProcess forceUpload:^(NSError *error) {
+        MSAlertHideLoading;
+        if (error) {
+            [MSDefaultTipsPool showError:error];
+        }
+        [self nextSetp];
+    }];
 }
 
-- (void) request:(MSRequest *)request onError:(NSError *)error
-{
-    [MSDefaultAlertPool hideAllAlert];
-    [MSDefaultTipsPool showError:error];
-}
 
-- (void) request:(MSRequest *)request onSucced:(id)object
-{
-    [MSDefaultAlertPool hideAllAlert];
-    [self nextSetp];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

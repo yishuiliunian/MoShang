@@ -57,24 +57,56 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
+  - MRProgress (0.8.1):
+    - MRProgress/ActivityIndicator (= 0.8.1)
+    - MRProgress/Blur (= 0.8.1)
+    - MRProgress/Circular (= 0.8.1)
+    - MRProgress/Icons (= 0.8.1)
+    - MRProgress/NavigationBarProgress (= 0.8.1)
+    - MRProgress/Overlay (= 0.8.1)
+  - MRProgress/ActivityIndicator (0.8.1):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.8.1):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.8.1):
+    - MRProgress/Helper
+    - MRProgress/ProgressBaseClass
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.8.1)
+  - MRProgress/Icons (0.8.1)
+  - MRProgress/NavigationBarProgress (0.8.1):
+    - MRProgress/ProgressBaseClass
+  - MRProgress/Overlay (0.8.1):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/ProgressBaseClass (0.8.1)
+  - MRProgress/Stopable (0.8.1):
+    - MRProgress/Helper
   - MTStringAttributes (0.1.0):
     - Slash (~> 0.1)
   - NSString-UrlEncode (2.0.0)
   - ObjectiveRecord (1.5.0):
     - ObjectiveSugar
   - ObjectiveSugar (1.1.0)
+  - PonyDebugger (0.4.2):
+    - SocketRocket
   - Realm (0.91.1):
     - Realm/Headers (= 0.91.1)
   - Realm/Headers (0.91.1)
   - RKDropdownAlert (0.1.1)
   - RKSwipeBetweenViewControllers (0.1.3)
   - RongCloudIMKit (1.4.1.1)
+  - RSKImageCropper (1.1.0)
   - SCLAlertView-Objective-C (0.5.6)
   - Slash (0.1.2):
     - Slash/arc (= 0.1.2)
     - Slash/no-arc (= 0.1.2)
   - Slash/arc (0.1.2)
   - Slash/no-arc (0.1.2)
+  - SocketRocket (0.2.0)
   - TDSemiModal (1.0.0)
   - THCalendarDatePicker (0.2.9):
     - KNSemiModalViewController (~> 0.3)
@@ -100,13 +132,16 @@ DEPENDENCIES:
   - JTSImageViewController
   - LKBadgeView (from `https://github.com/lakesoft/LKBadgeView.git`)
   - MagicalRecord
+  - MRProgress
   - MTStringAttributes
   - NSString-UrlEncode
   - ObjectiveRecord
+  - PonyDebugger (~> 0.4.0)
   - Realm
   - RKDropdownAlert
   - RKSwipeBetweenViewControllers
   - RongCloudIMKit
+  - RSKImageCropper
   - SCLAlertView-Objective-C
   - TDSemiModal
   - THCalendarDatePicker (~> 0.2.8)
@@ -139,16 +174,20 @@ SPEC CHECKSUMS:
   KNSemiModalViewController: 6fb1e2f6a4d84238b524cb705e91118b0fa6bbc9
   LKBadgeView: 178c43bcf11ada8052271d0d418505153634938f
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  MRProgress: cd12726e001ea25dec133322d34cc4754cbc58f8
   MTStringAttributes: 83a352dc6e65def1bfb95d2bcb39e041611a582d
   NSString-UrlEncode: 884ff989b77aeec0fe25474edc32ad7e31ffc5ff
   ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
+  PonyDebugger: 4e382f345ac61b77bcecf1fef385b35a7b592f26
   Realm: 81adfc7f43f9301f40bbc46d5e8a10aaf71b9504
   RKDropdownAlert: f9ef694f0b54e075b5e0bd61827bd69c8d29c051
   RKSwipeBetweenViewControllers: a0697cf3acfb523700815c01e911367c84c9240a
   RongCloudIMKit: 9f73ec4aba9bff5fb8185ea6996e94e1e10e40b2
+  RSKImageCropper: 9238796dac78b897ba82241315fd518a590979db
   SCLAlertView-Objective-C: 257de4171414dbc32bc3bfdcb61093fc0906536c
   Slash: d98d6ff27ece4297d8d65fb49fc1ce4307a75f46
+  SocketRocket: 6c9cfd1592bea82262b4283dcda3a7de166af3b6
   TDSemiModal: c2fd3fe003fe0c575c14fbcf75950cf2e075d3a2
   THCalendarDatePicker: 6f2c3f78b52dc07f08398814664f3a089399208a
   TTTAttributedLabel: 7c4592f9a806badb8b48dc634cb9800447c51594

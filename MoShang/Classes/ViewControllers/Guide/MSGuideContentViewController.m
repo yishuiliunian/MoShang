@@ -8,6 +8,7 @@
 
 #import "MSGuideContentViewController.h"
 #import "MSLoginViewController.h"
+#import "MSUILogicManager.h"
 
 @implementation UIViewController (MSGuideContentViewController)
 
@@ -26,14 +27,13 @@
 @end
 
 @implementation MSGuideContentViewController
-
+@synthesize editUserProcess = _editUserProcess;
 - (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (!self) {
         return self;
     }
-    _userInfo = [MSUserInfo new];
     return self;
 }
 - (void)viewDidLoad {
@@ -41,6 +41,15 @@
     [self pushViewController:[MSLoginViewController new] animated:NO];
     // Do any additional setup after loading the view.
 }
+- (MSEditUserInfoProcess*)editUserProcess
+{
+    if (!_editUserProcess) {
+        _editUserProcess = [MSEditUserInfoProcess new];
+        [[MSUILogicManager shareManager] addLogicProcess:_editUserProcess];
+    }
+    return _editUserProcess;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -20,6 +20,7 @@
 #import "MSAppearenceManager.h"
 #import <Realm.h>
 #import "MSAccountManager.h"
+#import "MSGlobalStrings.h"
 #define NUM_TO_STRING(x) [@(x) stringValue]
 FOUNDATION_EXTERN BOOL IS_MSColorString(NSString* str);
 

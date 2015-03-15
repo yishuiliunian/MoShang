@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22A870EACC2132F1A7EEC37C"
+               BlueprintIdentifier = "A293AC6AD24DF03DCEC5A129"
                BuildableName = "libPods-MoShang-CBStoreHouseRefreshControl.a"
                BlueprintName = "Pods-MoShang-CBStoreHouseRefreshControl"
                ReferencedContainer = "container:Pods.xcodeproj">

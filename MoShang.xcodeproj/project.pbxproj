@@ -48,6 +48,12 @@
 		65549A671AA99D3E001DA1CA /* MSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A661AA99D3E001DA1CA /* MSComment.m */; };
 		65549A6A1AA99D57001DA1CA /* MSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65549A691AA99D57001DA1CA /* MSCommentCell.m */; };
 		655B58961AB556CE00F16540 /* MSUploadImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58951AB556CE00F16540 /* MSUploadImageManager.m */; };
+		655B58AA1AB58A7500F16540 /* MSGlobalStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58A91AB58A7500F16540 /* MSGlobalStrings.m */; };
+		655B58BC1AB5C82200F16540 /* MSEditUserInfoProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58B71AB5C82200F16540 /* MSEditUserInfoProcess.m */; };
+		655B58BD1AB5C82200F16540 /* MSUILogicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58B91AB5C82200F16540 /* MSUILogicManager.m */; };
+		655B58BE1AB5C82200F16540 /* MSUILogicProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58BB1AB5C82200F16540 /* MSUILogicProcess.m */; };
+		655B58C11AB5C8C200F16540 /* MSCreateFeedProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58C01AB5C8C200F16540 /* MSCreateFeedProcess.m */; };
+		655B58C41AB5C9BA00F16540 /* MSPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655B58C31AB5C9BA00F16540 /* MSPhotoManager.m */; };
 		655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */; };
 		655E3BA11A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */; };
 		655E3BA21A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655E3BA01A8DD6FB00C79B43 /* common_big_button_focus_pressed@2x.png */; };
@@ -269,6 +275,18 @@
 		65549A691AA99D57001DA1CA /* MSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCommentCell.m; sourceTree = "<group>"; };
 		655B58941AB556CE00F16540 /* MSUploadImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUploadImageManager.h; sourceTree = "<group>"; };
 		655B58951AB556CE00F16540 /* MSUploadImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUploadImageManager.m; sourceTree = "<group>"; };
+		655B58A81AB58A7500F16540 /* MSGlobalStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGlobalStrings.h; sourceTree = "<group>"; };
+		655B58A91AB58A7500F16540 /* MSGlobalStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGlobalStrings.m; sourceTree = "<group>"; };
+		655B58B61AB5C82200F16540 /* MSEditUserInfoProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSEditUserInfoProcess.h; sourceTree = "<group>"; };
+		655B58B71AB5C82200F16540 /* MSEditUserInfoProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSEditUserInfoProcess.m; sourceTree = "<group>"; };
+		655B58B81AB5C82200F16540 /* MSUILogicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUILogicManager.h; sourceTree = "<group>"; };
+		655B58B91AB5C82200F16540 /* MSUILogicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUILogicManager.m; sourceTree = "<group>"; };
+		655B58BA1AB5C82200F16540 /* MSUILogicProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUILogicProcess.h; sourceTree = "<group>"; };
+		655B58BB1AB5C82200F16540 /* MSUILogicProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUILogicProcess.m; sourceTree = "<group>"; };
+		655B58BF1AB5C8C200F16540 /* MSCreateFeedProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCreateFeedProcess.h; sourceTree = "<group>"; };
+		655B58C01AB5C8C200F16540 /* MSCreateFeedProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCreateFeedProcess.m; sourceTree = "<group>"; };
+		655B58C21AB5C9BA00F16540 /* MSPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPhotoManager.h; sourceTree = "<group>"; };
+		655B58C31AB5C9BA00F16540 /* MSPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPhotoManager.m; sourceTree = "<group>"; };
 		655E3B8B1A8C904300C79B43 /* QQSurroundLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSurroundLineTextField.h; sourceTree = "<group>"; };
 		655E3B8C1A8C904300C79B43 /* QQSurroundLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSurroundLineTextField.m; sourceTree = "<group>"; };
 		655E3B9F1A8DD6FB00C79B43 /* common_big_button_focus_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_big_button_focus_nor@2x.png"; sourceTree = "<group>"; };
@@ -694,6 +712,8 @@
 				655E3BA41A8DD74500C79B43 /* UIButton+Custom.m */,
 				659F24A11AA6F5C80080096B /* UIViewController+Custom.h */,
 				659F24A21AA6F5C80080096B /* UIViewController+Custom.m */,
+				655B58A81AB58A7500F16540 /* MSGlobalStrings.h */,
+				655B58A91AB58A7500F16540 /* MSGlobalStrings.m */,
 			);
 			name = Unities;
 			sourceTree = "<group>";
@@ -754,6 +774,30 @@
 				655B58951AB556CE00F16540 /* MSUploadImageManager.m */,
 			);
 			path = UploadImages;
+			sourceTree = "<group>";
+		};
+		655B58B41AB5C82200F16540 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				655B58B51AB5C82200F16540 /* Logic */,
+				655B58BF1AB5C8C200F16540 /* MSCreateFeedProcess.h */,
+				655B58C01AB5C8C200F16540 /* MSCreateFeedProcess.m */,
+			);
+			name = Business;
+			path = ViewControllers/Business;
+			sourceTree = "<group>";
+		};
+		655B58B51AB5C82200F16540 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				655B58B61AB5C82200F16540 /* MSEditUserInfoProcess.h */,
+				655B58B71AB5C82200F16540 /* MSEditUserInfoProcess.m */,
+				655B58B81AB5C82200F16540 /* MSUILogicManager.h */,
+				655B58B91AB5C82200F16540 /* MSUILogicManager.m */,
+				655B58BA1AB5C82200F16540 /* MSUILogicProcess.h */,
+				655B58BB1AB5C82200F16540 /* MSUILogicProcess.m */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		6563965C1A821F0600E61638 /* author */ = {
@@ -862,6 +906,8 @@
 				659F24721AA5E9460080096B /* MSAddAvarterCell.m */,
 				659F24741AA5E95A0080096B /* MSPhotoViewCell.h */,
 				659F24751AA5E95A0080096B /* MSPhotoViewCell.m */,
+				655B58C21AB5C9BA00F16540 /* MSPhotoManager.h */,
+				655B58C31AB5C9BA00F16540 /* MSPhotoManager.m */,
 			);
 			path = Avarter;
 			sourceTree = "<group>";
@@ -1128,6 +1174,7 @@
 		65FD5B6D1A721BF8007239B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				655B58B41AB5C82200F16540 /* Business */,
 				6598D93A1A90476F00813939 /* Alert */,
 				65BCBBC61A88868200A37E08 /* Log */,
 				65BCBBC21A8884CF00A37E08 /* Assist */,
@@ -1491,12 +1538,14 @@
 				659F248B1AA5FB6A0080096B /* MSOssManager.m in Sources */,
 				65DA46771A8AFCDC00CF1536 /* MSChinaMapController.m in Sources */,
 				658221311A787D11006B599D /* MSTextLayoutItem.m in Sources */,
+				655B58C11AB5C8C200F16540 /* MSCreateFeedProcess.m in Sources */,
 				65549A611AA99AB0001DA1CA /* MSCommentsViewController.m in Sources */,
 				652982B71A85F5B300322E8B /* MSDebugCenter.m in Sources */,
 				658221161A77BCFB006B599D /* MSLineHorizontalLayout.m in Sources */,
 				65D49A1F1AA98CDB00791A6C /* MSFeedFuctionView.m in Sources */,
 				6545C4631A7F75BA0066C7FC /* MCRecord.m in Sources */,
 				65F4F2CE1AA88D7D00DD82BD /* MSCardItem.m in Sources */,
+				655B58BC1AB5C82200F16540 /* MSEditUserInfoProcess.m in Sources */,
 				6545C4661A7F76200066C7FC /* MCSession.m in Sources */,
 				6598D9361A8E02AA00813939 /* MSSetAvatarViewController.m in Sources */,
 				652982A11A85B86900322E8B /* MSSyncCenter.m in Sources */,
@@ -1511,6 +1560,7 @@
 				6563965B1A821CA700E61638 /* MSTokenManager.m in Sources */,
 				659F24871AA5F8C20080096B /* AppConfig.m in Sources */,
 				650DC2491A722FC5000D000F /* MSCenterAddButton.m in Sources */,
+				655B58AA1AB58A7500F16540 /* MSGlobalStrings.m in Sources */,
 				65D49A0B1AA978AC00791A6C /* MSChatListViewController.m in Sources */,
 				65BCBBCE1A88962C00A37E08 /* MSGetFeedByPosReq.m in Sources */,
 				6582210D1A77BBB0006B599D /* MSLayoutEngine.m in Sources */,
@@ -1534,6 +1584,7 @@
 				6503039B1A79049600F30A2D /* NSDate+Read.m in Sources */,
 				656DB5611A89E941008AE224 /* MSGetFeedByUidReq.m in Sources */,
 				6598D9301A8DF86200813939 /* MSGuideUserInfoViewController.m in Sources */,
+				655B58C41AB5C9BA00F16540 /* MSPhotoManager.m in Sources */,
 				656396581A82184000E61638 /* MSVerifyAuthorRequest.m in Sources */,
 				65D49A1C1AA97CF700791A6C /* MSBadgeItem.m in Sources */,
 				65D499FC1AA891A300791A6C /* MSCardItemCell.m in Sources */,
@@ -1541,6 +1592,7 @@
 				650DC2461A722C52000D000F /* MSTabBarItem.m in Sources */,
 				65FD5B891A721D54007239B9 /* MSMainViewController.m in Sources */,
 				655E3BA51A8DD74500C79B43 /* UIButton+Custom.m in Sources */,
+				655B58BE1AB5C82200F16540 /* MSUILogicProcess.m in Sources */,
 				656DB54F1A89AC2F008AE224 /* MSUserInfo.m in Sources */,
 				656DB5521A89AE80008AE224 /* MSSetUserInfoReq.m in Sources */,
 				65DA46C41A8C43F800CF1536 /* MSInputScrollViewController.m in Sources */,
@@ -1569,6 +1621,7 @@
 				6529829A1A85B3F200322E8B /* NSError+MS.m in Sources */,
 				6563965F1A821F1800E61638 /* MSRegisterReq.m in Sources */,
 				650DC2581A723259000D000F /* MSMineViewController.m in Sources */,
+				655B58BD1AB5C82200F16540 /* MSUILogicManager.m in Sources */,
 				658221371A787E71006B599D /* MSModel.m in Sources */,
 				65D49A081AA96F8F00791A6C /* MSUserFeedDataController.m in Sources */,
 				65D49A031AA9661700791A6C /* MSPosFeedDataController.m in Sources */,

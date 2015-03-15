@@ -10,6 +10,7 @@
 #import <TTTAttributedLabel.h>
 #import <MTStringParser.h>
 #import <DZGeometryTools.h>
+#import "MSGuideContentViewController.h"
 @interface MSInputScrollViewController : UIViewController
 @property (nonatomic, strong, readonly) UIScrollView* scrollView;
 @property (nonatomic, strong, readonly) TTTAttributedLabel* headTitleLabel;

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MSUserInfo.h"
 
-
+#import "MSUploadImageManager.h"
+#import "MSEditUserInfoProcess.h"
 @class MSGuideContentViewController;
 @interface UIViewController (MSGuideContentViewController)
 @property (nonatomic, strong, readonly) MSGuideContentViewController* guideContentViewController;
@@ -23,5 +24,5 @@
 
 @interface MSGuideContentViewController : UINavigationController
 @property (nonatomic, weak) id<MSGuideContentDelegate> guideContentDelegate;
-@property (nonatomic, strong, readonly) MSUserInfo* userInfo;
+@property (nonatomic, strong ,readonly) MSEditUserInfoProcess* editUserProcess;
 @end

@@ -13,25 +13,22 @@
 #import "MSPhotoViewCell.h"
 #import "MSAddAvarterCell.h"
 #import <JTSImageViewController.h>
-#import "MSOssManager.h"
 #import "MSGlobal.h"
 
 DEFINE_NSString(AddPhotoCellIdentifier)
 DEFINE_NSString(NomarlPhotoCellIdentifer)
 
-const int kMaxUploadImageCount = 5;
 
+const int kMaxUploadImageCount;
 @interface MSAvarterCollectionViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MSUploadImageDelegate>
 {
-    NSMutableDictionary* _avaterInfos;
-    NSMutableSet* _uploadKeys;
-    
-    NSMutableArray* _allAvaterKeys;
+
 }
 @end
 
 @implementation MSAvarterCollectionViewController
 @synthesize canAddPhoto = _canAddPhoto;
+@synthesize photoManager = _photoManager;
 - (void) dealloc
 {
 }
@@ -41,8 +38,7 @@ const int kMaxUploadImageCount = 5;
     if (!self) {
         return self;
     }
-    _avaterInfos =[NSMutableDictionary new];
-    _uploadKeys = [NSMutableSet new];
+  
     _canAddPhoto = NO;
     return self;
 }
@@ -55,27 +51,20 @@ const int kMaxUploadImageCount = 5;
     if (!self) {
         return self;
     }
-    
-    [self loadArrays:avarters];
+    [self.photoManager setPhotoArray:avarters];
     return self;
 }
-- (void)  loadArrays:(NSArray*)array
+- (MSPhotoManager*) photoManager
 {
-    NSMutableDictionary* dic = [NSMutableDictionary dictionary];
-    for (id object in array) {
-        if ([object isKindOfClass:[NSString class]]) {
-            [dic setObject:object forKey:object];
-        }else if ([object isKindOfClass:[UIImage class]]) {
-            [dic setObject:object forKey:MSGenRandomUUID()];
-        }
+    if (!_photoManager) {
+        _photoManager = [[MSPhotoManager alloc] init];
+        _photoManager.uiDelegate = self;
     }
-    _avaterInfos = dic;
-    _allAvaterKeys = [dic.allKeys mutableCopy];
+    return _photoManager;
 }
 - (void) setPhotos:(NSArray*)array
 {
-    [self loadArrays:array];
-    [self.collectionView reloadData];
+    [self.photoManager setPhotoArray:array];
 }
 - (void) setCanAddPhoto:(BOOL)canAddPhoto
 {
@@ -84,19 +73,20 @@ const int kMaxUploadImageCount = 5;
 
 - (BOOL) canAddPhoto
 {
-   return  _canAddPhoto && _allAvaterKeys.count <= kMaxUploadImageCount;
+   return  _canAddPhoto && self.photoManager.count <= kMaxUploadImageCount;
 
 }
 
 - (NSArray*) avarters
 {
-    return _allAvaterKeys;
+    return self.photoManager.photoArray;
 }
 - (void) viewDidLoad
 {
     [super viewDidLoad];
     [self.collectionView registerClass:[MSAddAvarterCell class] forCellWithReuseIdentifier:kDZAddPhotoCellIdentifier];
     [self.collectionView registerClass:[MSPhotoViewCell class] forCellWithReuseIdentifier:kDZNomarlPhotoCellIdentifer];
+    self.photoManager.uiDelegate = self.collectionView;
     [self.collectionView reloadData];
     self.collectionView.backgroundColor = [UIColor clearColor];
     
@@ -112,17 +102,17 @@ const int kMaxUploadImageCount = 5;
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if ([self canAddPhoto]) {
-        return _allAvaterKeys.count + 1;
+        return self.photoManager.count + 1;
     } else
     {
-        return _allAvaterKeys.count;
+        return self.photoManager.count;
     }
 }
 
 #define IS_TheAddPhotoRow(path) [self isTheAddPhotoRowIndexPath:path]
 - (BOOL) isTheAddPhotoRowIndexPath:(NSIndexPath*)path
 {
-    return path.row == _allAvaterKeys.count;
+    return path.row == self.photoManager.count;
 }
 - (UICollectionViewCell*) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -135,7 +125,7 @@ const int kMaxUploadImageCount = 5;
         MSPhotoViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kDZNomarlPhotoCellIdentifer forIndexPath:indexPath];
         cell.isFirst = (indexPath.row == 0);
         cell.backgroundColor = [UIColor redColor];
-        id object = _avaterInfos[[_allAvaterKeys objectAtIndex:indexPath.row]];
+        id object = [self.photoManager objectAtIndex:indexPath.row];
         if ([object isKindOfClass:[NSString class]]) {
             [cell.photoImageView hnk_setImageFromURL:[NSURL URLWithString:object]];
         } else if ([object isKindOfClass:[UIImage class]]) {
@@ -155,7 +145,7 @@ const int kMaxUploadImageCount = 5;
         JTSImageInfo* info = [[JTSImageInfo alloc] init];
         info.referenceRect = cell.frame;
         info.referenceView = cell.superview;
-        id ob = _avaterInfos[_allAvaterKeys[indexPath.row]];
+        id ob = [self.photoManager objectAtIndex:indexPath.row];
         if ([ob isKindOfClass:[NSString class]]) {
             info.imageURL = [NSURL URLWithString:ob];
         } else {
@@ -167,8 +157,7 @@ const int kMaxUploadImageCount = 5;
     }
 }
 
-INIT_DZ_EXTERN_STRING(DZSelectImageFromCamera, 相机);
-INIT_DZ_EXTERN_STRING(DZSelectImageFromScroll, 相册)
+
 - (void) addPhoto
 {
     UIActionSheet* actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择照片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:DZSelectImageFromCamera, DZSelectImageFromScroll, nil];
@@ -196,16 +185,8 @@ INIT_DZ_EXTERN_STRING(DZSelectImageFromScroll, 相册)
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage* image = info[UIImagePickerControllerOriginalImage];
-    NSString* key = MSGenRandomUUID();
-    [_avaterInfos setObject:image forKey:key];
-    [_allAvaterKeys addObject:key];
-    if (_allAvaterKeys.count < kMaxUploadImageCount) {
-        [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:[_allAvaterKeys indexOfObject:key] inSection:0]]];
-    } else {
-        [self.collectionView reloadData];
-    }
+    [self.photoManager addNeedUploadImage:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
-    [_uploadImageManager uploadImage:image key:key];
 }
 
 
@@ -214,14 +195,5 @@ INIT_DZ_EXTERN_STRING(DZSelectImageFromScroll, 相册)
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImageSucceed:(NSString *)key url:(NSString *)url
-{
-    [_avaterInfos setObject:url forKey:url];
-    [_allAvaterKeys replaceObjectAtIndex:[_allAvaterKeys indexOfObject:key] withObject:url];
-}
 
-- (void) uploadImageManger:(MSUploadImageManager *)manager uploadImage:(NSString *)key faild:(NSError *)error
-{
-    
-}
 @end
