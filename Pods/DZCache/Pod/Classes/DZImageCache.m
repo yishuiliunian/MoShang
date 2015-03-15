@@ -20,30 +20,52 @@
 
 - (UIImage*) cachedImageForName:(NSString*)name
 {
+    if (name == nil) {
+        return nil;
+    }
+    UIImage* image = [DZMemoryShareCache objectForKey:name];
+    if (image) {
+        return image;
+    }
+    
     NSArray* comps = [name componentsSeparatedByString:@"."];
     NSCAssert(comps.count <= 2, @"image name error %@", name);
     NSString* fileName = nil;
-    NSString* fileType = nil;
+    
+    NSMutableArray* fileTypes = [NSMutableArray new];
     if (comps.count == 1) {
         fileName = name;
-        fileType = @"png";
+        [fileTypes addObject:@"png"];
+        [fileTypes addObject:@"jpg"];
+        [fileTypes addObject:@"jpeg"];
     }
     else
     {
         fileName = comps[0];
-        fileType = comps[1];
+        [fileTypes addObject:comps[1]];
     }
     NSString* path = nil;
-    if (DeviceScreenISRetain()) {
-        NSString* retainFileName = [fileName stringByAppendingString:@"@2x"];
-        path = [[NSBundle mainBundle] pathForResource:retainFileName ofType:fileType];
-        if (!path) {
-            path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
+    
+    
+    for (NSString* type in fileTypes) {
+        
+        NSString*  retinaFileName = [fileName stringByAppendingString:@"@2x"];
+        path = [[NSBundle mainBundle] pathForResource:retinaFileName ofType:type];
+        if (path) {
+            break;
         }
-    } else {
-        path = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
+        
+        path = [[NSBundle mainBundle] pathForResource:fileName ofType:type];
+        if (path) {
+            break;
+        }
     }
-    return [self cachedImageFroPath:path];
+    
+    image = [UIImage imageWithContentsOfFile:path];
+    if (image) {
+        [DZMemoryShareCache setObject:image forKey:path];
+    }
+    return image;
 }
 
 - (UIImage*) cachedImageFroPath:(NSString*)path

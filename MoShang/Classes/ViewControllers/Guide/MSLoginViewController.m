@@ -61,7 +61,7 @@
     _contractLabel = [[TTTAttributedLabel alloc] init];
     [self.scrollView addSubview:_contractLabel];
     _contractLabel.delegate = self;
-    _contractLabel.textAlignment = UITextAlignmentCenter;
+    _contractLabel.textAlignment =  NSTextAlignmentCenter;
     
     
     NSString* contractPrefixStr = @"<normal>点击开始表示您同意</normal><action>陌上服务条款</action>";
@@ -75,7 +75,7 @@
     
     
 #ifdef DEBUG
-   _phonerNumberTextField.text = @"18500044282";
+   _phonerNumberTextField.text = [NSString stringWithFormat:@"185000%ld%d282", random()%10, rand() %10];
     _passwordTextField.text = @"system32";
 #endif
 }
@@ -124,6 +124,7 @@
     account.accountID = registerRequest.accountName;
     account.phoneNumber = registerRequest.phoneNumber;
     account.password = registerRequest.passwordMD5;
+    account.uid = object[@"uid"];
     [[MSAccountManager shareManager] reloadAccount:account];
     
     [self moveToNextStep];

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6C27955D2BE06B4D957775C"
+               BlueprintIdentifier = "EA116F7B341A5F87F39582D5"
                BuildableName = "libPods-MoShang-RongCloudIMKit.a"
                BlueprintName = "Pods-MoShang-RongCloudIMKit"
                ReferencedContainer = "container:Pods.xcodeproj">

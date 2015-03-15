@@ -9,6 +9,12 @@
 #import "MSAccountManager.h"
 #import <DZSingletonFactory.h>
 #import <DZProgramDefines.h>
+#import "MSRCTokenReq.h"
+#import <RongCloudIMKit/RCIM.h>
+
+@interface MSAccountManager () <MSRequestUIDelegate>
+@property (nonatomic, assign) int reloadTokenCount;
+@end
 @implementation MSAccountManager
 
 + (MSAccountManager*) shareManager
@@ -44,6 +50,7 @@ INIT_DZ_EXTERN_STRING(kMSStorageAccount, MSStorageAccount);
     if (!self) {
         return self;
     }
+    _reloadTokenCount = 0;
     _currentAccount = [self loadAccountFromStorage];
     return self;
 }
@@ -51,7 +58,44 @@ INIT_DZ_EXTERN_STRING(kMSStorageAccount, MSStorageAccount);
 - (void) reloadAccount:(MSAccount *)account
 {
     _currentAccount = account;
+    if (_currentAccount) {
+        [self reloadRongCloudToken:NO];
+    }
     [self storeAccountToStorage:_currentAccount];
 }
 
+- (void) reloadRongCloudToken:(BOOL)force
+{
+    if (_currentAccount == nil) {
+        return;
+    }
+    
+    MSRCTokenReq* req = [MSRCTokenReq new];
+    req.uid = _currentAccount.uid;
+    req.uidelegate = self;
+    req.forced = force;
+    [MSDefaultSyncCenter performRequest:req];
+}
+
+- (void) request:(MSRequest *)request onError:(NSError *)error
+{
+    
+}
+
+- (void) request:(MSRequest *)request onSucced:(id)object
+{
+    NSString* token = object;
+    [RCIM connectWithToken:token completion:^(NSString *userId) {
+        
+        NSLog(@"%@",userId);
+    } error:^(RCConnectErrorCode status) {
+    
+        if (status == ConnectErrorCode_TOKEN_INCORRECT) {
+            if (_reloadTokenCount < 2) {
+                [self reloadRongCloudToken:YES];
+                _reloadTokenCount ++;
+            }
+        }
+    }];
+}
 @end

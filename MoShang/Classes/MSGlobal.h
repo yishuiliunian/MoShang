@@ -18,6 +18,8 @@
 #import <UIImageView+Haneke.h>
 #import <DZImageCache.h>
 #import "MSAppearenceManager.h"
+#import <Realm.h>
+#import "MSAccountManager.h"
 #define NUM_TO_STRING(x) [@(x) stringValue]
 FOUNDATION_EXTERN BOOL IS_MSColorString(NSString* str);
 
@@ -35,3 +37,8 @@ FOUNDATION_EXTERN NSArray* MSPicturesListFromStr(NSString* str);
 #define MSHeadFemale     DZCachedImageByName(@"default_avater_lady.png")
 #define MSHeadMale          DZCachedImageByName(@"default_avater_man.png")
 
+
+//Realm
+#define MSRLMDefaultStore [RLMRealm defaultRealm]
+#define MSRLMBeginWrite   [MSRLMDefaultStore beginWriteTransaction];
+#define MSRLMCommitWrite    [MSRLMDefaultStore commitWriteTransaction];

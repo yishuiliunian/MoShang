@@ -42,7 +42,7 @@
 {
     NSString* token = retObject[@"token"];
     MSShareTokenManager.token = [[MSToken alloc] initWithToken:token account:self.accountName];
-    [self doUIOnSuccced:token];
+    [self doUIOnSuccced:retObject];
 }
 
 @end

@@ -18,6 +18,7 @@
 #import <RCChatViewController.h>
 #import <CBStoreHouseRefreshControl.h>
 #import "MSFeedDetailViewController.h"
+#import "MSUserInfoProvider.h"
 @interface MSFeedsTableViewController () <MSRequestUIDelegate, MSFeedCellDelegate >
 @property (nonatomic, assign) int lastRequestID;
 @property (nonatomic, strong) CBStoreHouseRefreshControl* storeRefreshControl;
@@ -124,12 +125,11 @@
 
 - (void) feedCell:(MSFeedCell *)cell didTapLiaoLiaoBtn:(MSFeed *)feed
 {
-    RCChatViewController *chatViewController = [[RCIM sharedRCIM]createPrivateChat:@"1" title:@"自问自答" completion:^(){
+    [[MSUserInfoProvider shareProvider] cacheUserID:feed.author nickName:feed.nick avatar:feed.head];
+    RCChatViewController *chatViewController = [[RCIM sharedRCIM]createPrivateChat:feed.author title:feed.nick completion:^(){
         // 创建 ViewController 后，调用的 Block，可以用来实现自定义行为。
     }];
  
-    chatViewController.hidesBottomBarWhenPushed = YES;
-    // 把单聊视图控制器添加到导航栈。
     chatViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatViewController animated:YES];
 }

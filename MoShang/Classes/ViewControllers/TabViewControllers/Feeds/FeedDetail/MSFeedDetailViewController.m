@@ -29,6 +29,8 @@
     _detailTopView = [MSFeedDetailView new];
     [self.view addSubview:_detailTopView];
     
+    [self dz_addChildViewController:_detailTopView.photosViewController];
+    
     _detailTopView.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = MSDefaultBackgroundColor();
     _detailTopView.badgeContentView.items = @[MSBadgeItemWithText(@"xxxx"),

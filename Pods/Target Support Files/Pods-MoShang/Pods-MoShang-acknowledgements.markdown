@@ -24,10 +24,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## AVOSCloud
-
-© Copyright 2013 AVOS Systems, Inc. See https://cn.avoscloud.com/terms.html
-
 ## CBStoreHouseRefreshControl
 
 Copyright (c) 2014 Suyu Zhang <suyu_zhang@hotmail.com>
@@ -56,7 +52,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Software License Agreement (BSD License)
 
-Copyright (c) 2010, Deusty, LLC
+Copyright (c) 2010-2015, Deusty, LLC
 All rights reserved.
 
 Redistribution and use of this software in source and binary forms,

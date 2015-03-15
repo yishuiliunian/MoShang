@@ -101,6 +101,14 @@
         MSRequestOnErrorAndReturn(error);
     }
     NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+//    NSString* str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    if ([str hasPrefix:@"string(4) \"here\""]) {
+//        str = [str substringFromIndex:@"string(4) \"here\"".length];
+//        
+//        data = [str dataUsingEncoding:NSUTF8StringEncoding];
+//        error = nil;
+//        dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+//    }
     MSRequestOnErrorAndReturn(error);
     if (![dic isKindOfClass:[NSDictionary class]]) {
         error = [NSError ms_errorWithMessage:@"解析数据失败" code:-999];

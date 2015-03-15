@@ -7,6 +7,7 @@
 //
 
 #import "MSLoginReq.h"
+#import "MSAccountManager.h"
 
 @implementation MSLoginReq
 
@@ -24,6 +25,7 @@
 {
     NSString* token = retObject[@"token"];
     _token = token;
+    MSCurrentAccount.uid = retObject[@"uid"];
     [self doUIOnSuccced:token];
 }
 @end

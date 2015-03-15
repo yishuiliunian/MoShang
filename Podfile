@@ -16,7 +16,6 @@ target 'MoShang' do
   pod "ObjectiveRecord"
   pod "MagicalRecord"
   pod 'JSQMessagesViewController'
-  pod 'AVOSCloud'
   pod 'CocoaLumberjack'
   pod "AFNetworking", "~> 2.0"
   pod 'JSONModel'

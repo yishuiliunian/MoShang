@@ -67,6 +67,7 @@
 		656DB55B1A89E86F008AE224 /* MSDelTalsReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB55A1A89E86F008AE224 /* MSDelTalsReq.m */; };
 		656DB55E1A89E8D2008AE224 /* MSReportPosReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB55D1A89E8D2008AE224 /* MSReportPosReq.m */; };
 		656DB5611A89E941008AE224 /* MSGetFeedByUidReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656DB5601A89E941008AE224 /* MSGetFeedByUidReq.m */; };
+		656FD96D1AB52E6E006887AE /* MSRCTokenReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FD96C1AB52E6E006887AE /* MSRCTokenReq.m */; };
 		6570FC3E1A78B8F7000021C7 /* tab_nearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6570FC3A1A78B8F7000021C7 /* tab_nearby@2x.png */; };
 		6570FC3F1A78B8F7000021C7 /* tab_hotnew@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6570FC3B1A78B8F7000021C7 /* tab_hotnew@2x.png */; };
 		6570FC401A78B8F7000021C7 /* tab_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6570FC3C1A78B8F7000021C7 /* tab_mine@2x.png */; };
@@ -86,6 +87,8 @@
 		658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221331A787E52006B599D /* MSFeedLayoutItem.m */; };
 		658221371A787E71006B599D /* MSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221361A787E71006B599D /* MSModel.m */; };
 		6582213A1A787E81006B599D /* MSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 658221391A787E81006B599D /* MSFeed.m */; };
+		65960CC31AB5414400BA2BEC /* MSUserInfoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 65960CC21AB5414400BA2BEC /* MSUserInfoProvider.m */; };
+		65960CC61AB5428F00BA2BEC /* MSRCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 65960CC51AB5428F00BA2BEC /* MSRCUserInfo.m */; };
 		6598D9301A8DF86200813939 /* MSGuideUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D92F1A8DF86200813939 /* MSGuideUserInfoViewController.m */; };
 		6598D9331A8DFDED00813939 /* MSGuideContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9321A8DFDED00813939 /* MSGuideContentViewController.m */; };
 		6598D9361A8E02AA00813939 /* MSSetAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6598D9351A8E02AA00813939 /* MSSetAvatarViewController.m */; };
@@ -299,6 +302,8 @@
 		656DB55D1A89E8D2008AE224 /* MSReportPosReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSReportPosReq.m; sourceTree = "<group>"; };
 		656DB55F1A89E941008AE224 /* MSGetFeedByUidReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGetFeedByUidReq.h; sourceTree = "<group>"; };
 		656DB5601A89E941008AE224 /* MSGetFeedByUidReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGetFeedByUidReq.m; sourceTree = "<group>"; };
+		656FD96B1AB52E6E006887AE /* MSRCTokenReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRCTokenReq.h; sourceTree = "<group>"; };
+		656FD96C1AB52E6E006887AE /* MSRCTokenReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRCTokenReq.m; sourceTree = "<group>"; };
 		6570FC3A1A78B8F7000021C7 /* tab_nearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_nearby@2x.png"; sourceTree = "<group>"; };
 		6570FC3B1A78B8F7000021C7 /* tab_hotnew@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_hotnew@2x.png"; sourceTree = "<group>"; };
 		6570FC3C1A78B8F7000021C7 /* tab_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_mine@2x.png"; sourceTree = "<group>"; };
@@ -329,6 +334,10 @@
 		658221361A787E71006B599D /* MSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSModel.m; sourceTree = "<group>"; };
 		658221381A787E81006B599D /* MSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeed.h; sourceTree = "<group>"; };
 		658221391A787E81006B599D /* MSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSFeed.m; sourceTree = "<group>"; };
+		65960CC11AB5414400BA2BEC /* MSUserInfoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUserInfoProvider.h; sourceTree = "<group>"; };
+		65960CC21AB5414400BA2BEC /* MSUserInfoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserInfoProvider.m; sourceTree = "<group>"; };
+		65960CC41AB5428F00BA2BEC /* MSRCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRCUserInfo.h; sourceTree = "<group>"; };
+		65960CC51AB5428F00BA2BEC /* MSRCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRCUserInfo.m; sourceTree = "<group>"; };
 		6598D92E1A8DF86200813939 /* MSGuideUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGuideUserInfoViewController.h; sourceTree = "<group>"; };
 		6598D92F1A8DF86200813939 /* MSGuideUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSGuideUserInfoViewController.m; sourceTree = "<group>"; };
 		6598D9311A8DFDED00813939 /* MSGuideContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSGuideContentViewController.h; sourceTree = "<group>"; };
@@ -610,6 +619,10 @@
 				652982A41A85BDDD00322E8B /* MSAccount.m */,
 				652982A61A85BF6600322E8B /* MSAccountManager.h */,
 				652982A71A85BF6600322E8B /* MSAccountManager.m */,
+				65960CC11AB5414400BA2BEC /* MSUserInfoProvider.h */,
+				65960CC21AB5414400BA2BEC /* MSUserInfoProvider.m */,
+				65960CC41AB5428F00BA2BEC /* MSRCUserInfo.h */,
+				65960CC51AB5428F00BA2BEC /* MSRCUserInfo.m */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -641,6 +654,8 @@
 				656DB5601A89E941008AE224 /* MSGetFeedByUidReq.m */,
 				65549A621AA99B63001DA1CA /* MSGetSingleFeedTalksReq.h */,
 				65549A631AA99B63001DA1CA /* MSGetSingleFeedTalksReq.m */,
+				656FD96B1AB52E6E006887AE /* MSRCTokenReq.h */,
+				656FD96C1AB52E6E006887AE /* MSRCTokenReq.m */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -1495,6 +1510,7 @@
 				6582211A1A77C4DF006B599D /* MSFeedCell.m in Sources */,
 				65FD5B811A721BF8007239B9 /* main.m in Sources */,
 				653A4E7F1A7E138F001384AC /* MSUser.m in Sources */,
+				656FD96D1AB52E6E006887AE /* MSRCTokenReq.m in Sources */,
 				65F4F2C01AA888F300DD82BD /* UIViewController+DZSwipeViewController.m in Sources */,
 				658221341A787E52006B599D /* MSFeedLayoutItem.m in Sources */,
 				659F24731AA5E9460080096B /* MSAddAvarterCell.m in Sources */,
@@ -1528,6 +1544,7 @@
 				650DC25B1A723266000D000F /* MSMasterTableViewController.m in Sources */,
 				656DB5581A89E798008AE224 /* MSGetMyTalksReq.m in Sources */,
 				655E3B8D1A8C904300C79B43 /* QQSurroundLineTextField.m in Sources */,
+				65960CC31AB5414400BA2BEC /* MSUserInfoProvider.m in Sources */,
 				65BCBBC91A8886D900A37E08 /* MSLog.m in Sources */,
 				6598D93D1A90479200813939 /* MSTipsPool.m in Sources */,
 				65DA460B1A8A100B00CF1536 /* MSChinaMap.m in Sources */,
@@ -1551,6 +1568,7 @@
 				65549A6A1AA99D57001DA1CA /* MSCommentCell.m in Sources */,
 				6598D94C1A90804E00813939 /* MSHoricalImagesVC.m in Sources */,
 				65F4F2BF1AA888F300DD82BD /* DZTabViewItem.m in Sources */,
+				65960CC61AB5428F00BA2BEC /* MSRCUserInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

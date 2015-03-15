@@ -32,6 +32,7 @@
     [super viewDidLoad];
     
     if (MSShareAccountManager.currentAccount) {
+        [MSShareAccountManager reloadRongCloudToken:NO];
         [self loadApplicationMainVC];
     } else
     {

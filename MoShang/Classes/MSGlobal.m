@@ -42,6 +42,8 @@ NSArray* MSPicturesListFromStr(NSString* str) {
         [pictures addObject:p];
     }
     return pictures;
+    
+
 }
 
 @implementation MSGlobal

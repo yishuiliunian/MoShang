@@ -15,4 +15,5 @@
 @property (nonatomic, strong, readonly) MSAccount* currentAccount;
 + (MSAccountManager*) shareManager;
 - (void) reloadAccount:(MSAccount*)account;
+- (void) reloadRongCloudToken:(BOOL)force;
 @end

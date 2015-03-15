@@ -14,6 +14,8 @@
 #import "MSAppearenceManager.h"
 #import "MSDebugCenter.h"
 #import <RongCloudIMKit/RCIM.h>
+#import "MSAccountManager.h"
+#import "MSUserInfoProvider.h"
 @implementation AppConfig
 + (AppConfig*) shareInstance
 {
@@ -43,14 +45,8 @@
 
 - (void) rongYunIMSetup
 {
-    [RCIM initWithAppKey:@"3argexb6rnvue" deviceToken:nil];
-    
-    [RCIM connectWithToken:@"WnaRW7U4gk3YSfQdvROPDwdLTz8G4yI3awWnw14VYT5GfR7+XwA0C6Om7aEMAPz5xVIcxRP5mhpuHkZIG9OR0OABlCi9FnOS" completion:^(NSString *userId) {
-        
-        NSLog(@"%@",userId);
-    } error:^(RCConnectErrorCode status) {
-        
-    }];
+    [RCIM initWithAppKey:@"pvxdm17jx56cr" deviceToken:nil];
+    [RCIM setUserInfoFetcherWithDelegate:[MSUserInfoProvider shareProvider] isCacheUserInfo:YES];
 }
 
 - (void) setup
